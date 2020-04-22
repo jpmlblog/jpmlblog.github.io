@@ -30,7 +30,7 @@ tags:
    仮想ネットワークや Private Link を使用する方法があります。設定することによって使用できなくなる機能がある点や、公開情報に記載のない利用方法は基本的にサポートされていない点について予め留意ください。  
    [Azure Virtual Network 内で Azure ML の実験と推論のジョブを安全に実行する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network)  
    [Configure Azure Private Link for an Azure Machine Learning workspace (Preview)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-private-link)  
-
+***
 ## 「プレビュー」機能の制限について
 
 Azure には、マイクロソフトがお客様のご意見を収集するために提供する、プレビュー版、ベータ版、またはその他のプレリリース版の機能、サービス、ソフトウェア、またはリージョン (以下、「プレビュー」といいます) が含まれる場合があります。以下サイトの使用条件に合意することを条件に、プレビューを使用することができます。  
