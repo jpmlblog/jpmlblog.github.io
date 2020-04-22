@@ -32,6 +32,8 @@ Azure Machine Learninig のご利用にあたり、参考となる公開情報�
 - [機械学習アルゴリズム](https://azure.microsoft.com/ja-jp/overview/machine-learning-algorithms/)
 - [ラーニング パス (?term=機械学習)](https://docs.microsoft.com/ja-jp/learn/browse/?term=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92)
 - [ラーニング パス (?products=azure-machine-learning-service)](https://docs.microsoft.com/ja-jp/learn/browse/?products=azure-machine-learning-service)  
+- [とっても便利! Azure Machine Leaning](https://www.youtube.com/watch?v=xx-meKk03YY)  
+
 
 ## 導入検討向け参考サイト  
 
