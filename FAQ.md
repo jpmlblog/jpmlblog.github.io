@@ -18,21 +18,25 @@ tags:
 
 - [Azure Machine Learning のエンタープライズ セキュリティ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-enterprise-security)
 
-データを保存するストレージ サービスへのアクセスを制限する場合、以下サイトに記載の認証方法をサポートしています。  
+### ストレージ サービスへのアクセスを制限する。  
+
+以下サイトに記載の認証方法をサポートしています。  
 
 - [Azure Storage サービスに接続する (#supported-data-storage-service-types)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-data#supported-data-storage-service-types)
 
-生成したモデルをデプロイした Web サービスへのアクセスを制限する場合、TLS 1.2 を有効にさせる方法や、キーベースまたはトークンベールの認証を使用する方法があります。
+### Web サービスへのアクセスを制限する。  
+
+TLS 1.2 の有効化、キーベースまたはトークン ベースの認証を有効化する方法があります。
 
 - [TLS を使用して Azure Machine Learning による Web サービスをセキュリティで保護する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-web-service)  
 - [Azure Machine Learning のリソースとワークフローの認証を設定する (#web-service-authentication)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-setup-authentication#web-service-authentication)  
 
-外部ネットワークから物理的なアクセスを無くしたい場合には、仮想ネットワークや Private Link を使用する方法があります。しかし、設定することによって使用できなくなる機能があるため、サイトに記載のない利用方法は基本的にサポートされていないものとご理解ください。
+### 外部ネットワークからのアクセスを制限する。
+
+仮想ネットワークや Private Link を使用する方法があります。設定することによって使用できなくなる機能がある点や、公開情報に記載のない利用方法は基本的にサポートされていない点について予め留意ください。
 
 - [Azure Virtual Network 内で Azure ML の実験と推論のジョブを安全に実行する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network)  
 - [Configure Azure Private Link for an Azure Machine Learning workspace (Preview)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-private-link)  
-
-<br>
 
 ## 「プレビュー」機能の制限について
 
