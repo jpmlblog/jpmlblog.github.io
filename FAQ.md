@@ -60,7 +60,7 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
    > 4. 随時予告なくプレビューを変更または中止することがある
    > 5. 「一般向け提供製品」でリリースしないことを選択する場合がある
 
-なお、サポート リクエストより一般サービス提供開始予定をお問い合わせいただいても、非公開となりますので回答することができません。提供開始となった際には、[Azure の更新情報](https://azure.microsoft.com/ja-jp/updates/?status=nowavailable&product=machine-learning-service,machine-learning-studio) サイトより通知されます。また、Azure ポータルまたは Azure Machine Learning のポータルで通知される場合もあります。  
+サポート リクエストより一般サービス提供開始予定をお問い合わせいただいても、非公開となりますので回答することができません。提供開始となった際には [Azure の更新情報](https://azure.microsoft.com/ja-jp/updates/?status=nowavailable&product=machine-learning-service,machine-learning-studio) サイトより通知されます。また、Azure ポータルまたは Azure Machine Learning のポータルで通知される場合もあります。  
 
 ***
 <br>
