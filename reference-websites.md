@@ -14,6 +14,8 @@ Azure Machine Learninig のご利用にあたり、参考となる公開情報�
 ***
 ## Azure Machine Learning 関連サイト  
 
+Azure Machine Learning の技術ドキュメント、価格、更新情報など。専用ポータルは [こちら](https://ml.azure.com/)。
+
 - [Azure Machine Learning のドキュメント](https://docs.microsoft.com/ja-jp/azure/machine-learning/)  
 - [Azure Machine Learning のリリース ノート](https://docs.microsoft.com/ja-jp/azure/machine-learning/azure-machine-learning-release-notes)  
 - [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
@@ -23,12 +25,16 @@ Azure Machine Learninig のご利用にあたり、参考となる公開情報�
 ***
 ## Azure Machine Learning Studio (Classic) 関連サイト  
 
+Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、更新情報など。専用ポータルは [こちら](https://studio.azureml.net/)。
+
 - [Azure Machine Learning Studio (classic) のドキュメント](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/)  
 - [Machine Learning Studio の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning-studio/)  
 - [Azure の更新情報 (?product=machine-learning-studio)](https://azure.microsoft.com/ja-jp/updates/?product=machine-learning-studio)  
 
 ***
 ## 機械学習の前提知識習得向け参考サイト
+
+機械学習に関する概要情報、学習用のコンテンツなど。
 
 - [機械学習とは何ですか?](https://azure.microsoft.com/ja-jp/overview/what-is-machine-learning-platform/)
 - [機械学習アルゴリズム](https://azure.microsoft.com/ja-jp/overview/machine-learning-algorithms/)
@@ -38,6 +44,8 @@ Azure Machine Learninig のご利用にあたり、参考となる公開情報�
 
 ***
 ## 導入検討向け参考サイト  
+
+Azure Machine Learning の導入によるメリットや考慮事項、事例など。
 
 - [Azure Machine Learning](https://azure.microsoft.com/ja-jp/services/machine-learning/)  
 - [Microsoft の機械学習製品とは (#azure-machine-learning)](https://docs.microsoft.com/ja-jp/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning?context=azure/machine-learning/service/context/ml-context#azure-machine-learning)  
@@ -49,6 +57,8 @@ Azure Machine Learninig のご利用にあたり、参考となる公開情報�
 
 ***
 ## 開発者向け参考サイト  
+
+Azure Machine Learning を使用して機械学習を開発するための API リファレンスやサンプルなど。
 
 - [Azure Machine Learning SDK for Python とは](https://docs.microsoft.com/ja-jp/python/api/overview/azure/ml/?view=azure-ml-py)  
 - [Python notebooks with ML and deep learning examples with Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks)

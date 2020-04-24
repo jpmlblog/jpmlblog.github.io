@@ -12,7 +12,12 @@ tags:
 <br>
 
 ***
-## セキュリティ要件のため外部アクセスを制限したい  
+## Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに異動することは可能か  
+
+不可能です。
+
+
+## セキュリティ要件のため各リソースへのアクセスを制限することは可能か  
 
 認証やアクセス権の付与、ネットワーク的な隔離、監視など、Azure Machine Learning で利用できるセキュリティ機能について、以下サイトにて纏めております。  
 [Azure Machine Learning のエンタープライズ セキュリティ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-enterprise-security)
@@ -27,11 +32,18 @@ tags:
    [Azure Machine Learning のリソースとワークフローの認証を設定する (#web-service-authentication)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-setup-authentication#web-service-authentication)  
 
 - **外部ネットワークからのアクセスを制限する**  
-   仮想ネットワークや Private Link を使用する方法があります。設定することによって使用できなくなる機能がある点や、公開情報に記載のない利用方法は基本的にサポートされていない点について予め留意ください。  
+   仮想ネットワークや Private Link を使用する方法があります。
    [Azure Virtual Network 内で Azure ML の実験と推論のジョブを安全に実行する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network)  
    [Configure Azure Private Link for an Azure Machine Learning workspace (Preview)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-private-link)  
+
+   公開情報に記載のない利用方法 (例えば、Azure SQL Server の「ファイアウォールと仮想ネットワーク」機能の使用など) はサポートされていません。  
+   また、Azure Machine Learning Studio (https://ml.azure.com/) の機能、例えば "ノートブック" や "自動 ML"、"データセット"、"データのラベル付け" は、仮想ネットワークに配置したリソースへのアクセスをサポートしておりません。
+   [こちら](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-virtual-network) のサイトの注意書きをご参照ください。  
+   >  Warning  
+   Microsoft does not support using the Azure Machine Learning Studio features such as Automated ML, Datasets, Datalabeling, Designer, and Notebooks if the underlying storage has virtual network enabled.
+
 ***
-## 「プレビュー」機能の制限について
+## 「プレビュー」とは何か
 
 Azure には、マイクロソフトがお客様のご意見を収集するために提供する、プレビュー版、ベータ版、またはその他のプレリリース版の機能、サービス、ソフトウェア、またはリージョン (以下、「プレビュー」といいます) が含まれる場合があります。以下サイトの使用条件に合意することを条件に、プレビューを使用することができます。  
 [Microsoft Azure プレビューの追加使用条件](https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/)    
@@ -41,6 +53,7 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
    > 4. 随時予告なくプレビューを変更または中止することがある
    > 5. 「一般向け提供製品」でリリースしないことを選択する場合がある
 
+なお、サポート リクエストより一般サービス提供開始予定をお問い合わせいただいても、非公開となりますので回答することができません。提供開始となった際には、[Azure の更新情報](https://azure.microsoft.com/ja-jp/updates/?status=nowavailable&product=machine-learning-service,machine-learning-studio) サイトより通知されます。また、Azure ポータルまたは Azure Machine Learning のポータルで通知される場合もあります。  
 
 ***
 <br>
