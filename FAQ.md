@@ -28,7 +28,7 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
 ***
 ## セキュリティ要件のため各リソースへのアクセスを制限することは可能か  
 
-認証やアクセス権の付与、ネットワーク的な隔離、監視など、Azure Machine Learning で利用できるセキュリティ機能について、以下サイトにて纏めております。  
+認証やアクセス権の付与、ネットワーク的な隔離、監視など、Azure Machine Learning で利用できるセキュリティ機能について、以下サイトにて纏めております。後述に一部抜粋を紹介します。  
 [Azure Machine Learning のエンタープライズ セキュリティ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-enterprise-security)
 
 - **ストレージ サービスへのアクセスを制限する**  
