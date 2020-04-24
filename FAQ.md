@@ -45,7 +45,7 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
    [Azure Virtual Network 内で Azure ML の実験と推論のジョブを安全に実行する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network)  
    [Configure Azure Private Link for an Azure Machine Learning workspace (Preview)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-private-link)  
 
-   公開情報に記載のない利用方法 (例えば、Azure SQL Server の「ファイアウォールと仮想ネットワーク」機能の使用など) はサポートされておりません。また、[Azure Machine Learning Studio](https://ml.azure.com/) の *ノートブック* や *自動 ML*、*データセット*、*データのラベル付け* は、仮想ネットワークの利用をサポートしておりません。[こちら](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-virtual-network) のサイトの注意書きをご参照ください。  
+   公開情報に記載のない利用方法 (例えば、Azure SQL Server の「ファイアウォールと仮想ネットワーク」機能の使用など) はサポートされておりません。また、[Azure Machine Learning Studio](https://ml.azure.com/) の *ノートブック* や *自動 ML* 、 *データセット* 、 *データのラベル付け* は、仮想ネットワークの利用をサポートしておりません。[こちら](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-virtual-network) のサイトの注意書きをご参照ください。  
    > ! Warning  
    Microsoft does not support using the Azure Machine Learning Studio features such as Automated ML, Datasets, Datalabeling, Designer, and Notebooks if the underlying storage has virtual network enabled.
 
