@@ -12,11 +12,24 @@ tags:
 <br>
 
 ***
+## 参考となるサイトを教えて欲しい
+
+以下にお纏めしておりますので、ご参照ください。
+
+[参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)
+
+***
 ## Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに異動することは可能か  
 
-不可能です。
+不可能です。参考となる情報を紹介します。  
+
+[]()
+[Azure Machine Learning ワークスペースとは (#workspace-management)](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#workspace-management)  
+> ! 警告  
+Azure Machine Learning ワークスペースを別のサブスクリプションに移動したり、所有するサブスクリプションを新しいテナントに移動したりすることは、サポートされていません。 エラーの原因になります。
 
 
+***
 ## セキュリティ要件のため各リソースへのアクセスを制限することは可能か  
 
 認証やアクセス権の付与、ネットワーク的な隔離、監視など、Azure Machine Learning で利用できるセキュリティ機能について、以下サイトにて纏めております。  
