@@ -12,9 +12,9 @@ tags:
 <br>
 
 ***
-## 参考となるサイトを教えて欲しい
+## 参考となるウェブサイトを教えて欲しい
 
-以下にサイトにまとめております。  
+別途ブログ記事として掲載しております。以下リンクより参照ください。  
 [参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)  
 
 ***
@@ -23,8 +23,7 @@ tags:
 不可能です。参考となる情報を紹介します。  
 [Azure Machine Learning ワークスペースとは (#workspace-management)](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#workspace-management)  
 > ! 警告  
-Azure Machine Learning ワークスペースを別のサブスクリプションに移動したり、所有するサブスクリプションを新しいテナントに移動したりすることは、サポートされていません。 エラーの原因になります。
-
+Azure Machine Learning ワークスペースを別のサブスクリプションに移動したり、所有するサブスクリプションを新しいテナントに移動したりすることは、サポートされていません。 エラーの原因になります。  
 
 ***
 ## セキュリティ要件のため各リソースへのアクセスを制限することは可能か  
