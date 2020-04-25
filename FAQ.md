@@ -12,10 +12,10 @@ tags:
 <br>
 
 ***
-## 製品を理解するために参考となる公開情報を教えて欲しい
-
+## <details><summary>製品を理解するために参考となる公開情報を教えて欲しい</summary>
 別途ブログ記事として掲載しております。以下リンクより参照ください。  
 [参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)  
+</details>  
 
 ***
 ## Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
