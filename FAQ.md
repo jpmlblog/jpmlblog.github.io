@@ -12,29 +12,26 @@ tags:
 <br>
 
 ***
-
-<details><summary><span style="font-size: 14pt">製品を理解するために参考となる公開情報を教えて欲しい
-</span></summary>
+### 製品を理解するために参考となる公開情報を教えて欲しい
+<details><summary>回答</summary>
 
 別途ブログ記事として掲載しております。以下リンクより参照ください。  
 [参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)  
 </details>
-<br>
 
 ***
-<details><summary><span style="font-size: 14pt">Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
-</span></summary>
+### Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
+<details><summary>回答</summary>
 
 不可能です。参考となる情報を紹介します。  
 [Azure Machine Learning ワークスペースとは (#workspace-management)](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#workspace-management)  
 > ! 警告  
 Azure Machine Learning ワークスペースを別のサブスクリプションに移動したり、所有するサブスクリプションを新しいテナントに移動したりすることは、サポートされていません。 エラーの原因になります。
 </details>
-<br>
 
 ***
-<details><summary><span style="font-size: 14pt">セキュリティ要件のため各リソースへのアクセスを制限することは可能か
-</span></summary>
+### セキュリティ要件のため各リソースへのアクセスを制限することは可能か
+<details><summary>回答</summary>
 
 認証やアクセス権の付与、ネットワーク的な隔離、監視など、Azure Machine Learning で利用できるセキュリティ機能について、以下サイトにて纏めております。  
 [Azure Machine Learning のエンタープライズ セキュリティ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-enterprise-security)  
@@ -59,11 +56,10 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
    > ! Warning  
    Microsoft does not support using the Azure Machine Learning Studio features such as Automated ML, Datasets, Datalabeling, Designer, and Notebooks if the underlying storage has virtual network enabled.
 </details>
-<br>
 
 ***
-<details><summary><span style="font-size: 14pt">「プレビュー」とは何か
-</span></summary>
+### 機能の説明にある 「プレビュー」 とは何か
+<details><summary>回答</summary>
 
 Azure には、マイクロソフトがお客様のご意見を収集するために提供する、プレビュー版、ベータ版、またはその他のプレリリース版の機能、サービス、ソフトウェア、またはリージョン (以下、「プレビュー」といいます) が含まれる場合があります。以下サイトの使用条件に合意することを条件に、プレビューを使用することができます。  
 [Microsoft Azure プレビューの追加使用条件](https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/)    
@@ -75,7 +71,6 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 
 サポート リクエストより一般サービス提供開始予定をお問い合わせいただいても、非公開となりますので回答することができません。提供開始となった際には [Azure の更新情報](https://azure.microsoft.com/ja-jp/updates/?status=nowavailable&product=machine-learning-service,machine-learning-studio) サイトより通知されます。また、Azure ポータルまたは Azure Machine Learning のポータルで通知される場合もあります。  
 </details>
-<br>
 
 ***
 <br>
