@@ -17,7 +17,7 @@ tags:
 
 別途ブログ記事として掲載しております。以下リンクより参照ください。  
 [参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)  
-</details>
+</details><br>
 
 ***
 #### Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
@@ -27,7 +27,7 @@ tags:
 [Azure Machine Learning ワークスペースとは (#workspace-management)](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#workspace-management)  
 > ! 警告  
 Azure Machine Learning ワークスペースを別のサブスクリプションに移動したり、所有するサブスクリプションを新しいテナントに移動したりすることは、サポートされていません。 エラーの原因になります。
-</details>
+</details><br>
 
 ***
 #### セキュリティ要件のため各リソースへのアクセスを制限することは可能か
@@ -55,7 +55,7 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
    公開情報に記載のない利用方法 (例えば、Azure SQL Server の「ファイアウォールと仮想ネットワーク」機能の使用など) はサポートされておりません。また、[Azure Machine Learning Studio](https://ml.azure.com/) の *ノートブック* や *自動 ML* 、*データセット* 、*データのラベル付け* は、仮想ネットワークに配置したストレージの利用をサポートしておりません。[こちら](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-virtual-network) のサイトの注意書きを参照ください。  
    > ! Warning  
    Microsoft does not support using the Azure Machine Learning Studio features such as Automated ML, Datasets, Datalabeling, Designer, and Notebooks if the underlying storage has virtual network enabled.
-</details>
+</details><br>
 
 ***
 #### 機能の説明にある 「プレビュー」 とは何か
@@ -70,7 +70,7 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
    > 5. 「一般向け提供製品」でリリースしないことを選択する場合がある
 
 サポート リクエストより一般サービス提供開始予定をお問い合わせいただいても、非公開となりますので回答することができません。提供開始となった際には [Azure の更新情報](https://azure.microsoft.com/ja-jp/updates/?status=nowavailable&product=machine-learning-service,machine-learning-studio) サイトより通知されます。また、Azure ポータルまたは Azure Machine Learning のポータルで通知される場合もあります。  
-</details>
+</details><br>
 
 ***
 <br>
