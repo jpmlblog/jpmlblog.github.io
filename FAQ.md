@@ -12,7 +12,7 @@ tags:
 <br>
 
 ***
-<span href="#test1" style="font-size: 14pt"> 製品を理解するために参考となる公開情報を教えて欲しい</span>  
+<span style="font-size: 14pt"><a href="#test1" >製品を理解するために参考となる公開情報を教えて欲しい</a></span>  
 <details><summary></summary>
 
 別途ブログ記事として掲載しております。以下リンクより参照ください。  
