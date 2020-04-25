@@ -12,8 +12,8 @@ tags:
 <br>
 
 ***
-<details><summary><span style="font-size: 14pt" id="test1">製品を理解するために参考となる公開情報を教えて欲しい</span>  
-</summary>
+#### 製品を理解するために参考となる公開情報を教えて欲しい  
+<details><summary style="font-size: 10pt">展開</summary>
 
 別途ブログ記事として掲載しております。以下リンクより参照ください。  
 [参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)  
@@ -21,7 +21,7 @@ tags:
 
 ***
 #### Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
-<details><summary></summary>
+<details><summary style="font-size: 10pt">展開</summary>
 
 不可能です。参考となる情報を紹介します。  
 [Azure Machine Learning ワークスペースとは (#workspace-management)](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#workspace-management)  
@@ -31,7 +31,7 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
 
 ***
 #### セキュリティ要件のため各リソースへのアクセスを制限することは可能か
-<details><summary></summary>
+<details><summary style="font-size: 10pt">展開</summary>
 
 認証やアクセス権の付与、ネットワーク的な隔離、監視など、Azure Machine Learning で利用できるセキュリティ機能について、以下サイトにて纏めております。  
 [Azure Machine Learning のエンタープライズ セキュリティ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-enterprise-security)  
@@ -59,7 +59,7 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
 
 ***
 #### 機能の説明にある 「プレビュー」 とは何か
-<details><summary></summary>
+<details><summary style="font-size: 10pt">展開</summary>
 
 Azure には、マイクロソフトがお客様のご意見を収集するために提供する、プレビュー版、ベータ版、またはその他のプレリリース版の機能、サービス、ソフトウェア、またはリージョン (以下、「プレビュー」といいます) が含まれる場合があります。以下サイトの使用条件に合意することを条件に、プレビューを使用することができます。  
 [Microsoft Azure プレビューの追加使用条件](https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/)    
