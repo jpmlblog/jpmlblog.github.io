@@ -12,19 +12,16 @@ tags:
 <br>
 
 ***
-<details><summary>
-
-## 製品を理解するために参考となる公開情報を教えて欲しい
-</summary>
+<details><summary><span style="font-size: 14pt">製品を理解するために参考となる公開情報を教えて欲しい
+</span></summary>
 
 別途ブログ記事として掲載しております。以下リンクより参照ください。  
 [参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)  
 </details>
 
-<details><summary>
-
-## Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
-</summary>
+***
+<details><summary><span style="font-size: 14pt">Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
+</span></summary>
 
 不可能です。参考となる情報を紹介します。  
 [Azure Machine Learning ワークスペースとは (#workspace-management)](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#workspace-management)  
@@ -32,10 +29,9 @@ tags:
 Azure Machine Learning ワークスペースを別のサブスクリプションに移動したり、所有するサブスクリプションを新しいテナントに移動したりすることは、サポートされていません。 エラーの原因になります。
 </details>
 
-<details><summary>
-
-## セキュリティ要件のため各リソースへのアクセスを制限することは可能か
-</summary>
+***
+<details><summary><span style="font-size: 14pt">セキュリティ要件のため各リソースへのアクセスを制限することは可能か
+</span></summary>
 
 認証やアクセス権の付与、ネットワーク的な隔離、監視など、Azure Machine Learning で利用できるセキュリティ機能について、以下サイトにて纏めております。  
 [Azure Machine Learning のエンタープライズ セキュリティ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-enterprise-security)  
@@ -61,10 +57,9 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
    Microsoft does not support using the Azure Machine Learning Studio features such as Automated ML, Datasets, Datalabeling, Designer, and Notebooks if the underlying storage has virtual network enabled.
 </details>
 
-<details><summary>
-
-## 「プレビュー」とは何か
-</summary>
+***
+<details><summary><span style="font-size: 14pt">「プレビュー」とは何か
+</span></summary>
 
 Azure には、マイクロソフトがお客様のご意見を収集するために提供する、プレビュー版、ベータ版、またはその他のプレリリース版の機能、サービス、ソフトウェア、またはリージョン (以下、「プレビュー」といいます) が含まれる場合があります。以下サイトの使用条件に合意することを条件に、プレビューを使用することができます。  
 [Microsoft Azure プレビューの追加使用条件](https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/)    
