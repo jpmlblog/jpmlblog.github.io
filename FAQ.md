@@ -12,12 +12,14 @@ tags:
 <br>
 
 ***
-<details><summary><span style="font-size: 14pt; padding: 20pt 0pt">製品を理解するために参考となる公開情報を教えて欲しい
+
+<details><summary><span style="font-size: 14pt">製品を理解するために参考となる公開情報を教えて欲しい
 </span></summary>
 
 別途ブログ記事として掲載しております。以下リンクより参照ください。  
 [参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)  
 </details>
+<br>
 
 ***
 <details><summary><span style="font-size: 14pt">Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
@@ -28,6 +30,7 @@ tags:
 > ! 警告  
 Azure Machine Learning ワークスペースを別のサブスクリプションに移動したり、所有するサブスクリプションを新しいテナントに移動したりすることは、サポートされていません。 エラーの原因になります。
 </details>
+<br>
 
 ***
 <details><summary><span style="font-size: 14pt">セキュリティ要件のため各リソースへのアクセスを制限することは可能か
@@ -56,6 +59,7 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
    > ! Warning  
    Microsoft does not support using the Azure Machine Learning Studio features such as Automated ML, Datasets, Datalabeling, Designer, and Notebooks if the underlying storage has virtual network enabled.
 </details>
+<br>
 
 ***
 <details><summary><span style="font-size: 14pt">「プレビュー」とは何か
@@ -71,6 +75,7 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 
 サポート リクエストより一般サービス提供開始予定をお問い合わせいただいても、非公開となりますので回答することができません。提供開始となった際には [Azure の更新情報](https://azure.microsoft.com/ja-jp/updates/?status=nowavailable&product=machine-learning-service,machine-learning-studio) サイトより通知されます。また、Azure ポータルまたは Azure Machine Learning のポータルで通知される場合もあります。  
 </details>
+<br>
 
 ***
 <br>
