@@ -12,7 +12,8 @@ tags:
 <br>
 
 ***
-<details><summary style="font-size: 14pt" id=test>製品を理解するために参考となる公開情報を教えて欲しい</summary>
+<a id="test"></a>
+<details><summary style="font-size: 14pt">製品を理解するために参考となる公開情報を教えて欲しい</summary>
 
 別途ブログ記事として掲載しております。以下リンクより参照ください。  
 [参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)  
