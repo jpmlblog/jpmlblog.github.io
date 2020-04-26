@@ -20,7 +20,7 @@ tags:
 
 ***
 #### Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
-<details><summary style="font-size: 10pt">展開</summary>
+<details open><summary style="font-size: 10pt">展開</summary>
 
 不可能です。参考となる情報を紹介します。  
 [Azure Machine Learning ワークスペースとは (#workspace-management)](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#workspace-management)  
@@ -30,7 +30,7 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
 
 ***
 #### セキュリティ要件のため各リソースへのアクセスを制限することは可能か
-<details><summary style="font-size: 10pt">展開</summary>
+<details open><summary style="font-size: 10pt">展開</summary>
 
 認証やアクセス権の付与、ネットワーク的な隔離、監視など、Azure Machine Learning で利用できるセキュリティ機能について、以下サイトにて纏めております。  
 [Azure Machine Learning のエンタープライズ セキュリティ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-enterprise-security)  
