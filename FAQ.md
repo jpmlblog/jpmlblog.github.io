@@ -1,6 +1,6 @@
 ---
 title: FAQ
-date: 2020-04-22 10:00:00
+date: 2020-04-26 10:00:00
 categories:
 - Azure Machine Learning 全般
 tags:
