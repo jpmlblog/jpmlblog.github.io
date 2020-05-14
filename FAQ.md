@@ -64,12 +64,40 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
 Azure には、マイクロソフトがお客様のご意見を収集するために提供する、プレビュー版、ベータ版、またはその他のプレリリース版の機能、サービス、ソフトウェア、またはリージョン (以下、「プレビュー」といいます) が含まれる場合があります。以下サイトの使用条件に合意することを条件に、プレビューを使用することができます。  
 [Microsoft Azure プレビューの追加使用条件](https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/)    
    > 1. 「現状有姿のまま」「瑕疵を問わない条件」「提供可能な場合に限り提供しうる形で」提供される  
-   > 2. サービス レベル契約および限定的保証の対象とはならない
-   > 3. カスタマー サポートの対象とならない
-   > 4. 随時予告なくプレビューを変更または中止することがある
-   > 5. 「一般向け提供製品」でリリースしないことを選択する場合がある
+   > 1. サービス レベル契約および限定的保証の対象とはならない
+   > 1. カスタマー サポートの対象とならない
+   > 1. 随時予告なくプレビューを変更または中止することがある
+   > 1. 「一般向け提供製品」でリリースしないことを選択する場合がある
 
-サポート リクエストより一般サービス提供開始予定をお問い合わせいただいても、非公開となりますので回答することができません。提供開始となった際には [Azure の更新情報](https://azure.microsoft.com/ja-jp/updates/?status=nowavailable&product=machine-learning-service,machine-learning-studio) サイトより通知されます。また、Azure ポータルまたは Azure Machine Learning のポータルで通知される場合もあります。  
+プレビューは開発段階のサービス・機能でもあるため、公開中のドキュメントと異なる仕様があったり、メンテナンスに伴い使用できなくなることがあります。以下のようなご質問につきましては、基本的に Azure サポートから回答を提供することが難しいことをご理解ください。  
+
+- 一般サービス提供開始予定
+- 予期しない動作の原因調査
+- 公開情報にない仕様の確認
+
+提供開始となった際には [Azure の更新情報](https://azure.microsoft.com/ja-jp/updates/?status=nowavailable&product=machine-learning-service,machine-learning-studio) サイトより通知されます。また、Azure ポータルまたは Azure Machine Learning のポータルで通知される場合もあります。   
+  
+</details>
+
+***
+#### コストの見積もり方を知りたい
+<details><summary style="font-size: 10pt">回答</summary>
+Azure Machine Learning のワークスペース自体には課金は発生しません。ワークスペースで作成したリソースに課金が発生します。  
+
+https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/
+
+ワークスペースで作成した仮想マシンや、その他の関連するリソースの課金については、お客様の使い方によって異なりますので、一概には回答することができません。  
+ 
+弊社にて見積もりが必要な場合には、営業担当者へご依頼いただくことをお勧めいたします。  
+
+https://azure.microsoft.com/ja-jp/overview/sales-number/
+</details>
+
+***
+#### Machine Learning Studio (Classic) と Azure Machine Learning のデザイナー機能はどのような違いがあるか
+<details><summary style="font-size: 10pt">回答</summary>
+※ メンテナンス中です。
+
 </details>
 
 ***
