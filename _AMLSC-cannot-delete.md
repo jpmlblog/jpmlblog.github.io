@@ -25,16 +25,16 @@ Azure ポータル上には表示されていないリソースが継続して�
 
 - ワークスペース ID の確認方法
 
-   [Azure Machine Learning Studio (Classic) ワークスペース](https://studio.azureml.net/Home) にアクセスし、[Settings] メニューよりワークスペース ID を確認します。  
+   「[Azure Machine Learning Studio (Classic) ワークスペース](https://studio.azureml.net/Home)」 にアクセスし、[Settings] メニューよりワークスペース ID を確認します。  
    ![workspace-id.png](https://jpmlblog.github.io/images/AMLSC-cannot-delete/workspace-id.png)  
 
 
 - リソース ID の確認方法
 
-   Azure ポータルでダウンロードできる使用状況レポートの csv ファイルの ResourceId (ResourceId) よりご確認いただけます。下記のサイトの 「Azure 請求書 (.pdf) のダウンロード」 セクションの 4. の手順より、csv ファイルをダウンロードして確認します。  
-
-   [Azure の請求書と毎日の使用状況データをダウンロードまたは表示する](https://docs.microsoft.com/ja-jp/azure/cost-management-billing/manage/download-azure-invoice-daily-usage-date)  
+   「[Azure の請求書と毎日の使用状況データをダウンロードまたは表示する](https://docs.microsoft.com/ja-jp/azure/cost-management-billing/manage/download-azure-invoice-daily-usage-date)」 サイトの 「Azure 請求書 (.pdf) のダウンロード」 セクションの 4. の手順より csv ファイルをダウンロードし、ResourceId (ResourceId) の項目を確認します。  
    ![download-invoice.png](https://jpmlblog.github.io/images/AMLSC-cannot-delete/download-invoice.png)  
+   
+   ![download-invoice-csv.png](https://jpmlblog.github.io/images/AMLSC-cannot-delete/download-invoice-csv.png)  
 
 ### (2) リソース削除を希望するサポート リクエストを発行
 
