@@ -84,9 +84,11 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 <details><summary style="font-size: 10pt">回答</summary>
 Azure Machine Learning のワークスペース自体には課金は発生しません。ワークスペースで作成したリソースに課金が発生します。  
 
-https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/
+[Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)
 
-ワークスペースで作成した仮想マシンや、その他の関連するリソースの課金については、お客様の使い方によって異なりますので、一概には回答することができません。  
+主要な課金対象は、開発環境やトレーニングの実行環境として作成した仮想マシンです。  
+
+ワークスペースで作成した仮想マシンや、その他の関連するリソースの課金については、お客様の使い方によって異なりますので、見積もりを回答することができません。  
  
 弊社にて見積もりが必要な場合には、営業担当者へご依頼いただくことをお勧めいたします。  
 
