@@ -54,6 +54,7 @@ Azure Machine Learning Studio (Classic) ワークスペース リソースにお
    問題の種類やサービス、リソースなどはこちらを参考に設定します。  
 
    ![support-request.png](https://jpmlblog.github.io/images/AMLSC-cannot-delete/support-request.png)  
+   ※ Azure ポータルの言語設定を English にしている場合には、サービスは [Machine Learning Studio] を選択ください。
 
 - [詳細] タブの設定
 
