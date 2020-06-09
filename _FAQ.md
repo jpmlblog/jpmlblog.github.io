@@ -81,14 +81,27 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 
 ***
 #### コストの見積もり方を知りたい
-<details><summary style="font-size: 10pt">回答</summary>
+<summary style="font-size: 10pt">回答</summary>
 Azure Machine Learning のワークスペース自体には課金は発生しません。ワークスペースで作成したリソースに課金が発生します。  
 
 [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)
 
-主要な課金対象は、開発環境やトレーニングの実行環境として作成した仮想マシンです。  
+主要な課金対象は、開発環境やトレーニングの実行環境として作成した仮想マシンです。また、作成したモデルをデプロイした場合、デプロイ先のサービスについても課金が発生します。参考に見積もり例をご紹介いたします。  
 
-ワークスペースで作成した仮想マシンや、その他の関連するリソースの課金については、お客様の使い方によって異なりますので、見積もりを回答することができません。  
+※ Enterprise エディションの追加料金は (6/8 現在) 発生しないため、考慮を省略します。
+
+- 開発環境として Azure Machine Learning コンピューティング インスタンス (東日本リージョン、STANDARD_DS3_V2) を 1 日 10 時間、20 日間使用する場合  
+   > 45.808 [円/時間] x 24 [時間/日] x 20 [日] = 21987.84 [円]
+   
+   - 参考サイト  
+      [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
+      [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service)  
+
+- トレーニング ターゲットとして Azure Machine Learning コンピューティング クラスター (東日本リージョン、STANDARD_DS3_V2) を作成し、
+
+
+
+その他の関連するリソースの課金については、お客様の使い方によって異なりますので、見積もりを回答することができません。  
  
 弊社にて見積もりが必要な場合には、営業担当者へご依頼いただくことをお勧めいたします。  
 
@@ -103,5 +116,7 @@ https://azure.microsoft.com/ja-jp/overview/sales-number/
 </details>
 
 ***
+`変更履歴`  
+`2020/04/22 created by Mochizuki`  
 <br>
-※ 適宜追加更新します。
+※ 適宜追加更新します。  

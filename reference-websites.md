@@ -21,6 +21,9 @@ Azure Machine Learning の技術ドキュメント、価格、更新情報など
 - [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
 - [Azure Machine Learning の既知の問題とトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/resource-known-issues)  
 - [Azure の更新情報 (?product=machine-learning-service)](https://azure.microsoft.com/ja-jp/updates/?product=machine-learning-service)  
+- [(旧) フォーラム サイト](https://social.msdn.microsoft.com/Forums/en-US/home?forum=AzureMachineLearningService)  
+- [フォーラム サイト](https://docs.microsoft.com/en-us/answers/topics/azure-machine-learning.html)
+
 
 ***
 ## Azure Machine Learning Studio (Classic) 関連サイト  
@@ -30,6 +33,8 @@ Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、�
 - [Azure Machine Learning Studio (classic) のドキュメント](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/)  
 - [Machine Learning Studio の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning-studio/)  
 - [Azure の更新情報 (?product=machine-learning-studio)](https://azure.microsoft.com/ja-jp/updates/?product=machine-learning-studio)  
+- [(旧) フォーラム サイト](https://social.msdn.microsoft.com/Forums/en-US/home?forum=MachineLearning)
+- [フォーラム サイト](https://docs.microsoft.com/en-us/answers/topics/azure-machine-learning-studio-classic.html)
 
 ***
 ## 機械学習の前提知識習得向け参考サイト
@@ -41,6 +46,12 @@ Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、�
 - [ラーニング パス (?term=機械学習)](https://docs.microsoft.com/ja-jp/learn/browse/?term=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92)
 - [ラーニング パス (?products=azure-machine-learning-service)](https://docs.microsoft.com/ja-jp/learn/browse/?products=azure-machine-learning-service)  
 - [とっても便利! Azure Machine Leaning](https://www.youtube.com/watch?v=xx-meKk03YY)  
+- 初心者向けデータ サイエンス解説ビデオ
+   - [データ サイエンスが回答する 5 つの質問](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers)
+   - [データ サイエンス用のデータの準備はお済みですか?](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science)
+   - [データで回答できる質問をする](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data)
+   - [単純なモデルで回答を予測する](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-predict-an-answer-with-a-simple-model)
+   - [他のユーザーの成果物をコピーしてデータ サイエンスを実行する](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-copy-other-peoples-work-to-do-data-science)
 
 ***
 ## 導入検討向け参考サイト  
@@ -65,7 +76,11 @@ Azure Machine Learning を使用して機械学習を開発するための API �
 - [Azure Machine Learning デザイナーのアルゴリズムとモジュールのリファレンス (プレビュー)](https://docs.microsoft.com/ja-jp/azure/machine-learning/algorithm-module-reference/module-reference)  
 - [機械学習 REST API リファレンス](https://docs.microsoft.com/ja-jp/rest/api/azureml/)  
 - [Azure Machine Learning 用の CLI 拡張機能を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/reference-azure-machine-learning-cli)  
+- [Browse code samples](https://docs.microsoft.com/en-us/samples/browse/?products=azure-machine-learning-service)
 
 ***
+`変更履歴`  
+`2020/04/22 created by Mochizuki`  
+`2020/06/08 modified by Mochizuki`  
 <br>
-※ 適宜追加更新します。
+※ 適宜追加更新します。  
