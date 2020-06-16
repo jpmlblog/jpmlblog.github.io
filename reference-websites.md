@@ -47,11 +47,11 @@ Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、�
 - [ラーニング パス (?products=azure-machine-learning-service)](https://docs.microsoft.com/ja-jp/learn/browse/?products=azure-machine-learning-service)  
 - [とっても便利! Azure Machine Leaning](https://www.youtube.com/watch?v=xx-meKk03YY)  
 - 初心者向けデータ サイエンス解説ビデオ
-   - [データ サイエンスが回答する 5 つの質問](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers)
-   - [データ サイエンス用のデータの準備はお済みですか?](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science)
-   - [データで回答できる質問をする](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data)
-   - [単純なモデルで回答を予測する](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-predict-an-answer-with-a-simple-model)
-   - [他のユーザーの成果物をコピーしてデータ サイエンスを実行する](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-copy-other-peoples-work-to-do-data-science)
+   >- [データ サイエンスが回答する 5 つの質問](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers)
+   >- [データ サイエンス用のデータの準備はお済みですか?](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science)
+   >- [データで回答できる質問をする](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data)
+   >- [単純なモデルで回答を予測する](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-predict-an-answer-with-a-simple-model)
+   >- [他のユーザーの成果物をコピーしてデータ サイエンスを実行する](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-copy-other-peoples-work-to-do-data-science)
 
 ***
 ## 導入検討向け参考サイト  
