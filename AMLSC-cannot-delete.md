@@ -45,11 +45,11 @@ Azure Machine Learning Studio (Classic) ワークスペース リソースにお
    </div>
 
    CSV ファイルの以下の列を確認ください。  
-
    
    <div align="left">
    <img alt="download-invoice-csv.png" src="https://jpmlblog.github.io/images/AMLSC-cannot-delete/download-invoice-csv.png">
    </div>
+
 ***
 
 ### (2) リソース削除を希望するサポート リクエストを発行
