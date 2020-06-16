@@ -32,17 +32,17 @@ Azure Machine Learning Studio (Classic) ワークスペース リソースにお
 
    「[Azure Machine Learning Studio (Classic) ワークスペース](https://studio.azureml.net/Home)」 にアクセスし、[Settings] メニューよりワークスペース ID を確認します。  
 
-   ![workspace-id.png](https://jpmlblog.github.io/images/AMLSC-cannot-delete/workspace-id.png)  
+   <img alt="workspace-id.png" src="https://jpmlblog.github.io/images/AMLSC-cannot-delete/workspace-id.png">
 
 - リソース ID の確認方法
 
    「[Azure の請求書と毎日の使用状況データをダウンロードまたは表示する](https://docs.microsoft.com/ja-jp/azure/cost-management-billing/manage/download-azure-invoice-daily-usage-date)」 サイトの 「Azure 請求書 (.pdf) のダウンロード」 セクションの 4. の手順より csv ファイルをダウンロードし、ResourceId (ResourceId) の項目を確認します。  
 
-   ![download-invoice.png](https://jpmlblog.github.io/images/AMLSC-cannot-delete/download-invoice.png)  
+   <img alt="download-invoice.png" src="https://jpmlblog.github.io/images/AMLSC-cannot-delete/download-invoice.png">
 
    CSV ファイルの以下の列を確認ください。  
 
-   ![download-invoice.png](https://jpmlblog.github.io/images/AMLSC-cannot-delete/download-invoice-csv.png)  
+   <img alt="download-invoice-csv.png" src="https://jpmlblog.github.io/images/AMLSC-cannot-delete/download-invoice-csv.png">
 ***
 
 ### (2) リソース削除を希望するサポート リクエストを発行
@@ -53,14 +53,15 @@ Azure Machine Learning Studio (Classic) ワークスペース リソースにお
 
    問題の種類やサービス、リソースなどはこちらを参考に設定します。  
 
-   ![support-request.png](https://jpmlblog.github.io/images/AMLSC-cannot-delete/support-request.png)  
+   <img alt="support-request.png" src="https://jpmlblog.github.io/images/AMLSC-cannot-delete/support-request.png">
+ 
    ※ Azure ポータルの言語設定を English にしている場合には、サービスは [Machine Learning Studio] を選択ください。
 
 - [詳細] タブの設定
 
    [詳細] タブの [* 詳細] 欄に、確認したワークスペース ID またはリソース ID を記載します。  
 
-   ![support-request-detail.png](https://jpmlblog.github.io/images/AMLSC-cannot-delete/support-request-detail.png)  
+   <img alt="support-request-detail.png" src="https://jpmlblog.github.io/images/AMLSC-cannot-delete/support-request-detail.png">
 <br>
 
 </div>
