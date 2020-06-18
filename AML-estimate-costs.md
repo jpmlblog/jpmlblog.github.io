@@ -16,8 +16,7 @@ Azure Machine Learning のコスト見積もりについて、参考となる情
 
 - [Azure Machine Learning のコストを計画して管理する](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-plan-manage-cost)  
 
-<br>
-
+***
 ## コスト見積もり例について
 Azure Machine Learning のワークスペース自体には課金は発生しません。ワークスペースで作成したリソースに課金が発生します。  
 
@@ -66,8 +65,7 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
    [Container Instances の価格](https://azure.microsoft.com/ja-jp/pricing/details/container-instances/)  
    [料金計算ツール (+Container Instance)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=container-instances)  
 
-<br>  
-
+***
 ## 見積もりが難しいコストについて
 上記に加えて以下リソースの課金が発生いたします。これらはご利用方法によって金額が大きく異なりますため、試算を含めた見積もりを例示することができません。一般的に上述の料金と比較して数パーセント程度の小さい金額となりますため、一定期間ご利用いただいた後、実際の課金額を基に見積もることをお勧めします。  
 
@@ -75,8 +73,7 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 - [Azure ブロック BLOB Storage (汎用 v1)](https://azure.microsoft.com/ja-jp/pricing/details/storage/blobs/)  
 - [Key Vault](https://azure.microsoft.com/ja-jp/pricing/details/key-vault/)  
 
-<br>
-
+***
 ## 見積もりの依頼について
 弊社より見積もりの回答が必要な場合、営業担当のタスクとして対応しております。下記サイトを参考にご依頼ください。  
 
