@@ -100,7 +100,7 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 - [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
 -  [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service)  
  
-弊社より見積もりの回答が必要な場合、営業担当のタスクとして対応しておりますため、下記サイトを参考にご依頼ください。  
+弊社より見積もりの回答が必要な場合、営業担当のタスクとして対応しております。下記サイトよりご依頼ください。  
 
 - [Azure 営業担当者に問い合わせる](https://azure.microsoft.com/ja-jp/overview/sales-number/)
 </details>
