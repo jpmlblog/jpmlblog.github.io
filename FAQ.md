@@ -90,11 +90,11 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 ***
 #### コストの見積もり方を知りたい
 <details><summary style="font-size: 10pt">回答</summary>
-コストの見積もり例について下記記事に纏めています。参考にご参照ください。  
+コストの見積もり例について下記記事に纏めています。  
 
-- [Azure Machine Learning のコストを計画して管理する](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-plan-manage-cost)  
+- [Azure Machine Learning のコスト見積もりについて](https://jpmlblog.github.io/blog/2020/06/18/AML-estimate-costs/)  
 
-その他、参考となる公開情報を紹介させていただきます。
+その他、コスト見積もりの参考となる公開情報を紹介します。
 
 - [Azure Machine Learning のコストを計画して管理する](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-plan-manage-cost)  
 - [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
