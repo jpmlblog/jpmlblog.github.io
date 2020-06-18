@@ -21,9 +21,13 @@ Azure Machine Learning の技術ドキュメント、価格、更新情報など
 - [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
 - [Azure Machine Learning の既知の問題とトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/resource-known-issues)  
 - [Azure の更新情報 (?product=machine-learning-service)](https://azure.microsoft.com/ja-jp/updates/?product=machine-learning-service)  
-- [(旧) フォーラム サイト](https://social.msdn.microsoft.com/Forums/en-US/home?forum=AzureMachineLearningService)  
-- [フォーラム サイト](https://docs.microsoft.com/en-us/answers/topics/azure-machine-learning.html)
 
+過去の Q&A、新規 Q&A、機能改善のフィードバックなど。
+
+- [(旧) Q&A](https://social.msdn.microsoft.com/Forums/en-US/home?forum=AzureMachineLearningService)  
+- [Q&A](https://docs.microsoft.com/en-us/answers/topics/azure-machine-learning.html)  
+- [feedback forum](https://feedback.azure.com/forums/257792-machine-learning)  
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-machine-learning-service)
 
 ***
 ## Azure Machine Learning Studio (Classic) 関連サイト  
@@ -33,8 +37,13 @@ Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、�
 - [Azure Machine Learning Studio (classic) のドキュメント](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/)  
 - [Machine Learning Studio の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning-studio/)  
 - [Azure の更新情報 (?product=machine-learning-studio)](https://azure.microsoft.com/ja-jp/updates/?product=machine-learning-studio)  
+
+過去の Q&A、新規 Q&A、機能改善のフィードバックなど。
+
 - [(旧) フォーラム サイト](https://social.msdn.microsoft.com/Forums/en-US/home?forum=MachineLearning)
 - [フォーラム サイト](https://docs.microsoft.com/en-us/answers/topics/azure-machine-learning-studio-classic.html)
+- [feedback forum](https://feedback.azure.com/forums/257792-machine-learning)  
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-machine-learning-studio)  
 
 ***
 ## 機械学習の前提知識習得向け参考サイト
@@ -79,8 +88,13 @@ Azure Machine Learning を使用して機械学習を開発するための API �
 - [Browse code samples](https://docs.microsoft.com/en-us/samples/browse/?products=azure-machine-learning-service)
 
 ***
+## 開発者向け参考サイト  
+
+
+***
 `変更履歴`  
 `2020/04/22 created by Mochizuki`  
 `2020/06/08 modified by Mochizuki`  
+`2020/06/18 modified by Mochizuki`  
 <br>
 ※ 適宜追加更新します。  

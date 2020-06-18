@@ -51,7 +51,7 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
    [プライベート仮想ネットワークを使用して機械学習のライフサイクルをセキュリティで保護する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network)  
    [Azure Machine Learning ワークスペースの Azure Private Link を構成する (プレビュー)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-private-link)  
 
-   公開情報に記載のない利用方法 (例えば、Azure SQL Server の「ファイアウォールと仮想ネットワーク」機能の使用など) はサポートされておりません。また、[Azure Machine Learning Studio](https://ml.azure.com/) の *ノートブック* や *自動 ML* 、*データセット* 、*データのラベル付け* は、仮想ネットワークに配置したストレージの利用をサポートしておりません。[こちら](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-virtual-network) のサイトの注意書きを参照ください。  
+   公開情報に記載のない利用方法 (例えば、Azure SQL Server の「ファイアウォールと仮想ネットワーク」機能の使用など) はサポートされておりません。詳細につきましては [こちら](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-virtual-network) のサイトの注意書きを参照ください。  
    > ! Warning  
    If your underlying storage is in a virtual network, users will not be able to use Azure Machine Learning's studio web experience, including:
    >
@@ -121,6 +121,6 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 ***
 `変更履歴`  
 `2020/04/22 created by Mochizuki`  
-`2020/06/16 modified by Mochizuki`  
+`2020/06/18 modified by Mochizuki`  
 <br>
 ※ 適宜追加更新します。  
