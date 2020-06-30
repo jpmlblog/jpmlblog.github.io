@@ -88,10 +88,6 @@ Azure Machine Learning を使用して機械学習を開発するための API �
 - [Browse code samples](https://docs.microsoft.com/en-us/samples/browse/?products=azure-machine-learning-service)
 
 ***
-## 開発者向け参考サイト  
-
-
-***
 `変更履歴`  
 `2020/04/22 created by Mochizuki`  
 `2020/06/08 modified by Mochizuki`  

@@ -119,6 +119,18 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 </details>
 
 ***
+#### Enterprise エディションと Basic エディションの違いは？
+<details><summary style="font-size: 10pt">回答</summary>
+作成中
+
+https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-editions
+
+https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/
+
+
+</details>
+
+***
 `変更履歴`  
 `2020/04/22 created by Mochizuki`  
 `2020/06/18 modified by Mochizuki`  
