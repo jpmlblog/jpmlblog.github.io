@@ -1,5 +1,5 @@
 ---
-title: 参考となる公開情報について
+title: Azure Machine Learning の参考となる公開情報について
 date: 2020-04-22 12:00:00
 categories:
 - Azure Machine Learning 全般
