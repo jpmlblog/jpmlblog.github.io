@@ -27,15 +27,15 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 ### 仮想ネットワークの作成例
 [基本] タブの設定例です。仮想ネットワークはワークスペースと同じリソースグループに作成します。同じリソースグル―プの既存の仮想ネットワークでも使用可能です。名前、地域は任意です。  
 
-<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet1.png" width=500px>
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet1.png" width=600px>
 
 [IP アドレス] タブの設定例です。仮想ネットワークの IP アドレス帯は任意で変更可能です。サブネットはそのままで進めます。  
 
-![AML-create-vnet2.png](https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet2.png)
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet2.png" width=600px>
 
-[セキュリティ]、[タグ] タブも既定のまま進め、リソースを作成します。
+[セキュリティ]、[タグ] タブも既定のまま進め、リソースを作成します。  
 
-![AML-create-vnet3.png](https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png)
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png" width=600px>
 
 ### サブネットの作成例
 作成した仮想ネットワークでサブネットを作成します。名前、アドレス範囲は任意です。サブネットの委任に `Microsoft.ContainerInstance/containerGroups` を指定します。  
