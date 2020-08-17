@@ -26,8 +26,8 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
 ### 仮想ネットワークの作成例
 |[基本] タブの設定例です。仮想ネットワークはワークスペースと同じリソースグループに作成します。同じリソースグル―プの既存の仮想ネットワークでも使用可能です。名前、地域は任意です。|
-|---|
-|![AML-create-vnet1.png](https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet1.png)|
+|:--|
+|<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet1.png" width=300px>|
 
 [IP アドレス] タブの設定例です。仮想ネットワークの IP アドレス帯は任意で変更可能です。サブネットはそのままで進めます。  
 
