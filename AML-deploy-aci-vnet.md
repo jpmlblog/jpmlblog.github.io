@@ -32,9 +32,10 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
    <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet2.png" width=500px>  
 
-[セキュリティ]、[タグ] タブも既定のまま進めると下記の画面に進みます。手順例では、リソースグル―プ amlrg に amlvnet1 という仮想ネットワークが作成されます。  
+[セキュリティ]、[タグ] タブも既定のまま進めると下記の画面に進みます。手順例では、リソースグループ amlrg に amlvnet1 という仮想ネットワークが作成されます。  
 
    <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png" width=300px>  
+<br>
 
 ---
 ## サブネットの作成例
@@ -47,6 +48,7 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 ここまで進めると、amlvnet1 配下に default と amlsubnet1 サブネットが存在し、amlsubnet1 には委任先に Microsoft.ContainerInstance/containerGroups が設定されていることが確認できます。  
 
 <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet2.png" width=800px>  
+<br>
 
 ---
 ## 仮想ネットワークへのモデル デプロイ例
@@ -80,23 +82,24 @@ SDK を使用して作成する必要があります。[AciWebservice.deploy_con
    service.wait_for_deployment(show_output = True)
    ```
 
-作成された REST エンドポイントは、Azure Machine Learning ポータルの [エンドポイント] から確認できます。  
+作成された REST エンドポイントは、Azure Machine Learning ポータルの [エンドポイント] から確認できます。以下画像では REST エンドポイントは `http://10.0.1.4/score` となっています。  
 
-<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-aci.png" width=600px>  
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-aci.png" width=500px>  
+<br>
 
 ---
 ## 参考: Web サービスの動作確認例
 Web サービスと同じ仮想ネットワーク上にあるコンピュート インスタンスから Web リクエストを実行する方法を紹介します。まず、[こちらのサイト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network#compute-clusters--instances) を参照し、ネットワーク セキュリティ グループ (NSG) を作成します。下記画像ではリージョンの指定を省略しています。  
 
-<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-nsg.png" width=700px>  
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-nsg.png" width=800px>  
 
 作成した NSG を amlvnet1 の default サブネットに設定します。  
 
-<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-change-nsg.png" width=600px>  
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-change-nsg.png" width=500px>  
 
 amlvnet1 の default サブネットに Compute Instance を作成します。  
 
-<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-compute.png" width=600px>  
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-compute.png" width=500px>  
 
 作成したコンピュート インスタンス上で以下のコードを実行します。[こちら](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-consume-web-service#call-the-service-python) のサイトの手順が参考になります。  
 
@@ -116,6 +119,7 @@ headers = {'Content-Type': 'application/json'}
 resp = requests.post(scoring_uri, input_data , headers=headers)
 print(resp.text)
 ```
+<br>
 
 ***
 `変更履歴`  
