@@ -26,15 +26,15 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
 - [基本] タブの設定例です。仮想ネットワークはワークスペースと同じリソースグループに作成します。同じリソースグル―プの既存の仮想ネットワークでも使用可能です。名前、地域は任意です。  
 
-   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet1.png" width=500px>  
+   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet1.png" width=600px>  
 
 - [IP アドレス] タブの設定例です。仮想ネットワークの IP アドレス帯は任意で変更可能です。サブネットはそのままで進めます。  
 
-   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet2.png" width=500px>  
+   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet2.png" width=600px>  
 
 [セキュリティ]、[タグ] タブも既定のまま進めると下記の画面に進みます。手順例では、リソースグループ amlrg に amlvnet1 という仮想ネットワークが作成されます。  
 
-   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png" width=300px>  
+   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png" width=350px>  
 <br>
 
 ---
@@ -43,9 +43,9 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
 - サブネットの作成例です。名前、アドレス範囲は任意です。サブネットの委任に `Microsoft.ContainerInstance/containerGroups` を指定します。  
 
-   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet1.png" width=200px>  
+   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet1.png" width=250px>  
 
-ここまで進めると、amlvnet1 配下に default と amlsubnet1 サブネットが存在し、amlsubnet1 には委任先に Microsoft.ContainerInstance/containerGroups が設定されていることが確認できます。  
+ここまで進めると、amlvnet1 配下に default と amlsubnet1 サブネットが存在し、amlsubnet1 には委任先に `Microsoft.ContainerInstance/containerGroups` が設定されていることが確認できます。  
 
 <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet2.png" width=800px>  
 <br>
@@ -84,7 +84,7 @@ SDK を使用して作成する必要があります。[AciWebservice.deploy_con
 
 作成された REST エンドポイントは、Azure Machine Learning ポータルの [エンドポイント] から確認できます。以下画像では REST エンドポイントは `http://10.0.1.4/score` となっています。  
 
-<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-aci.png" width=500px>  
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-aci.png" width=600px>  
 <br>
 
 ---
