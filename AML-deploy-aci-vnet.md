@@ -47,7 +47,7 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
 ここまで進めると、amlvnet1 配下に default と amlsubnet1 サブネットが存在し、amlsubnet1 には委任先に `Microsoft.ContainerInstance/containerGroups` が設定されていることが確認できます。  
 
-<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet2.png" width=800px>  
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet2.png" width=750px>  
 <br>
 
 ---
