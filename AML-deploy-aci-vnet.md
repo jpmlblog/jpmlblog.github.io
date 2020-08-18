@@ -34,7 +34,7 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
 [セキュリティ]、[タグ] タブも既定のまま進めると下記の画面に進みます。手順例では、リソースグル―プ amlrg に amlvnet1 という仮想ネットワークが作成されます。  
 
-   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png" width=400px>  
+   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png" width=300px>  
 
 ---
 ## サブネットの作成例
@@ -42,7 +42,7 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
 - サブネットの作成例です。名前、アドレス範囲は任意です。サブネットの委任に `Microsoft.ContainerInstance/containerGroups` を指定します。  
 
-   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet1.png" width=300px>  
+   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet1.png" width=200px>  
 
 ここまで進めると、amlvnet1 配下に default と amlsubnet1 サブネットが存在し、amlsubnet1 には委任先に Microsoft.ContainerInstance/containerGroups が設定されていることが確認できます。  
 
