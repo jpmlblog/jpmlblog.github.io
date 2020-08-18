@@ -48,9 +48,11 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
 ---
 ## 2. 仮想ネットワークへのモデル デプロイ
-[こちらのサイト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance#using-the-sdk) のコードに vnet_name、subnet_name を追加して実行します。なお、location を指定しない場合 westus が設定されるため、仮想ネットワークが westus 以外の場合には location を指定する必要があります。  
+SDK を使用して作成する必要があります。[AciWebservice.deploy_configuration()](https://docs.microsoft.com/ja-jp/python/api/azureml-core/azureml.core.webservice.aci.aciwebservice?view=azure-ml-py#deploy-configuration-cpu-cores-none--memory-gb-none--tags-none--properties-none--description-none--location-none--auth-enabled-none--ssl-enabled-none--enable-app-insights-none--ssl-cert-pem-file-none--ssl-key-pem-file-none--ssl-cname-none--dns-name-label-none--primary-key-none--secondary-key-none--collect-model-data-none--cmk-vault-base-url-none--cmk-key-name-none--cmk-key-version-none--vnet-name-none--subnet-name-none-) 関数の vnet_name、subnet_name に作成した仮想ネットワークとサブネットを指定します。具体的な手順は以下を参照ください。  
 
 ### ACI へのデプロイ例
+「[Azure Container Instances にモデルをデプロイする - SDK を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance#using-the-sdk)」 のコードに vnet_name、subnet_name を追加して実行します。なお、location を指定しない場合 westus が設定されるため、仮想ネットワークが westus 以外の場合には location を指定する必要があります。  
+
 上記公開情報では [model]、inference_config が事前に設定されていることが前提となっています。ここではモデル model.pkl、Conda 依存関係ファイル myenv.yml、エントリ スクリプト ファイル score.py を使用して作成する方法を紹介します。  
 
 ```Python
