@@ -37,15 +37,16 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
 - [セキュリティ]、[タグ] タブも既定のまま進め、リソースを作成します。  
 
-   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png" width=500px>  
+   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png" width=400px>  
 
 ### サブネットの作成例
 「[サブネットの委任を追加または削除する - サブネットを Azure サービスに委任する](https://docs.microsoft.com/ja-jp/azure/virtual-network/manage-subnet-delegation#delegate-a-subnet-to-an-azure-service)」 の手順に従って進めます。  
-作成した仮想ネットワークでサブネットを作成します。名前、アドレス範囲は任意です。サブネットの委任に `Microsoft.ContainerInstance/containerGroups` を指定します。  
 
-<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet1.png" width=60%>  
+- 作成した仮想ネットワークでサブネットを作成します。名前、アドレス範囲は任意です。サブネットの委任に `Microsoft.ContainerInstance/containerGroups` を指定します。  
 
-<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet2.png" width=60%> 
+   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet1.png" width=350px>  
+
+   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet2.png" width=600px>  
 
 ---
 ## 仮想ネットワークへのモデル デプロイ
