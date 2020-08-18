@@ -21,10 +21,7 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 - [Azure Container Instances (ACI) を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network#use-azure-container-instances-aci)  
 
 ---
-## 仮想ネットワークの作成
-仮想ネットワークにサブネットを追加、[サブネットの委任] を設定します。具体的な手順は以下を参照ください。  
-
-### 仮想ネットワークの作成例
+## 仮想ネットワークの作成例
 「[サブネットの委任を追加または削除する - 仮想ネットワークの作成](https://docs.microsoft.com/ja-jp/azure/virtual-network/manage-subnet-delegation#create-the-virtual-network)」 の手順に従って進めます。  
 
 - [基本] タブの設定例です。仮想ネットワークはワークスペースと同じリソースグループに作成します。同じリソースグル―プの既存の仮想ネットワークでも使用可能です。名前、地域は任意です。  
@@ -35,68 +32,71 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
    <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet2.png" width=500px>  
 
-- [セキュリティ]、[タグ] タブも既定のまま進め、リソースを作成します。  
+[セキュリティ]、[タグ] タブも既定のまま進めると下記の画面に進みます。手順例では、リソースグル―プ amlrg に amlvnet1 という仮想ネットワークが作成されます。  
 
    <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png" width=400px>  
 
-### サブネットの作成例
-「[サブネットの委任を追加または削除する - サブネットを Azure サービスに委任する](https://docs.microsoft.com/ja-jp/azure/virtual-network/manage-subnet-delegation#delegate-a-subnet-to-an-azure-service)」 の手順に従って進めます。  
+---
+## サブネットの作成例
+作成した仮想ネットワークにサブネットを作成します。「[サブネットの委任を追加または削除する - サブネットを Azure サービスに委任する](https://docs.microsoft.com/ja-jp/azure/virtual-network/manage-subnet-delegation#delegate-a-subnet-to-an-azure-service)」 の手順に従って進めます。  
 
-- 作成した仮想ネットワークでサブネットを作成します。名前、アドレス範囲は任意です。サブネットの委任に `Microsoft.ContainerInstance/containerGroups` を指定します。  
+- サブネットの作成例です。名前、アドレス範囲は任意です。サブネットの委任に `Microsoft.ContainerInstance/containerGroups` を指定します。  
 
-   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet1.png" width=350px>  
+   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet1.png" width=300px>  
 
-   <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet2.png" width=600px>  
+ここまで進めると、amlvnet1 配下に default と amlsubnet1 サブネットが存在し、amlsubnet1 には委任先に Microsoft.ContainerInstance/containerGroups が設定されていることが確認できます。  
+
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-subnet2.png" width=800px>  
 
 ---
-## 仮想ネットワークへのモデル デプロイ
-SDK を使用して作成する必要があります。[AciWebservice.deploy_configuration()](https://docs.microsoft.com/ja-jp/python/api/azureml-core/azureml.core.webservice.aci.aciwebservice?view=azure-ml-py#deploy-configuration-cpu-cores-none--memory-gb-none--tags-none--properties-none--description-none--location-none--auth-enabled-none--ssl-enabled-none--enable-app-insights-none--ssl-cert-pem-file-none--ssl-key-pem-file-none--ssl-cname-none--dns-name-label-none--primary-key-none--secondary-key-none--collect-model-data-none--cmk-vault-base-url-none--cmk-key-name-none--cmk-key-version-none--vnet-name-none--subnet-name-none-) 関数の vnet_name、subnet_name に作成した仮想ネットワークとサブネットを指定します。具体的な手順は以下を参照ください。  
+## 仮想ネットワークへのモデル デプロイ例
+SDK を使用して作成する必要があります。[AciWebservice.deploy_configuration()](https://docs.microsoft.com/ja-jp/python/api/azureml-core/azureml.core.webservice.aci.aciwebservice?view=azure-ml-py#deploy-configuration-cpu-cores-none--memory-gb-none--tags-none--properties-none--description-none--location-none--auth-enabled-none--ssl-enabled-none--enable-app-insights-none--ssl-cert-pem-file-none--ssl-key-pem-file-none--ssl-cname-none--dns-name-label-none--primary-key-none--secondary-key-none--collect-model-data-none--cmk-vault-base-url-none--cmk-key-name-none--cmk-key-version-none--vnet-name-none--subnet-name-none-) 関数の引数 vnet_name、subnet_name に作成した仮想ネットワークとサブネットを指定して deployment_config を作成し、[Model.deploy()](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.model.model?view=azure-ml-py#deploy-workspace--name--models--inference-config-none--deployment-config-none--deployment-target-none--overwrite-false-) に指定して実行します。具体的な手順は以下を参照ください。  
 
-### ACI へのデプロイ例
-「[Azure Container Instances にモデルをデプロイする - SDK を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance#using-the-sdk)」 のコードに vnet_name、subnet_name を追加して実行します。なお、location を指定しない場合 westus が設定されるため、仮想ネットワークが westus 以外の場合には location を指定する必要があります。  
+- [Model.deploy()](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.model.model?view=azure-ml-py#deploy-workspace--name--models--inference-config-none--deployment-config-none--deployment-target-none--overwrite-false-) の実行には models や inference_config を事前に設定している必要があります。以下に、モデル ファイル model.pkl、Conda 依存関係ファイル myenv.yml、エントリ スクリプト ファイル score.py を基にして、それぞれ設定するコード スニペットを紹介します。    
 
-上記公開情報では [model]、inference_config が事前に設定されていることが前提となっています。ここではモデル model.pkl、Conda 依存関係ファイル myenv.yml、エントリ スクリプト ファイル score.py を使用して作成する方法を紹介します。  
+   ```Python
+   from azureml.core import Workspace
+   from azureml.core import Environment
+   from azureml.core.model import Model
+   from azureml.core.model import InferenceConfig
+   
+   ws = Workspace.from_config()
+   model = Model.register(model_path="model.pkl",
+                          model_name="mymodel",
+                          workspace=ws)
+   env = Environment.from_conda_specification(name='myenv', file_path='myenv.yml')
+   inference_config = InferenceConfig(entry_script="score.py", environment=env)
+   ```
 
-```Python
-from azureml.core import Workspace
-from azureml.core import Environment
-from azureml.core.model import Model
-from azureml.core.model import InferenceConfig
+- 「[Azure Container Instances にモデルをデプロイする - SDK を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance#using-the-sdk)」 のコードに vnet_name、subnet_name を追加して実行します。なお、location を指定しない場合 westus が設定されるため、仮想ネットワークが westus 以外の場合には location を指定する必要があります。以下にコード スニペットを紹介します。  
 
-ws = Workspace.from_config()
-model = Model.register(model_path="model.pkl",
-                       model_name="mymodel",
-                       workspace=ws)
-env = Environment.from_conda_specification(name='myenv', file_path='myenv.yml')
-inference_config = InferenceConfig(entry_script="score.py", environment=env)
-```
-
-```Python
-from azureml.core.webservice import AciWebservice, Webservice
-from azureml.core.model import Model
-
-deployment_config = AciWebservice.deploy_configuration(cpu_cores = 1, memory_gb = 1,
-    location = "japaneast", vnet_name = "amlvnet1", subnet_name = "amlsubnet1")
-service = Model.deploy(ws, "aciservice", [model], inference_config, deployment_config)
-service.wait_for_deployment(show_output = True)
-```
+   ```Python
+   from azureml.core.webservice import AciWebservice, Webservice
+   from azureml.core.model import Model
+   
+   deployment_config = AciWebservice.deploy_configuration(cpu_cores = 1, memory_gb = 1,
+       location = "japaneast", vnet_name = "amlvnet1", subnet_name = "amlsubnet1")
+   service = Model.deploy(ws, "aciservice", [model], inference_config, deployment_config)
+   service.wait_for_deployment(show_output = True)
+   ```
 
 作成された REST エンドポイントは、Azure Machine Learning ポータルの [エンドポイント] から確認できます。  
 
-![AML-create-aci.png](https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-aci.png)  
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-aci.png" width=600px>  
 
-### Web サービスの動作確認例
+---
+## 参考: Web サービスの動作確認例
 Web サービスと同じ仮想ネットワーク上にあるコンピュート インスタンスから Web リクエストを実行する方法を紹介します。まず、[こちらのサイト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network#compute-clusters--instances) を参照し、ネットワーク セキュリティ グループ (NSG) を作成します。下記画像ではリージョンの指定を省略しています。  
 
-![AML-create-nsg.png](https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-nsg.png)  
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-nsg.png" width=700px>  
 
 作成した NSG を amlvnet1 の default サブネットに設定します。  
 
-![AML-change-nsg.png](https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-change-nsg.png)  
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-change-nsg.png" width=600px>  
 
 amlvnet1 の default サブネットに Compute Instance を作成します。  
 
-![AML-create-compute.png](https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-compute.png)  
+<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-compute.png" width=600px>  
 
 作成したコンピュート インスタンス上で以下のコードを実行します。[こちら](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-consume-web-service#call-the-service-python) のサイトの手順が参考になります。  
 
