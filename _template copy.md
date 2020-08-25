@@ -11,7 +11,9 @@ Azure Machine Learning の機能について、不明点のお問い合わせや
 <br>
 
 ***
-## 製品不具合の報告
+## 機能改善要望
+
+
 下記サイトを参考に、Azure サポート リクエストを発行ください。技術に関する
 
 - [Azure サポート要求を作成する](https://docs.microsoft.com/ja-jp/azure/azure-portal/supportability/how-to-create-azure-support-request)
