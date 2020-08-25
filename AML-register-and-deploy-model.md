@@ -1,6 +1,6 @@
 ---
 title: Azure Machine Learning Studio でモデル登録およびデプロイする場合の留意点について
-date: 2020-08-25 12:00:00
+date: 2020-08-25 17:00:00
 categories:
 - Azure Machine Learning
 tags:
@@ -20,11 +20,11 @@ Azure Machine Learning Studio (https://ml.azure.com/) のユーザー インタ�
 ## モデルの登録
 Azure Machine Learning Studio (https://ml.azure.com/) の [アセット] - [モデル] の [+ モデルの登録] をクリックします。  
 
-<img src="https://jpmlblog.github.io/images/AML-model-register-and-deploy/Register-model-button.png" width=600px>  
+<img src="https://jpmlblog.github.io/images/AML-register-and-deploy-model/Register-model-button.png" width=600px>  
 
 表示された入力項目のうち、* マークのある項目を全て埋めて [登録] ボタンをクリックします。  
 
-<img src="https://jpmlblog.github.io/images/AML-model-register-and-deploy/Register-model-config.png" width=500px>  
+<img src="https://jpmlblog.github.io/images/AML-register-and-deploy-model/Register-model-config.png" width=500px>  
 
 この時、以下の点に留意ください。
 
@@ -36,11 +36,11 @@ Azure Machine Learning Studio (https://ml.azure.com/) の [アセット] - [モ�
 ## モデルのデプロイ
 Azure Machine Learning Studio (https://ml.azure.com/) の [アセット] - [モデル] より、登録されているモデルをクリックします。  
 
-<img src="https://jpmlblog.github.io/images/AML-model-register-and-deploy/Deploy-model-button.png" width=500px>  
+<img src="https://jpmlblog.github.io/images/AML-register-and-deploy-model/Deploy-model-button.png" width=500px>  
 
 表示された入力項目のうち、* マークのある項目を全て埋めて [登録] ボタンをクリックします。  
 
-<img src="https://jpmlblog.github.io/images/AML-model-register-and-deploy/Deploy-model-config.png" width=500px>  
+<img src="https://jpmlblog.github.io/images/AML-register-and-deploy-model/Deploy-model-config.png" width=500px>  
 
 この時、以下の点に留意ください。  
 
@@ -50,9 +50,11 @@ Azure Machine Learning Studio (https://ml.azure.com/) の [アセット] - [モ�
 - エントリ スクリプト ファイルのモデル指定に誤りがあったり、Conda 依存関係ファイルが誤っていると、デプロイ操作がエラーの表示なく長時間完了しない場合があります。デプロイ先のリソースにエラーが記録されている場合がありますので、厳密な調査が必要となりましたら、モデルファイル、エントリ スクリプト ファイル、Conda 依存関係ファイルと共にサポート リクエストを発行ください。  
 <br>
 
-### 自動 ML (Automated Machine Learning) のモデルのデプロイ 
-自動 ML の実行結果からモデルをデプロイする場合、エントリ スクリプト ファイルおよび Conda 依存関係ファイルを指定する必要はありません。具体的な操作内容は、下記サイトを参照ください。
+### 参考: 自動 ML (Automated Machine Learning) のモデルのデプロイ 
+自動 ML の実行結果からモデルをデプロイする場合、エントリ スクリプト ファイルおよび Conda 依存関係ファイルを指定する必要はありません。具体的な操作内容は下記サイトを参照ください。
 
 - [モデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-use-automated-ml-for-ml-models#deploy-your-model)
 
 ***
+`変更履歴`  
+`2020/08/25 created by Mochizuki`  
