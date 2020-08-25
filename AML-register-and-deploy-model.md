@@ -20,11 +20,11 @@ Azure Machine Learning Studio (https://ml.azure.com/) のユーザー インタ�
 ## モデルの登録
 Azure Machine Learning Studio (https://ml.azure.com/) の [アセット] - [モデル] の [+ モデルの登録] をクリックします。  
 
-<img src="https://jpmlblog.github.io/images/AML-register-and-deploy-model/Register-model-button.png" width=600px>  
+<img src="https://jpmlblog.github.io/images/AML-register-and-deploy-model/Register-model-button.png" width=500px>  
 
 表示された入力項目のうち、* マークのある項目を全て埋めて [登録] ボタンをクリックします。  
 
-<img src="https://jpmlblog.github.io/images/AML-register-and-deploy-model/Register-model-config.png" width=500px>  
+<img src="https://jpmlblog.github.io/images/AML-register-and-deploy-model/Register-model-config.png" width=400px>  
 
 この時、以下の点に留意ください。
 
@@ -40,7 +40,7 @@ Azure Machine Learning Studio (https://ml.azure.com/) の [アセット] - [モ�
 
 表示された入力項目のうち、* マークのある項目を全て埋めて [登録] ボタンをクリックします。  
 
-<img src="https://jpmlblog.github.io/images/AML-register-and-deploy-model/Deploy-model-config.png" width=500px>  
+<img src="https://jpmlblog.github.io/images/AML-register-and-deploy-model/Deploy-model-config.png" width=400px>  
 
 この時、以下の点に留意ください。  
 
