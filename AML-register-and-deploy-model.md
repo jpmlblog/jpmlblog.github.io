@@ -49,7 +49,6 @@ Azure Machine Learning Studio (https://ml.azure.com/) の [アセット] - [モ�
    (参考情報) [推論構成を定義する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-and-where?tabs=python#define-an-inference-configuration)  
 
 - エントリ スクリプト ファイルのモデル指定に誤りがあったり、Conda 依存関係ファイルが誤っていると、デプロイ操作がエラーの表示なく長時間完了しない場合があります。デプロイ先のリソースにエラーが記録されている場合がありますので、厳密な調査が必要となりましたら、モデルファイル、エントリ スクリプト ファイル、Conda 依存関係ファイルと共にサポート リクエストを発行ください。  
-<br>
 
 <b><u>(参考) 自動 ML (Automated Machine Learning) のモデルのデプロイ</b></u>  
 自動 ML の実行結果からモデルをデプロイする場合、エントリ スクリプト ファイルおよび Conda 依存関係ファイルを指定する必要はありません。具体的な操作内容は下記サイトを参照ください。  
