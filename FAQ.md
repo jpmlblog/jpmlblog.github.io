@@ -119,8 +119,24 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 </details>
 
 ***
+#### リソース名に平仮名や漢字を使用可能か
+<details><summary style="font-size: 10pt">回答</summary>
+使用可能な文字はありますが、予期せぬエラーが発生しリソース作成が失敗する場合があるため、推奨しません。  
+
+リソース グループ名やリソース名には、有効な文字を指定させていただいております。下記情報に従い、リソース グループ名を英数字とハイフンのみを使用して作成ください。  
+ 
+- [Microsoft.MachineLearningServices](https://docs.microsoft.com/ja-jp/azure/azure-resource-manager/management/resource-name-rules#microsoftmachinelearningservices)
+   > Microsoft.MachineLearningServices  
+   >|Entity|Scope|長さ|有効な文字|  
+   >|:-----|:----|:---|:--------|  
+   >|workspaces|resource group|3-33|英数字とハイフン。|  
+   >|workspaces / computes|ワークスペース|2-16|英数字とハイフン。|  
+</details>
+
+***
 `変更履歴`  
 `2020/04/22 created by Mochizuki`  
-`2020/06/18 modified by Mochizuki`  
+`2020/06/18 modified by Mochizuki` 
+`2020/08/26 modified by Mochizuki` 
 <br>
 ※ 適宜追加更新します。  

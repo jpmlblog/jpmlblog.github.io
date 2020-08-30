@@ -1,0 +1,69 @@
+---
+title: 情報採取手順
+date: 2020-08-31 12:00:00
+categories:
+- Azure Machine Learning
+tags:
+- 情報採取手順
+---
+Azure Machine Learning のポータル (https://ml.azure.com/) 利用時に、HTTP エラーなどネットワーク関連のエラーが発生した場合の、情報採取手順を紹介します。  
+<!-- more -->
+<br>
+
+***
+## 対象
+事象の再現が可能な端末 (OS: Windows 10 の各バージョン)
+
+## 事前準備
+[こちら](https://jpmlblog.github.io//files/CollectInfo_AzureConnection.txt "CollectInfo_AzureConnection.txt") から CollectInfo_AzureConnection.txt ファイルをダウンロードし、拡張子を .txt から .bat に変更、実施対象の任意の場所に格納します。  
+
+<実施対象に以下が存在する状態>  
+・ [任意の場所]\CollectInfo_AzureConnection.bat ファイル
+
+## 影響
+ログを採取することで負荷が上がる可能性は考えられますが、基本的に OS リソースや処理への影響はありません。 
+
+## 実行手順
+(1) 再現確認用マシンに管理者アカウントでログオンします。  
+(2) CollectInfo_AzureConnection.bat ファイルを右クリックし、[管理者として実行] を選択します。  
+(3) "実行したい番号を入力ください" メッセージに 1 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
+
+※ CollectInfo_AzureConnection.bat のコマンド プロンプトは起動したままにしておきます。  
+
+(4) Microsoft Edge (Chromium) または Chrome を起動します。  
+
+※ (5) ～ (11) の手順は 「[トラブルシューティングのためにブラウザー トレースをキャプチャする](https://docs.microsoft.com/ja-jp/azure/azure-portal/capture-browser-trace)」 の内容を参考にしています。上記以外のブラウザーを使用する場合、こちらのサイトを参考に実行ください。  
+
+(5) F12 キーを押下し、デベロッパー ツールを起動します。  
+(6) [Network]タブを選択し、[Preserve log] を選択します。  
+![chromium-network-preserve-log.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-network-preserve-log.png)  
+
+(7) [Console] タブを選択し、[Console settings] を選択してから、[Preserve Log] を選択します。[Console settings] をもう一度選択して、設定ペインを閉じます。  
+![chromium-console-preserve-log.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-console-preserve-log.png)  
+
+(8) [Network] タブを選択し、 [Stop recording network log] と [Clear] を選択します。  
+![chromium-stop-clear-session.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-stop-clear-session.png)  
+
+(9) [Record network log] を選択して、問題を再現します。  
+![chromium-start-session.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-start-session.png)  
+
+※ 事象の再現を確認、そのまま十数秒ほど待ちます。  
+
+(10) [Stop recording network log] を選択し、 [Export HAR] を選択して任意の場所に .har ファイルを保存します。  
+![chromium-network-export-har.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-network-export-har.png)  
+
+(11) [Console](コンソール) タブを選択します。いずれかのメッセージを右クリックし、 [Save as...] を選択して、任意の場所に .log ファイルを保存します。  
+![chromium-console-select.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-console-select.png)  
+
+※ 以下、CollectInfo_AzureConnection.bat のコマンド プロンプトにて再度操作を実施します。  
+
+(12) "実行したい番号を入力ください" メッセージに 2 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
+(13) "実行したい番号を入力ください" メッセージに 3 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
+(14) "実行したい番号を入力ください" メッセージに q を入力、リターン キーを押下してツールを終了します。  
+(15) 手順 (10) および (11) で保存したファイルと、デスクトップ上 <YYYYMMDD 形式の年月日>_<ホスト名>_info フォルダーをまとめて ZIP 圧縮し、お問い合わせいただく際にご提供ください。  
+
+***
+本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
+
+`変更履歴`  
+`9999/12/31 created by ******`
