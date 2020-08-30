@@ -13,8 +13,10 @@ Internet Explorer 11 利用時に確認できている現象について紹介�
 ***
 Azure Machine Learning ワークスペースの作成が Internet Explorer 11 失敗するといった報告が複数件寄せられております。  
 
-※ 下記表示のまま、状態が遷移しません。  
-<img src="https://jpmlblog.github.io/images/AML-IE11/Create-workspace-error.png" width=600px>  
+<div style="text-align: center;">
+※ 下記表示のまま、状態が遷移しません。 
+<img src="https://jpmlblog.github.io/images/AML-IE11/Create-workspace-error.png" width=600px>
+</div>    
 
 また、Azure Machine Learning ポータル (https://ml.azure.com/) の操作においても予期しないエラーが発生するといった報告もございます。これらの事象は、別のブラウザ (Microsoft Edge または Chrome) を使用することで回避できる可能性があります。  
 
