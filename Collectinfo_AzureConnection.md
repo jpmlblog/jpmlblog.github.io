@@ -36,23 +36,29 @@ Azure Machine Learning のポータル (https://ml.azure.com/) 利用時に、HT
 
 (5) F12 キーを押下し、デベロッパー ツールを起動します。  
 (6) [Network]タブを選択し、[Preserve log] を選択します。  
+
 ![chromium-network-preserve-log.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-network-preserve-log.png)  
 
 (7) [Console] タブを選択し、[Console settings] を選択してから、[Preserve Log] を選択します。[Console settings] をもう一度選択して、設定ペインを閉じます。  
+
 ![chromium-console-preserve-log.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-console-preserve-log.png)  
 
 (8) [Network] タブを選択し、 [Stop recording network log] と [Clear] を選択します。  
+
 ![chromium-stop-clear-session.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-stop-clear-session.png)  
 
 (9) [Record network log] を選択して、問題を再現します。  
+
 ![chromium-start-session.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-start-session.png)  
 
 ※ 事象の再現を確認、そのまま十数秒ほど待ちます。  
 
 (10) [Stop recording network log] を選択し、 [Export HAR] を選択して任意の場所に .har ファイルを保存します。  
+
 ![chromium-network-export-har.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-network-export-har.png)  
 
 (11) [Console](コンソール) タブを選択します。いずれかのメッセージを右クリックし、 [Save as...] を選択して、任意の場所に .log ファイルを保存します。  
+
 ![chromium-console-select.png](https://docs.microsoft.com/ja-jp/azure/azure-portal/media/capture-browser-trace/chromium-console-select.png)  
 
 ※ 以下、CollectInfo_AzureConnection.bat のコマンド プロンプトにて再度操作を実施します。  
