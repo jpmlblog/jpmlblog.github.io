@@ -6,7 +6,7 @@ categories:
 tags:
 - 情報採取手順
 ---
-Azure Machine Learning のポータル (https://ml.azure.com/) 利用時に、HTTP エラーなどネットワーク関連のエラーが発生した場合の、情報採取手順を紹介します。  
+Azure サービスのご利用時に、HTTP ステータス コードなどネットワーク関連のエラーが表示される場合があります。問題の調査にはネットワーク関連の情報が必要となりますので、汎用的な情報採取手順を紹介します。  
 <!-- more -->
 <br>
 
@@ -26,7 +26,7 @@ Azure Machine Learning のポータル (https://ml.azure.com/) 利用時に、HT
 ## 実行手順
 (1) 再現確認用マシンに管理者アカウントでログオンします。  
 (2) CollectInfo_AzureConnection.bat ファイルを右クリックし、[管理者として実行] を選択します。  
-(3) "実行したい番号を入力ください" メッセージに 1 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
+(3) "Please enter the number you want to execute. Enter q to quit tool." メッセージに 1 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
 
 ※ CollectInfo_AzureConnection.bat のコマンド プロンプトは起動したままにしておきます。  
 
@@ -63,9 +63,9 @@ Azure Machine Learning のポータル (https://ml.azure.com/) 利用時に、HT
 
 ※ 以下、CollectInfo_AzureConnection.bat のコマンド プロンプトにて再度操作を実施します。  
 
-(12) "実行したい番号を入力ください" メッセージに 2 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
-(13) "実行したい番号を入力ください" メッセージに 3 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
-(14) "実行したい番号を入力ください" メッセージに q を入力、リターン キーを押下してツールを終了します。  
+(12) "Please enter the number you want to execute. Enter q to quit tool." メッセージに 2 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
+(13) "Please enter the number you want to execute. Enter q to quit tool." メッセージに 3 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
+(14) "Please enter the number you want to execute. Enter q to quit tool." メッセージに q を入力、リターン キーを押下してツールを終了します。  
 (15) 手順 (10) および (11) で保存したファイル (拡張子 .har および .log のファイル) と、デスクトップ上 <YYYYMMDD 形式の年月日>_<ホスト名>_info フォルダーをまとめて ZIP 圧縮し、お問い合わせいただく際にご提供ください。  
 
 ※ サポート リクエストに関する参考情報  
