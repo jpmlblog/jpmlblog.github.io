@@ -26,7 +26,7 @@ Azure サービスのご利用時に、HTTP ステータス コードなどネ�
 ## 実行手順
 (1) 再現確認用マシンに管理者アカウントでログオンします。  
 (2) CollectInfo_AzureConnection.bat ファイルを右クリックし、[管理者として実行] を選択します。  
-(3) "Please enter the number you want to execute. Enter q to quit tool." メッセージに 1 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
+(3) "Please enter the number you want to execute. Enter q to quit tool." メッセージに `1` を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
 
 ※ CollectInfo_AzureConnection.bat のコマンド プロンプトは起動したままにしておきます。  
 
@@ -63,10 +63,10 @@ Azure サービスのご利用時に、HTTP ステータス コードなどネ�
 
 ※ 以下、CollectInfo_AzureConnection.bat のコマンド プロンプトにて再度操作を実施します。  
 
-(12) "Please enter the number you want to execute. Enter q to quit tool." メッセージに 2 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
-(13) "Please enter the number you want to execute. Enter q to quit tool." メッセージに 3 を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
-(14) "Please enter the number you want to execute. Enter q to quit tool." メッセージに q を入力、リターン キーを押下してツールを終了します。  
-(15) 手順 (10) および (11) で保存したファイル (拡張子 .har および .log のファイル) と、デスクトップ上 <YYYYMMDD 形式の年月日>_<ホスト名>_info フォルダーをまとめて ZIP 圧縮し、お問い合わせいただく際にご提供ください。  
+(12) "Please enter the number you want to execute. Enter q to quit tool." メッセージに `2` を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
+(13) "Please enter the number you want to execute. Enter q to quit tool." メッセージに `3` を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
+(14) "Please enter the number you want to execute. Enter q to quit tool." メッセージに `q` を入力、リターン キーを押下してツールを終了します。  
+(15) 手順 (10) および (11) で保存したファイル (拡張子 .har および .log のファイル) と、デスクトップ上 `<YYYYMMDD 形式の年月日>_<ホスト名>_info` フォルダーをまとめて ZIP 圧縮し、お問い合わせいただく際にご提供ください。  
 
 ※ サポート リクエストに関する参考情報  
 ・ [Azure サポート要求を作成する](https://docs.microsoft.com/ja-jp/azure/azure-portal/supportability/how-to-create-azure-support-request)  
@@ -77,4 +77,4 @@ Azure サービスのご利用時に、HTTP ステータス コードなどネ�
 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 
 `変更履歴`  
-`2020/08/31 created by Mochizuki
+`2020/08/31 created by Mochizuki`
