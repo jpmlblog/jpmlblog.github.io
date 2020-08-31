@@ -30,7 +30,7 @@ Azure サービスのご利用時に、HTTP ステータス コードなどネ�
 
 ※ CollectInfo_AzureConnection.bat のコマンド プロンプトは起動したままにしておきます。  
 
-(4) Microsoft Edge (Chromium) または Chrome を起動します。  
+(4) Microsoft Edge (Chromium) または Chrome を起動し、問題が再現する操作の直前まで画面を進めます。  
 
 ※ (5) ～ (11) の手順は 「[トラブルシューティングのためにブラウザー トレースをキャプチャする](https://docs.microsoft.com/ja-jp/azure/azure-portal/capture-browser-trace)」 の内容を参考にしています。上記以外のブラウザーを使用する場合、こちらのサイトを参考に実行ください。  
 
