@@ -6,12 +6,13 @@ categories:
 tags:
 - Internet Explorer 11
 ---
-Internet Explorer 11 利用時に確認できている現象について紹介します。
+Internet Explorer 11 (IE11) 利用時に発生する現象について紹介します。
 <!-- more -->
 <br>
 
 ***
-Azure Machine Learning ワークスペースの作成が失敗するといった報告が複数件寄せられております。この事象は、Azure ポータルを Internet Explorer 11 で開いてリソース作成を行った場合に発生することが確認できております。  
+## IE11 関連事例について
+Azure ポータルで Azure Machine Learning ワークスペースの作成が失敗するといった報告が複数件寄せられております。この事象は、Azure ポータルを Internet Explorer 11 で開いてリソース作成を行った場合に発生することが確認できております。  
 
 <div style="text-align: center;">
 (再現時、下記表示のまま状態が遷移しません)
@@ -23,6 +24,12 @@ Azure Machine Learning ワークスペースの作成が失敗するといった
 Internet Explorer 11 は弊社サービスに限らず幅広い Web サービスで、順次サポート対象外になる予定です。恐れ入りますが、現段階で Microsoft Edge などへの移行をご検討ください。  
  
 - [Microsoft 365 アプリの Internet Explorer 11 のサポート終了と Windows 10 での Microsoft Edge レガシー版のサービス終了](https://blogs.windows.com/japan/2020/08/18/microsoft-365-apps-say-farewell-to-internet-explorer-11/)
+
+***
+## その他のブラウザーの事例について
+Microsoft Edge および Chrome のご利用環境において、Azure Machine Learning ポータルの一部のメニューが表示されなかったり、機能の実行が失敗するなどといった事象が報告されています。こうした事象は古いバージョンのブラウザーを使用していることに起因している可能性があるため、原因の切り分けとして以下の対処の実施をご検討ください。
+- ブラウザーを最新バージョンにアップデートする
+- 別のブラウザーを使用する
 
 ***
 `変更履歴`  
