@@ -14,9 +14,10 @@ Azure Machine Learninig のご利用にあたり、参考となる公開情報�
 ***
 ## Azure Machine Learning 関連サイト  
 
-Azure Machine Learning の技術ドキュメント、価格、更新情報など。専用ポータルは [こちら](https://ml.azure.com/)。
+Azure Machine Learning の技術ドキュメント、価格、更新情報など。専用ポータルは [こちら (https://ml.azure.com/)](https://ml.azure.com/)。
 
 - [Azure Machine Learning のドキュメント](https://docs.microsoft.com/ja-jp/azure/machine-learning/)  
+- [Azure Machine Learning デザイナーのアルゴリズムとモジュールのリファレンス (プレビュー)](https://docs.microsoft.com/ja-jp/azure/machine-learning/algorithm-module-reference/module-reference)  
 - [Azure Machine Learning のリリース ノート](https://docs.microsoft.com/ja-jp/azure/machine-learning/azure-machine-learning-release-notes)  
 - [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
 - [Azure Machine Learning の既知の問題とトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/resource-known-issues)  
@@ -32,9 +33,10 @@ Azure Machine Learning の技術ドキュメント、価格、更新情報など
 ***
 ## Azure Machine Learning Studio (Classic) 関連サイト  
 
-Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、更新情報など。専用ポータルは [こちら](https://studio.azureml.net/)。
+Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、更新情報など。専用ポータルは [こちら (https://studio.azureml.net/)](https://studio.azureml.net/)。
 
 - [Azure Machine Learning Studio (classic) のドキュメント](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/)  
+- [Azure Machine Learning Studio (クラシック): アルゴリズムとモジュールのヘルプ](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio-module-reference/)  
 - [Machine Learning Studio の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning-studio/)  
 - [Azure の更新情報 (?product=machine-learning-studio)](https://azure.microsoft.com/ja-jp/updates/?product=machine-learning-studio)  
 
@@ -82,15 +84,17 @@ Azure Machine Learning を使用して機械学習を開発するための API �
 
 - [Azure Machine Learning SDK for Python とは](https://docs.microsoft.com/ja-jp/python/api/overview/azure/ml/?view=azure-ml-py)  
 - [Python notebooks with ML and deep learning examples with Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks)
-- [Azure Machine Learning デザイナーのアルゴリズムとモジュールのリファレンス (プレビュー)](https://docs.microsoft.com/ja-jp/azure/machine-learning/algorithm-module-reference/module-reference)  
 - [機械学習 REST API リファレンス](https://docs.microsoft.com/ja-jp/rest/api/azureml/)  
 - [Azure Machine Learning 用の CLI 拡張機能を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/reference-azure-machine-learning-cli)  
 - [Browse code samples](https://docs.microsoft.com/en-us/samples/browse/?products=azure-machine-learning-service)
 
 ***
+
 `変更履歴`  
 `2020/04/22 created by Mochizuki`  
 `2020/06/08 modified by Mochizuki`  
 `2020/06/18 modified by Mochizuki`  
+`2020/09/08 modified by Mochizuki`  
 <br>
+※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 適宜追加更新します。  

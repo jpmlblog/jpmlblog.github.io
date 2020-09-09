@@ -14,7 +14,6 @@ tags:
 ***
 #### 製品を理解するために参考となる公開情報を教えて欲しい
 <details><summary style="font-size: 10pt">回答</summary>
-
 別途ブログ記事として掲載しております。以下リンクより参照ください。  
 [参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)  
 </details>
@@ -22,7 +21,6 @@ tags:
 ***
 #### Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
 <details><summary style="font-size: 10pt">回答</summary>
-
 不可能です。参考となる情報を紹介します。  
 [Azure Machine Learning ワークスペースとは (#workspace-management)](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#workspace-management)  
 > ! 警告  
@@ -32,7 +30,6 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
 ***
 #### セキュリティ要件のため各リソースへのアクセスを制限することは可能か
 <details><summary style="font-size: 10pt">回答</summary>
-
 認証やアクセス権の付与、ネットワーク的な隔離、監視など、Azure Machine Learning で利用できるセキュリティ機能について、以下サイトにて纏めております。  
 [Azure Machine Learning のエンタープライズ セキュリティ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-enterprise-security)  
 
@@ -48,27 +45,15 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
    [Azure Machine Learning のリソースとワークフローの認証を設定する (#web-service-authentication)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-setup-authentication#web-service-authentication)  
 - **外部ネットワークからのアクセスを制限する**  
    仮想ネットワークや Private Link を使用する方法があります。  
-   [プライベート仮想ネットワークを使用して機械学習のライフサイクルをセキュリティで保護する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network)  
-   [Azure Machine Learning ワークスペースの Azure Private Link を構成する (プレビュー)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-private-link)  
+   [プライベート仮想ネットワークでのトレーニング中や推論中のネットワークの分離](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network)  
+   [Azure Machine Learning ワークスペース用に Azure Private Link を構成する (プレビュー)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-private-link)  
 
-   公開情報に記載のない利用方法 (例えば、Azure SQL Server の「ファイアウォールと仮想ネットワーク」機能の使用など) はサポートされておりません。詳細につきましては [こちら](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-virtual-network) のサイトの注意書きを参照ください。  
-   > ! Warning  
-   If your underlying storage is in a virtual network, users will not be able to use Azure Machine Learning's studio web experience, including:
-   >
-   >- drag-n-drop designer
-   >- UI for automated machine learning
-   >- UI for data labeling
-   >- UI for data sets
-   >- Notebooks
-   >
-   >If you try, you will receive a message similar to the following error: \_\_Error: Unable to profile this dataset. This might be because your data is stored behind a virtual network or your data does not support profile.\_\_
-
+   公開情報に記載のない利用方法 (例えば、Azure SQL Server の「ファイアウォールと仮想ネットワーク」機能の使用など) はサポートされておりません。詳細につきましては [こちら](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-virtual-network#machine-learning-studio) のサイトの注意書きを参照ください。  
 </details>
 
 ***
 #### 機能の説明にある 「プレビュー」 とは何か
 <details><summary style="font-size: 10pt">回答</summary>
-
 Azure には、マイクロソフトがお客様のご意見を収集するために提供する、プレビュー版、ベータ版、またはその他のプレリリース版の機能、サービス、ソフトウェア、またはリージョン (以下、「プレビュー」といいます) が含まれる場合があります。以下サイトの使用条件に合意することを条件に、プレビューを使用することができます。  
 [Microsoft Azure プレビューの追加使用条件](https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/)    
    > 1. 「現状有姿のまま」「瑕疵を問わない条件」「提供可能な場合に限り提供しうる形で」提供される  
