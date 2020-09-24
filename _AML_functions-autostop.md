@@ -1,6 +1,6 @@
 ---
 title: Azure Functions を使用してコンピューティング インスタンスを自動停止する方法について
-date: 2020-09-23 00:00:00
+date: 2020-09-23 12:00:00
 categories:
 - Azure Machine Learning
 tags:
