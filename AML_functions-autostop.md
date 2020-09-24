@@ -92,83 +92,83 @@ Visual Studio Code を起動し、新しいプロジェクトを作成します�
 Azure Functions プロジェクトに含まれるコード ファイル (__init__.py、function.json、requirements.txt) を編集します。  
 
 - __init__.py
-    - ServicePrincipalAuthentication 関数の \<Tenant ID>、\<Client ID>、\<Client Secret> の設定は、下記サイトの [Service Principal Authentication] セクションを参照ください。  
-      (参考サイト) [Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb)
-    - \<Workspace Name>、\<Subscription ID>、\<Resource Group Name> は、ご利用の Azure Machine Learning ワークスペース リソースの情報を入力ください。
-    - compute_name 配列の \<Compute Instance Name> に停止したいコンピューティング インスタンス名を指定します。複数指定可能です。
-    - コンピューティング インスタンスの停止処理は、下記サイトの ComputeInstance クラスの関数を使用します。  
-      (参考サイト) [ComputeInstance class](https://docs.microsoft.com/ja-jp/python/api/azureml-core/azureml.core.compute.computeinstance.computeinstance?view=azure-ml-py)
+  - ServicePrincipalAuthentication 関数の \<Tenant ID>、\<Client ID>、\<Client Secret> の設定は、下記サイトの [Service Principal Authentication] セクションを参照ください。  
+    (参考サイト) [Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb)
+  - \<Workspace Name>、\<Subscription ID>、\<Resource Group Name> は、ご利用の Azure Machine Learning ワークスペース リソースの情報を入力ください。
+  - compute_name 配列の \<Compute Instance Name> に停止したいコンピューティング インスタンス名を指定します。複数指定可能です。
+  - コンピューティング インスタンスの停止処理は、下記サイトの ComputeInstance クラスの関数を使用します。  
+    (参考サイト) [ComputeInstance class](https://docs.microsoft.com/ja-jp/python/api/azureml-core/azureml.core.compute.computeinstance.computeinstance?view=azure-ml-py)
 
-    ```python
-    import datetime
-    import logging
+  ```python
+  import datetime
+  import logging
 
-    import azure.functions as func
-    from azureml.core.workspace import Workspace
-    from azureml.core.compute import ComputeTarget, ComputeInstance
-    from azureml.core.compute_target import ComputeTargetException
-    from azureml.core.authentication import ServicePrincipalAuthentication
+  import azure.functions as func
+  from azureml.core.workspace import Workspace
+  from azureml.core.compute import ComputeTarget, ComputeInstance
+  from azureml.core.compute_target import ComputeTargetException
+  from azureml.core.authentication import ServicePrincipalAuthentication
 
-    def main(mytimer: func.TimerRequest) -> None:
+  def main(mytimer: func.TimerRequest) -> None:
 
-        # サービス プリンシパル認証の設定
-        svc_pr = ServicePrincipalAuthentication(
-                tenant_id="<Tenant ID>",
-                service_principal_id="<Client ID>",
-                service_principal_password="<Client Secret>")
+      # サービス プリンシパル認証の設定
+      svc_pr = ServicePrincipalAuthentication(
+              tenant_id="<Tenant ID>",
+              service_principal_id="<Client ID>",
+              service_principal_password="<Client Secret>")
 
-        # ワークスペース情報の取得
-        ws = Workspace.get(name="<Workspace Name>",
-                subscription_id="<Subscription ID>",
-                resource_group="<Resource Group Name>",
-                auth=svc_pr)
+      # ワークスペース情報の取得
+      ws = Workspace.get(name="<Workspace Name>",
+              subscription_id="<Subscription ID>",
+              resource_group="<Resource Group Name>",
+              auth=svc_pr)
 
-        # 停止したいコンピューティング インスタンス名の設定
-        compute_name = ["<Compute Instance Name>", "<Compute Instance Name>", ...]
+      # 停止したいコンピューティング インスタンス名の設定
+      compute_name = ["<Compute Instance Name>", "<Compute Instance Name>", ...]
 
-        # Running 状態のコンピューティング インスタンスを停止実行
-        for i in compute_name:
-            state = ComputeInstance(ws, i).get_status().state
-            if state == "Running":
-                ComputeInstance(ws, i).stop(wait_for_completion=False, show_output=False)
-                logging.info(f"{i} state is {state} now. The auto-stop process is executed.")
-            else:
-                logging.info(f"{i} state is {state} now. The auto-stop process is NOT executed.")
-    ```
+      # Running 状態のコンピューティング インスタンスを停止実行
+      for i in compute_name:
+          state = ComputeInstance(ws, i).get_status().state
+          if state == "Running":
+              ComputeInstance(ws, i).stop(wait_for_completion=False, show_output=False)
+              logging.info(f"{i} state is {state} now. The auto-stop process is executed.")
+          else:
+              logging.info(f"{i} state is {state} now. The auto-stop process is NOT executed.")
+  ```
 
 - function.json  
-    shchedule 部分を編集することで実行時刻を変更可能です。指定方法は以下のサイトが参考になります。
+  shchedule 部分を編集することで実行時刻を変更可能です。指定方法は以下のサイトが参考になります。
 
-   - (参考サイト) [NCRONTAB 式](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-expressions)
-   - (参考サイト) [NCRONTAB の例](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-examples)
-   - (参考サイト) [NCRONTAB タイム ゾーン](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-time-zones)
+  - (参考サイト) [NCRONTAB 式](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-expressions)
+  - (参考サイト) [NCRONTAB の例](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-examples)
+  - (参考サイト) [NCRONTAB タイム ゾーン](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-time-zones)
 
-   なお、UTC 指定となりますので、JST で指定する場合には 9 時間を差し引いた時刻を指定ください。以下画像では、毎日 21:25:00 JST に起動する設定としています。  
+  なお、UTC 指定となりますので、JST で指定する場合には 9 時間を差し引いた時刻を指定ください。以下画像では、毎日 21:25:00 JST に起動する設定としています。  
 
-    ```json
-    {
-      "scriptFile": "__init__.py",
-      "bindings": [
-        {
-        "name": "mytimer",
-        "type": "timerTrigger",
-        "direction": "in",
-        "schedule": "0 25 12 * * *"
-        }
-      ]
-    }
-    ```
+  ```json
+  {
+    "scriptFile": "__init__.py",
+    "bindings": [
+      {
+      "name": "mytimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 25 12 * * *"
+      }
+    ]
+  }
+  ```
 
 - requirements.txt  
   azureml-core を追加します。
-    ```python
-    # DO NOT include azure-functions-worker in this file
-    # The Python Worker is managed by Azure Functions platform
-    # Manually managing azure-functions-worker may cause unexpected issues
+  ```python
+  # DO NOT include azure-functions-worker in this file
+  # The Python Worker is managed by Azure Functions platform
+  # Manually managing azure-functions-worker may cause unexpected issues
 
-    azure-functions
-    azureml-core
-    ```
+  azure-functions
+  azureml-core
+  ```
 
 ### プロジェクトのデプロイ
 Visual Studio Code より、Azure Functions プロジェクトのデプロイを行います。デプロイ後にコード ファイルの再編集した場合でも、再度デプロイを実行することで変更を反映することが可能です。  
