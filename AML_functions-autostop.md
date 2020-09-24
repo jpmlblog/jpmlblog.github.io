@@ -16,7 +16,11 @@ Azure Machine Learning のコンピューティング インスタンスは、�
 本記事では、Azure Functions のタイマー トリガーを使用して、Azure Machine Learning SDK (AzureML SDK) のコードを決まった時刻に実行させることで、コンピューティング インスタンスを自動停止させる方法を紹介します。  
 
 (補足)  
-Azure Automation は Azure CLI および Python 3 の実行をサポートしていないため、本記事では触れておりません。  
+Azure Automation は Azure CLI および Python 3 の実行をサポートしていないため、本記事では触れておりません。 
+
+(参考情報)
+- [チュートリアル:Visual Studio Code を使用して Python でサーバーレスの Azure Functions を作成してデプロイする](https://docs.microsoft.com/ja-jp/azure/developer/python/tutorial-vs-code-serverless-python-01)  
+- [Azure でタイマーによってトリガーされる関数を作成する](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-create-scheduled-function) 
 
 ***
 ## 事前準備
@@ -35,8 +39,6 @@ Azure ポータルより Function App リソースを作成します。設定項
 (参考) [Azure Portal で初めての関数を作成する](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-create-first-azure-function)  
 (参考) [クイック スタート:Visual Studio Code を使用して Azure で関数を作成する](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-python)  
 
-<br>
-
 設定例:
 - リソース グループ名: ※ 任意、本手順では functionsrg 
 - 関数アプリ名: ※ 任意、本手順では aml-managecompute  
@@ -46,7 +48,6 @@ Azure ポータルより Function App リソースを作成します。設定項
 - 地域: ※ 任意、本手順では Japan East を選択
 
 <img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-functions-resource-1.png" width=400px>  
-<br>
 
 設定例:
 - Strage: ※ 既定のまま使用 
@@ -198,14 +199,6 @@ Azure ポータルより、作成した Function App リソースの [関数] �
 <img src="https://jpmlblog.github.io/images/AML_functions-autostop/confirmation-funcapp-2.png" width=500px>  
 
 ***
-### 参考となる公開情報
-
-- [Azure Functions のドキュメント](https://docs.microsoft.com/ja-jp/azure/azure-functions/)
-
-- [チュートリアル:Visual Studio Code を使用して Python でサーバーレスの Azure Functions を作成してデプロイする](https://docs.microsoft.com/ja-jp/azure/developer/python/tutorial-vs-code-serverless-python-01)
-
-
-***
 ## (参考) AzureML CLI を使用する場合
 Azure Machine Learning CLI (AzureML CLI) は Azure CLI への拡張機能です。下記サイトに具体的な使用方法が紹介されております。  
 
@@ -215,7 +208,7 @@ Azure Machine Learning CLI (AzureML CLI) は Azure CLI への拡張機能です�
 
 - [az ml computetarget computeinstance](https://docs.microsoft.com/ja-jp/cli/azure/ext/azure-cli-ml/ml/computetarget/computeinstance?view=azure-cli-latest)
 
-本記事では、コンピューティング インスタンスの起動停止に関連する操作部分のみ抜粋して以下に紹介します。  
+本記事では時刻実行する方法については言及せず、コンピューティング インスタンスの起動停止に関連する操作部分のみ抜粋して以下に紹介します。  
 
 ```powershell
 # Azure サブスクリプションへの CLI の接続  
@@ -238,4 +231,4 @@ az ml computetarget computeinstance stop -n <コンピューティング イン�
 ```
 ***
 `変更履歴`  
-`9999/12/31 created by ******`
+`2020/09/24 created by Mochizuki`  
