@@ -47,14 +47,14 @@ Azure ポータルより Function App リソースを作成します。設定項
 - バージョン: 3.6  
 - 地域: ※ 任意、本手順では Japan East を選択
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-functions-resource-1.png" width=400px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-functions-resource-1.png" width=600px>  
 
 設定例:
 - Strage: ※ 既定のまま使用 
 - オペレーティング システム: Linux
 - プランの種類: 消費量 (サーバーレス)  
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-functions-resource-2.png" width=400px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-functions-resource-2.png" width=600px>  
 <br>
 
 ### Azure Functions プロジェクトの作成  
@@ -62,31 +62,31 @@ Visual Studio Code を起動し、新しいプロジェクトを作成します�
 
 - アクティビティ バーの Azure アイコンを選択、 [Functions] 領域で [Create NCreate New Project New Project (新しいプロジェクトの作成)] アイコンを選択します。  
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-1.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-1.png" width=400px>  
 
 - 「Select the folder that will contain your function project (関数プロジェクトを含めるフォルダを選択してください)」 では Browse を選択し、Functions 専用のフォルダーを指定します。    
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-2.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-2.png" width=400px>  
 
 - 「Select a language for your function project (関数プロジェクトの言語を選択してください)」 では [Python] を選択します。  
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-3.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-3.png" width=400px>  
 
 - 「Select a Python alias to create a virtual environment (仮想環境を作成する Python エイリアスを選択してください)」 では Python インタープリターの場所を選択します。場所 (以下画像の py 3.7.5 のようなパス) が表示されない場合、[Skip virtual environment] を選択ください。
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-4.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-4.png" width=400px>  
 
 - 「Select a template for your project's first function (プロジェクトの最初の関数のテンプレートを選択してください)」 では [Timer trigger] を選択します。
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-5.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-5.png" width=400px>  
 
 - 「Provide a function name (関数名を指定してください)」 では任意の名前を指定します。本手順では既定値 [TimerTrigger1] を使用します。
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-6.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-6.png" width=400px>  
 
 - 「Enter a cron expression ... (cron 式を入力してください)」 では、自動停止を実行したい時刻を指定します。後から変更可能なので、既定値のままスキップください。  
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-7.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-7.png" width=400px>  
 
 ### コード ファイルの編集
 Azure Functions プロジェクトに含まれるコード ファイル (__init__.py、function.json、requirements.txt) を編集します。  
@@ -178,25 +178,25 @@ Visual Studio Code より、Azure Functions プロジェクトのデプロイを
 
 - Visual Studio Code の [Functions] 領域より作成した Azure Functions リソースを右クリックし、[Deploy to Function App...] を選択します。  
 
-  <img src="https://jpmlblog.github.io/images/AML_functions-autostop/deploy-functions-project-1.png" width=300px>  
+  <img src="https://jpmlblog.github.io/images/AML_functions-autostop/deploy-functions-project-1.png" width=400px>  
 
 - 「Select the folder to deploy」 では Browse を選択し、Functions 専用のフォルダーを指定します。  
 
-  <img src="https://jpmlblog.github.io/images/AML_functions-autostop/deploy-functions-project-2.png" width=300px>  
+  <img src="https://jpmlblog.github.io/images/AML_functions-autostop/deploy-functions-project-2.png" width=400px>  
 
 - 上書き確認の警告メッセージがポップアップしますので、[Deploy] を選択して続行します。
 
-  <img src="https://jpmlblog.github.io/images/AML_functions-autostop/deploy-functions-project-3.png" width=300px>  
+  <img src="https://jpmlblog.github.io/images/AML_functions-autostop/deploy-functions-project-3.png" width=400px>  
 
 ***
 ## 動作確認
 Azure ポータルより、作成した Function App リソースの [関数] メニューを表示し、タイマー トリガーが存在し、有効になっていることを確認します。  
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/confirmation-funcapp-1.png" width=500px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/confirmation-funcapp-1.png" width=700px>  
 
 タイマー トリガーのリンクをクリックすると、デプロイした設定や動作履歴を確認することが可能です。下記画像は、[モニター] メニューより 12:24:59 UTC (-> 概ね 21:25:00 JST) にトリガーが実行されていることが確認できます。  
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/confirmation-funcapp-2.png" width=500px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/confirmation-funcapp-2.png" width=800px>  
 
 ***
 ## (参考) AzureML CLI を使用する場合
