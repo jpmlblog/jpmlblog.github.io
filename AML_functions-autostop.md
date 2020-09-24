@@ -193,7 +193,7 @@ Azure ポータルより、作成した Function App リソースの [関数] �
 
 タイマー トリガーのリンクをクリックすると、デプロイした設定や動作履歴を確認することが可能です。下記画像は、[モニター] メニューより 12:24:59 UTC (-> 概ね 21:25:00 JST) にトリガーが実行されていることが確認できます。  
 
-<img src="https://jpmlblog.github.io/images/AML_functions-autostop/confirmation-funcapp-2.png" width=800px>  
+<img src="https://jpmlblog.github.io/images/AML_functions-autostop/confirmation-funcapp-2.png" width=850px>  
 <br>
 
 ***
