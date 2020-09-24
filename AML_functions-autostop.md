@@ -94,11 +94,8 @@ Azure Functions プロジェクトに含まれるコード ファイル (__init_
 - __init__.py
     - ServicePrincipalAuthentication 関数の \<Tenant ID>、\<Client ID>、\<Client Secret> の設定は、下記サイトの [Service Principal Authentication] セクションを参照ください。  
       (参考サイト) [Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb)
-    
     - \<Workspace Name>、\<Subscription ID>、\<Resource Group Name> は、ご利用の Azure Machine Learning ワークスペース リソースの情報を入力ください。
-
-    - compute_name 配列の \<Compute Instance Name> に停止したいコンピューティング インスタンス名を指定します。複数指定可能です。  
-
+    - compute_name 配列の \<Compute Instance Name> に停止したいコンピューティング インスタンス名を指定します。複数指定可能です。
     - コンピューティング インスタンスの停止処理は、下記サイトの ComputeInstance クラスの関数を使用します。  
       (参考サイト) [ComputeInstance class](https://docs.microsoft.com/ja-jp/python/api/azureml-core/azureml.core.compute.computeinstance.computeinstance?view=azure-ml-py)
 
@@ -142,9 +139,9 @@ Azure Functions プロジェクトに含まれるコード ファイル (__init_
 - function.json  
     shchedule 部分を編集することで実行時刻を変更可能です。指定方法は以下のサイトが参考になります。
 
-   - (参考サイト) [NCRONTAB 式](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-expressions)  
-   - (参考サイト) [NCRONTAB の例](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-examples)  
-   - (参考サイト) [NCRONTAB タイム ゾーン](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-time-zones)  
+   - (参考サイト) [NCRONTAB 式](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-expressions)
+   - (参考サイト) [NCRONTAB の例](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-examples)
+   - (参考サイト) [NCRONTAB タイム ゾーン](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-time-zones)
 
    なお、UTC 指定となりますので、JST で指定する場合には 9 時間を差し引いた時刻を指定ください。以下画像では、毎日 21:25:00 JST に起動する設定としています。  
 
@@ -163,7 +160,7 @@ Azure Functions プロジェクトに含まれるコード ファイル (__init_
     ```
 
 - requirements.txt  
-    azureml-core を追加します。
+  azureml-core を追加します。
     ```python
     # DO NOT include azure-functions-worker in this file
     # The Python Worker is managed by Azure Functions platform
@@ -197,6 +194,7 @@ Azure ポータルより、作成した Function App リソースの [関数] �
 タイマー トリガーのリンクをクリックすると、デプロイした設定や動作履歴を確認することが可能です。下記画像は、[モニター] メニューより 12:24:59 UTC (-> 概ね 21:25:00 JST) にトリガーが実行されていることが確認できます。  
 
 <img src="https://jpmlblog.github.io/images/AML_functions-autostop/confirmation-funcapp-2.png" width=800px>  
+<br>
 
 ***
 ## (参考) AzureML CLI を使用する場合
