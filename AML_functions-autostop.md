@@ -16,7 +16,7 @@ Azure Machine Learning のコンピューティング インスタンスは、�
 本記事では、Azure Functions のタイマー トリガーを使用して、Azure Machine Learning SDK (AzureML SDK) のコードを決まった時刻に実行させることで、コンピューティング インスタンスを自動停止させる方法を紹介します。  
 
 (補足)  
-Azure Automation は Azure CLI および Python 3 の実行をサポートしていないため、本記事では触れておりません。 
+Azure Automation は Azure Machine Learning CLI および Python 3 の実行をサポートしていないため、本記事では振れておりません。  
 
 (参考情報)
 - [チュートリアル:Visual Studio Code を使用して Python でサーバーレスの Azure Functions を作成してデプロイする](https://docs.microsoft.com/ja-jp/azure/developer/python/tutorial-vs-code-serverless-python-01)  
@@ -60,7 +60,7 @@ Azure ポータルより Function App リソースを作成します。設定項
 ### Azure Functions プロジェクトの作成  
 Visual Studio Code を起動し、新しいプロジェクトを作成します。
 
-- アクティビティ バーの Azure アイコンを選択、 [Functions] 領域で [Create NCreate New Project New Project (新しいプロジェクトの作成)] アイコンを選択します。  
+- アクティビティ バーの Azure アイコンを選択、 [Functions] 領域で [Create New Project (新しいプロジェクトの作成)] アイコンを選択します。  
 
 <img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-1.png" width=400px>  
 
@@ -72,7 +72,8 @@ Visual Studio Code を起動し、新しいプロジェクトを作成します�
 
 <img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-3.png" width=400px>  
 
-- 「Select a Python alias to create a virtual environment (仮想環境を作成する Python エイリアスを選択してください)」 では Python インタープリターの場所を選択します。場所 (以下画像の py 3.7.5 のようなパス) が表示されない場合、[Skip virtual environment] を選択ください。
+- 「Select a Python alias to create a virtual environment (仮想環境を作成する Python エイリアスを選択してください)」 では Python インタープリターの場所を選択します。  
+  場所 (以下画像の py 3.7.5 のようなパス) が表示されない場合、[Skip virtual environment] を選択ください。
 
 <img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-4.png" width=400px>  
 
@@ -80,11 +81,13 @@ Visual Studio Code を起動し、新しいプロジェクトを作成します�
 
 <img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-5.png" width=400px>  
 
-- 「Provide a function name (関数名を指定してください)」 では任意の名前を指定します。本手順では既定値 [TimerTrigger1] を使用します。
+- 「Provide a function name (関数名を指定してください)」 では任意の名前を指定します。  
+  本手順では既定値 [TimerTrigger1] を使用します。
 
 <img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-6.png" width=400px>  
 
-- 「Enter a cron expression ... (cron 式を入力してください)」 では、自動停止を実行したい時刻を指定します。後から変更可能なので、既定値のままスキップください。  
+- 「Enter a cron expression ... (cron 式を入力してください)」 では、自動停止を実行したい時刻を指定します。
+  後から変更可能なので、既定値のままスキップください。  
 
 <img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-7.png" width=400px>  
 
