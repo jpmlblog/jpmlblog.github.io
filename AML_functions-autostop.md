@@ -237,3 +237,4 @@ az ml computetarget computeinstance stop -n <コンピューティング イン�
 ***
 `変更履歴`  
 `2020/09/24 created by Mochizuki`  
+`2020/09/25 modified by Mochizuki`  
