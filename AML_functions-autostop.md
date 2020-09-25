@@ -95,7 +95,7 @@ Azure Functions プロジェクトに含まれるコード ファイル (__init_
   - ServicePrincipalAuthentication 関数の \<Tenant ID>、\<Client ID>、\<Client Secret> の設定は、下記サイトの [Service Principal Authentication] セクションを参照ください。  
     (参考サイト) [Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb)
   - \<Workspace Name>、\<Subscription ID>、\<Resource Group Name> は、ご利用の Azure Machine Learning ワークスペース リソースの情報を入力ください。
-  - compute_name 配列の \<Compute Instance Name> に停止したいコンピューティング インスタンス名を指定します。複数指定可能です。
+  - 停止したいコンピューティング インスタンス名を指定する場合、\<Compute Instance Name> に停止したいコンピューティング インスタンス名を指定した配列 compute_name を定義します。  
   - コンピューティング インスタンスの停止処理は、下記サイトの ComputeInstance クラスの関数を使用します。  
     (参考サイト) [ComputeInstance class](https://docs.microsoft.com/ja-jp/python/api/azureml-core/azureml.core.compute.computeinstance.computeinstance?view=azure-ml-py)
 
@@ -123,8 +123,12 @@ Azure Functions プロジェクトに含まれるコード ファイル (__init_
               resource_group="<Resource Group Name>",
               auth=svc_pr)
 
-      # 停止したいコンピューティング インスタンス名の設定
-      compute_name = ["<Compute Instance Name>", "<Compute Instance Name>", ...]
+      # ワークスペース内の全てのコンピューティング インスタンス名の取得
+      computes = ws.compute_targets
+      compute_name = [c for c in computes if type(computes[c]) == ComputeInstance]
+
+      # 停止したいコンピューティング インスタンス名を指定する場合
+      # compute_name = ["<Compute Instance Name>", "<Compute Instance Name>", ...]
 
       # Running 状態のコンピューティング インスタンスを停止実行
       for i in compute_name:
