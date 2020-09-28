@@ -16,7 +16,7 @@ Azure Machine Learning のコンピューティング インスタンスは、�
 本記事では、Azure Functions のタイマー トリガーを使用して、Azure Machine Learning SDK (AzureML SDK) のコードを決まった時刻に実行させることで、コンピューティング インスタンスを自動停止させる方法を紹介します。  
 
 (補足)  
-Azure Automation は Azure Machine Learning CLI および Python 3 の実行をサポートしていないため、本記事では振れておりません。  
+Azure Automation は Azure Machine Learning CLI および Python 3 の実行をサポートしていないため、本記事では触れておりません。  
 
 (参考情報)
 - [チュートリアル:Visual Studio Code を使用して Python でサーバーレスの Azure Functions を作成してデプロイする](https://docs.microsoft.com/ja-jp/azure/developer/python/tutorial-vs-code-serverless-python-01)  
