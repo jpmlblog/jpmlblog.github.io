@@ -27,7 +27,8 @@ Azure Automation は Azure Machine Learning CLI および Python 3 の実行を�
 本記事では、Visual Studio Code を使用して Azure Functions へデプロイを行います。事前に以下を満たしているかご確認ください。  
 
 - Azure Machine Learning ワークスペース リソースの作成
-- Azure Machine Learning ワークスペースの [サービス プリンシパル認証設定](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-setup-authentication#service-principal-authentication)
+- Azure Machine Learning ワークスペースの [サービス プリンシパル認証設定](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-setup-authentication#service-principal-authentication)  
+  ※ GUI で実行する手順は [Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb) の Service Principal Authentication セクションを参照ください。
 - [Visual Studio Code](https://code.visualstudio.com/) のインストール
 - [Azure Functions 拡張機能](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-develop-vs-code?tabs=csharp#install-the-azure-functions-extension) のインストール
 
@@ -92,9 +93,9 @@ Visual Studio Code を起動し、新しいプロジェクトを作成します�
 <img src="https://jpmlblog.github.io/images/AML_functions-autostop/create-new-project-7.png" width=400px>  
 
 ### コード ファイルの編集
-Azure Functions プロジェクトに含まれるコード ファイル (__init__.py、function.json、requirements.txt) を編集します。  
+Azure Functions プロジェクトに含まれるコード ファイル (\_\_init__.py、function.json、requirements.txt) を編集します。  
 
-- __init__.py
+- \_\_init__.py
   - ServicePrincipalAuthentication 関数の \<Tenant ID>、\<Client ID>、\<Client Secret> の設定は、下記サイトの [Service Principal Authentication] セクションを参照ください。  
     (参考サイト) [Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb)
   - \<Workspace Name>、\<Subscription ID>、\<Resource Group Name> は、ご利用の Azure Machine Learning ワークスペース リソースの情報を入力ください。
