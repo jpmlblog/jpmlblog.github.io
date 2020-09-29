@@ -26,9 +26,9 @@ Azure Automation は Azure Machine Learning CLI および Python 3 の実行を�
 ## 事前準備
 本記事では、Visual Studio Code を使用して Azure Functions へデプロイを行います。事前に以下を満たしているかご確認ください。  
 
-- Azure Machine Learning ワークスペース リソースの作成
-- Azure Machine Learning ワークスペースの [サービス プリンシパル認証設定](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-setup-authentication#service-principal-authentication)  
-  ※ GUI で実行する手順は [Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb) の Service Principal Authentication セクションを参照ください。
+- Azure Machine Learning [ワークスペース リソースの作成](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#create-a-workspace)
+- Azure Machine Learning ワークスペース リソースへの[サービス プリンシパル認証設定](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-setup-authentication#service-principal-authentication)  
+  > 手順は 「[Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb)」 の Service Principal Authentication セクションを参照ください。  
 - [Visual Studio Code](https://code.visualstudio.com/) のインストール
 - [Azure Functions 拡張機能](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-develop-vs-code?tabs=csharp#install-the-azure-functions-extension) のインストール
 
