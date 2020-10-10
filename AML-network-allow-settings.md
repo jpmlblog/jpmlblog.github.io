@@ -19,27 +19,25 @@ Azure Machine Learning で使用する通信先ホスト名の一覧は以下サ
 
 - [ファイアウォールの内側で Azure Machine Learning のワークスペースを使用する - # Microsoft のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#microsoft-hosts)
 
-  >|ホスト名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|目的|
-  >|:---|:---|
-  >|login.microsoftonline.com|認証|
-  >|management.azure.com|ワークスペース情報を取得するために使用されます|
-  >|*.batchai.core.windows.net|クラスターをトレーニングします|
-  >|ml.azure.com|Azure Machine Learning Studio|
-  >|default.exp-tas.com|Azure Machine Learning スタジオによって使用されます|
-  >|*.azureml.ms|Azure Machine Learning API によって使用されます|
-  >|*.experiments.azureml.net|Azure Machine Learning で実行される実験で使用されます|
-  >|*.modelmanagement.azureml.net|モデルを登録してデプロイするために使用されます|
-  >|mlworkspace.azure.ai|ワークスペースを表示するときに Azure portal によって使用されます|
-  >|*.aether.ms|Azure Machine Learning パイプラインを実行するときに使用されます|
-  >|*.instances.azureml.net|Azure Machine Learning のコンピューティング インスタンスです
-  >|*.instances.azureml.ms|ワークスペースで Private Link が有効な場合の Azure Machine Learning のコンピューティング インスタンスです|
-  >|windows.net|Azure Blob Storage|
-  >|vault.azure.net|Azure Key Vault|
-  >|azurecr.io|Azure Container Registry|
-  >|mcr.microsoft.com|基本 Docker イメージ用の Microsoft Container Registry|
-  >|\<your-acr-server-name\>.azurecr.io|Azure Container Registry が仮想ネットワークの背後にある場合にのみ必要です。 この構成では、Microsoft 環境からサブスクリプションの ACR インスタンスへのプライベート リンクが作成されます。 Azure Machine Learning ワークスペースの ACR サーバー名を使用します。|
-  >|*.notebooks.azure.net|Azure Machine Learning studio のノートブックで必要です。|
-  >|graph.windows.net|ノートブックに必要です|
+  >login.microsoftonline.com  
+  >management.azure.com  
+  >*.batchai.core.windows.net  
+  >ml.azure.com  
+  >default.exp-tas.com  
+  >*.azureml.ms  
+  >*.experiments.azureml.net  
+  >*.modelmanagement.azureml.net  
+  >mlworkspace.azure.ai  
+  >*.aether.ms  
+  >*.instances.azureml.net  
+  >*.instances.azureml.ms  
+  >windows.net  
+  >vault.azure.net  
+  >azurecr.io  
+  >mcr.microsoft.com  
+  >\<your-acr-server-name\>.azurecr.io  
+  >*.notebooks.azure.net  
+  >graph.windows.net  
 
 ***
 ## ポート番号の許可
