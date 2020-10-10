@@ -48,14 +48,14 @@ HTTPS または HTTP (443 および 80) のプロトコルで通信を行いま�
 ネットワーク機器などで WebSocket の通信をブロックしている場合、上述したホスト名一覧について許可いただくことをお勧めいたします。  
 なお、現時点 (2020/10/10) では以下のホスト名について WebSocket の通信を行うことが確認できておりますので、宛先を絞り込む必要がある場合には、最低限以下ホスト名宛の WebSocket 通信を許可するよう設定ください。  
 
->*.azureml.ms  
->*.notebooks.azure.net  
->*.instances.azureml.net  
->*.experiments.azureml.net  
+*.azureml.ms  
+*.notebooks.azure.net  
+*.instances.azureml.net  
+*.experiments.azureml.net  
 
 今後サービス側機能の変更によって別のホスト名で WebSocket 通信を必須とする場合がございますので、その際には適宜許可を追加頂くことをご検討ください。
 
-- [(参考情報) コンピューティング クラスターとインスタンス](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-training-vnet#compute-clusters--instances)
+- [(参考情報) コンピューティング クラスターとインスタンス](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-training-vnet#compute-clusters--instances)  
   >コンピューティング インスタンスの Jupyter 機能を動作させるには、Web ソケット通信が無効になっていないことを確認してください。
 
 ***
