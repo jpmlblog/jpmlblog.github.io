@@ -1,5 +1,5 @@
 ---
-title: FAQ
+title: Azure Machine Learning (AzureML, AML) の FAQ
 date: 2020-04-22 10:00:00
 categories:
 - Azure Machine Learning 全般
@@ -7,7 +7,9 @@ tags:
 - FAQ
 ---
 
-よくあるご質問とその回答をまとめております。
+よくあるご質問とその回答をまとめております。  
+併せて [本サイトについて](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/) 、 [ホームページ](https://jpmlblog.github.io/blog/) および [記事一覧](https://jpmlblog.github.io/blog/archives/) もご参照いただければ幸いです。  
+
 <!-- more -->
 <br>
 
@@ -15,6 +17,7 @@ tags:
 #### 製品を理解するために参考となる公開情報を教えて欲しい
 <details><summary style="font-size: 10pt">回答</summary>
 別途ブログ記事として掲載しております。以下リンクより参照ください。  
+
 [参考となる公開情報について](https://jpmlblog.github.io/blog/2020/04/22/reference-websites/)  
 </details>
 
@@ -22,6 +25,7 @@ tags:
 #### Machine Learning ワークスペースを別のリソース グル―プまたは別のサブスクリプションに移動することは可能か
 <details><summary style="font-size: 10pt">回答</summary>
 不可能です。参考となる情報を紹介します。  
+
 [Azure Machine Learning ワークスペースとは (#workspace-management)](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#workspace-management)  
 > ! 警告  
 Azure Machine Learning ワークスペースを別のサブスクリプションに移動したり、所有するサブスクリプションを新しいテナントに移動したりすることは、サポートされていません。 エラーの原因になります。
@@ -31,6 +35,7 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
 #### セキュリティ要件のため各リソースへのアクセスを制限することは可能か
 <details><summary style="font-size: 10pt">回答</summary>
 認証やアクセス権の付与、ネットワーク的な隔離、監視など、Azure Machine Learning で利用できるセキュリティ機能について、以下サイトにて纏めております。  
+
 [Azure Machine Learning のエンタープライズ セキュリティ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-enterprise-security)  
 
 一部抜粋を紹介します。  
@@ -56,7 +61,7 @@ Azure Machine Learning ワークスペースを別のサブスクリプション
 <details><summary style="font-size: 10pt">回答</summary>
 Azure には、マイクロソフトがお客様のご意見を収集するために提供する、プレビュー版、ベータ版、またはその他のプレリリース版の機能、サービス、ソフトウェア、またはリージョン (以下、「プレビュー」といいます) が含まれる場合があります。以下サイトの使用条件に合意することを条件に、プレビューを使用することができます。  
 
-[Microsoft Azure プレビューの追加使用条件](https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/)    
+- [Microsoft Azure プレビューの追加使用条件](https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/)    
    > 1. 「現状有姿のまま」「瑕疵を問わない条件」「提供可能な場合に限り提供しうる形で」提供される  
    > 1. サービス レベル契約および限定的保証の対象とはならない
    > 1. カスタマー サポートの対象とならない
@@ -94,13 +99,9 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 ***
 #### Azure Machine Learning Studio (Classic) と Azure Machine Learning のデザイナー機能はどのような違いがあるか
 <details><summary style="font-size: 10pt">回答</summary>
-それぞれ GUI ベースで機械学習を行うサービスとなりますが、新・旧という形では分けられておらず、データの移行にも対応していません。    
+それぞれ GUI ベースで機械学習を行うサービスとなりますが、新・旧という形では分けられておらず、データの移行にも対応していません。  
+具体的な差異は以下サイトに纏められております。  
 
-- [Azure Machine Learning](https://docs.microsoft.com/ja-jp/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning?context=azure/machine-learning/service/context/ml-context#azure-machine-learning)  
-- [Azure ML Studio (クラシック)](https://docs.microsoft.com/ja-jp/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning?context=azure/machine-learning/service/context/ml-context#azure-ml-studio-classic)  
-
-具体的な差異は以下サイトに纏められております。
- 
 - [Azure Machine Learning と Machine Learning Studio (classic) の違い](https://docs.microsoft.com/ja-jp/azure/machine-learning/compare-azure-ml-to-studio-classic)
 </details>
 
@@ -117,6 +118,14 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
    >|:-----|:----|:---|:--------|  
    >|workspaces|resource group|3-33|英数字とハイフン。|  
    >|workspaces / computes|ワークスペース|2-16|英数字とハイフン。|  
+</details>
+
+***
+#### コンピューティング インスタンスを自動で停止させたい
+<details><summary style="font-size: 10pt">回答</summary>
+Azure Functions を使用して、特定の時間に停止させる方法を以下記事にて公開しております。  
+
+- [Azure Functions を使用してコンピューティング インスタンスを自動停止する方法について](https://jpmlblog.github.io/blog/2020/09/24/AML_functions-autostop/)  
 </details>
 
 ***
