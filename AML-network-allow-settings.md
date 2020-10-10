@@ -1,5 +1,5 @@
 ---
-title: Azure Machine Learning 宛通信の許可リストについて
+title: Azure Machine Learning サービスの通信許可設定方法について
 date: 2020-10-10 12:00:00
 categories:
 - Azure Machine Learning
