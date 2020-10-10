@@ -19,7 +19,7 @@ Azure Machine Learning で使用する通信先ホスト名の一覧は以下サ
 
 - [ファイアウォールの内側で Azure Machine Learning のワークスペースを使用する - # Microsoft のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#microsoft-hosts)
 
-  >|ホスト名                  |目的|
+  >|ホスト名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|目的|
   >|:---|:---|
   >|login.microsoftonline.com|認証|
   >|management.azure.com|ワークスペース情報を取得するために使用されます|
