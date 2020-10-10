@@ -1,5 +1,5 @@
 ---
-title: Azure Machine Learning サービスの通信許可設定方法について
+title: Azure Machine Learning サービス宛の通信を許可する設定について
 date: 2020-10-10 12:00:00
 categories:
 - Azure Machine Learning
