@@ -39,6 +39,9 @@ Azure Machine Learning で使用する通信先ホスト名の一覧は以下サ
   >*.notebooks.azure.net  
   >graph.windows.net  
 
+  ※ 各ホスト名宛の通信の概要は[抜粋元](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#microsoft-hosts)を参照ください。  
+  ※ 機能別に列挙されておりますので、一部設定上重複するものがあります。  
+
 ***
 ## ポート番号の許可
 HTTPS または HTTP (443 および 80) のプロトコルで通信を行います。上記したホスト名一覧に対し、送信方向のポート番号 443 および 80 宛の通信を許可するよう設定ください。  
