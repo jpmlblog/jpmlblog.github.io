@@ -1,8 +1,8 @@
 ---
-title: 120082726000148 の件
+title: RBAC を使用して Azure Machine Learning ワークスペースへのアクセスを管理する方法について
 date: 9999-12-31 00:00:00
 categories:
-- template
+- Azure Machine Learning 
 tags:
 - テンプレ
 ---
@@ -11,6 +11,7 @@ tags:
 <br>
 
 ***
+120082726000148
 # テンプレート
 ## テンプレートファイルについて
 これはテンプレートファイルです。このファイルはサイトから参照されません。
