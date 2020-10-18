@@ -25,13 +25,13 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 
 また、Azure Machine Learning スタジオ上でコンピューティング リソースを作成する場合には、下記画像のように有効な文字の情報が表示され、名前の検証が行われますので、これに従い名前を指定下さい。  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-rule-of-compute-instance.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-rule-of-compute-instance.png">  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error1-compute-instance.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error1-compute-instance.png">  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error2-compute-instance.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error2-compute-instance.png">  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error3-compute-instance.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error3-compute-instance.png">  
 
 ***
 ## データセットの名前の場合
@@ -39,27 +39,30 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 
 例えば、下記の通り全角の "Ｄａｔａｓｅｔ" という名前で登録するとします。  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset.png">  
 
 これをクリックすると、以下の通り HTTP 404 エラーが表示されます。  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error.png">  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error-detail.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error-detail.png">  
 
 なお、このデータセットを Azure Machine Learning スタジオ上で登録解除しようとしても、正常に処理が進まず失敗します。回避策として、Azure Machine Learning の CLI 拡張機能をすることでこれを登録解除することが出来ます。下記公開情報に従い Azure Machine Learning 
 
 [Azure Machine Learning の CLI 拡張機能のインストールと使用](https://docs.microsoft.com/ja-jp/azure/machine-learning/reference-azure-machine-learning-cli)  
 
+Azure CLI がインストール済みの環境では以下の実行します。
 ```PowerShell:拡張機能のインストールおよび更新
 az extension add -n azure-cli-ml
 az extension update -n azure-cli-ml
 ```
 
+初回アクセス時には、以下のコマンドでワークスペースにアタッチします。
 ```PowerShell:初回接続時
 az ml folder attach -w "ワークスペース名" -g "リソース グル―プ名"
 ```
 
+以下のコマンドでデータセットの登録を解除します。
 ```PowerShell:データセットの登録解除
  az ml dataset unregister -n "データセット名"
 ```
