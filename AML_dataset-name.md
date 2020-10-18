@@ -48,8 +48,10 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error.png" width=400px>  
 
+<br>
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error-detail.png" width=350px>  
 
+<br>
 ### 対処方法について
 この事象は、現在弊社開発部門にフィードバックを行い調査中となります。なお、このデータセットを Azure Machine Learning スタジオ上で登録解除しようとしても、正常に処理が進まず失敗します。  
 
@@ -57,21 +59,22 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 
 - [Azure Machine Learning の CLI 拡張機能のインストールと使用](https://docs.microsoft.com/ja-jp/azure/machine-learning/reference-azure-machine-learning-cli)  
 
-Azure CLI がインストール済みの環境では以下の実行します。
-```PowerShell:拡張機能のインストールおよび更新
-az extension add -n azure-cli-ml
-az extension update -n azure-cli-ml
-```
+  実行例:  
+  Azure CLI がインストール済みの環境では以下の実行します。  
+  ```PowerShell:拡張機能のインストールおよび更新
+  az extension add -n azure-cli-ml
+  az extension update -n azure-cli-ml
+  ```
 
-初回アクセス時には、以下のコマンドでワークスペースにアタッチします。
-```PowerShell:初回接続時
-az ml folder attach -w "ワークスペース名" -g "リソース グル―プ名"
-```
+  初回アクセス時には、以下のコマンドでワークスペースにアタッチします。  
+  ```PowerShell:初回接続時
+  az ml folder attach -w "ワークスペース名" -g "リソース グル―プ名"
+  ```
 
-以下のコマンドでデータセットの登録を解除します。
-```PowerShell:データセットの登録解除
- az ml dataset unregister -n "データセット名"
-```
+  以下のコマンドでデータセットの登録を解除します。  
+  ```PowerShell:データセットの登録解除
+  az ml dataset unregister -n "データセット名"
+  ```
 
 ***
 `変更履歴`  
