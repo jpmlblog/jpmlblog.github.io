@@ -141,7 +141,7 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 
 Azure Functions を使用して、特定の時間に停止させる方法を以下記事にて公開しております。  
 
-- [Azure Functions を使用してコンピューティング インスタンスを自動停止する方法について](https://jpmlblog.github.io/blog/2020/09/24/AML_functions-autostop/)  
+- [Azure Functions を使用してコンピューティング インスタンスを自動停止する方法について](https://jpmlblog.github.io/blog/2020/09/24/AML-functions-autostop/)  
 </details>
 
 ***
