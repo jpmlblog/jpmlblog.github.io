@@ -25,13 +25,16 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 
 また、Azure Machine Learning スタジオ上でコンピューティング リソースを作成する場合には、下記画像のように有効な文字の情報が表示され、名前の検証が行われますので、これに従い名前を指定下さい。  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-rule-of-compute-instance.png">  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-rule-of-compute-instance.png" width=700px>  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error1-compute-instance.png">  
+エラー例 1.  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error1-compute-instance.png" width=500px>  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error2-compute-instance.png">  
+エラー例 2.  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error2-compute-instance.png" width=500px>  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error3-compute-instance.png">  
+エラー例 3.  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error3-compute-instance.png" width=500px>  
 
 ***
 ## データセットの名前の場合
@@ -39,13 +42,14 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 
 例えば、下記の通り全角の "Ｄａｔａｓｅｔ" という名前で登録するとします。  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset.png">  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset.png" width=700px>  
 
 これをクリックすると、以下の通り HTTP 404 エラーが表示されます。  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error.png">  
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error.png" width=400px>  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error-detail.png">  
+<br>
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error-detail.png" width=400px>  
 
 なお、このデータセットを Azure Machine Learning スタジオ上で登録解除しようとしても、正常に処理が進まず失敗します。回避策として、Azure Machine Learning の CLI 拡張機能をすることでこれを登録解除することが出来ます。下記公開情報に従い Azure Machine Learning 
 
