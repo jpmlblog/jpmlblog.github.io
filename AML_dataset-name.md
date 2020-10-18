@@ -1,6 +1,6 @@
 ---
 title: データセット名に UTF-8 の 1 バイト コード文字以外を使用すると参照できなくなる
-date: 9999-12-31 00:00:00
+date: 2020-10-19 12:00:00
 categories:
 - Azure Machine Learning
 tags:
@@ -66,7 +66,7 @@ az ml folder attach -w "ワークスペース名" -g "リソース グル―プ�
 
 ***
 `変更履歴`  
-`2020/10/19 created by Mochiszuki
+`2020/10/19 created by Mochiszuki`
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
