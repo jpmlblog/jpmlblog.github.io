@@ -1,5 +1,5 @@
 ---
-title: データセット名に UTF-8 の 1 バイト コード文字以外を使用すると参照できなくなる
+title: Azure Machine Learning の名前付け規則について
 date: 2020-10-19 12:00:00
 categories:
 - Azure Machine Learning
@@ -37,7 +37,7 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error3-compute-instance.png" width=600px>  
 
 ***
-## データセットの名前の場合
+### データセットの名前付けで発生する事象について
 データセットを登録する際に指定する名前には、上述のような公開情報や、機械的な名前検証が行われません。しかしながら、UTF-8 の 1 バイト コード以外の文字 (漢字などの全角文字や異なる言語の文字) を使用した場合、登録後に Azure Machine Learning スタジオで参照できなくなるといった現象が報告されています。  
 
 例えば、下記の通り全角の "Ｄａｔａｓｅｔ" という名前で登録するとします。  
@@ -48,12 +48,14 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error.png" width=400px>  
 
-<br>
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error-detail.png" width=350px>  
 
-なお、このデータセットを Azure Machine Learning スタジオ上で登録解除しようとしても、正常に処理が進まず失敗します。回避策として、Azure Machine Learning の CLI 拡張機能をすることでこれを登録解除することが出来ます。下記公開情報に従い Azure Machine Learning 
+### 対処方法について
+この事象は、現在弊社開発部門にフィードバックを行い調査中となります。なお、このデータセットを Azure Machine Learning スタジオ上で登録解除しようとしても、正常に処理が進まず失敗します。  
 
-[Azure Machine Learning の CLI 拡張機能のインストールと使用](https://docs.microsoft.com/ja-jp/azure/machine-learning/reference-azure-machine-learning-cli)  
+回避策として、Azure Machine Learning の CLI 拡張機能をすることでこれを登録解除することが出来ます。下記公開情報に従い、拡張機能のインストールおよびデータセットの登録解除をお試しください。  
+
+- [Azure Machine Learning の CLI 拡張機能のインストールと使用](https://docs.microsoft.com/ja-jp/azure/machine-learning/reference-azure-machine-learning-cli)  
 
 Azure CLI がインストール済みの環境では以下の実行します。
 ```PowerShell:拡張機能のインストールおよび更新
