@@ -52,6 +52,7 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error-detail.png" width=350px>  
 
 <br>
+
 ### 対処方法について
 この事象は、現在弊社開発部門にフィードバックを行い調査中となります。なお、このデータセットを Azure Machine Learning スタジオ上で登録解除しようとしても、正常に処理が進まず失敗します。  
 
