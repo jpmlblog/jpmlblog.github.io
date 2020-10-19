@@ -7,7 +7,7 @@ tags:
 - 名前付け規則
 - Dataset
 ---
-データセットの名前に漢字などの全角文字を使用した場合、登録後に Azure Machine Learning スタジオから参照できなくなる事象が報告されています。具体的な事象について紹介いたします。  
+データセットの名前に漢字などの全角文字を使用した場合、登録後に Azure Machine Learning スタジオから参照できなくなる事象が報告されています。Azure Machine Learning の利用における名前付け規則などを踏まえ、現在確認されている事象について紹介いたします。  
 <!-- more -->
 <br>
 
@@ -35,6 +35,8 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 
 - エラー例 3.  
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error3-compute-instance.png" width=600px>  
+
+<br>
 
 ***
 ### データセットの名前付けで発生する事象について
