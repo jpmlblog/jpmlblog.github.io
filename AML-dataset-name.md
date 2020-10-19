@@ -35,7 +35,6 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 
 - エラー例 3.  
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error3-compute-instance.png" width=600px align="left"><br clear="left">
-<br>
 
 ***
 ### データセットの名前付けで発生する事象について
@@ -50,7 +49,6 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error.png" width=400px align="left"><br clear="left">
 
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error-detail.png" width=350px align="left"><br clear="left">
-<br>
 
 ***
 ### 対処方法について
