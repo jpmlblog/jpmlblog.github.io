@@ -40,13 +40,13 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 
 例えば、下記の通り全角の "Ｄａｔａｓｅｔ" という名前で登録するとします。  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset.png" width=800px align="left" border="1"><br clear="left">
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset.png" width=800px align="left"><br clear="left">
 
 これをクリックすると、以下の通り HTTP 404 エラーが表示されます。  
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error.png" width=400px align="left" border="1"><br clear="left">
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error.png" width=400px align="left"><br clear="left">
 
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error-detail.png" width=350px align="left" border="1"><br clear="left">
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/name-of-dataset-error-detail.png" width=350px align="left"><br clear="left">
 
 ***
 ### 対処方法について
