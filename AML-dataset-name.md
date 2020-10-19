@@ -28,13 +28,13 @@ Azure Machine Learning で使用するリソースの名前付け規則として
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-rule-of-compute-instance.png" width=700px>  
 
 - エラー例 1.  
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error1-compute-instance.png" width=600px align="left"><br>
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error1-compute-instance.png" width=600px align="left"><br clear="left">
 
 - エラー例 2.  
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error2-compute-instance.png" width=600px align="left"><br>
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error2-compute-instance.png" width=600px align="left"><br clear="left">
 
 - エラー例 3.  
-<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error3-compute-instance.png" width=600px align="left"><br>
+<img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-error3-compute-instance.png" width=600px align="left"><br clear="left">
 
 <br>
 
