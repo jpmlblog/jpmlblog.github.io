@@ -15,7 +15,7 @@ tags:
 ## テンプレートファイルについて
 これはテンプレートファイルです。このファイルはサイトから参照されません。
 
-<img src="https://jpmlblog.github.io/images/template.png" width=300px>  
+<img src="https://jpmlblog.github.io/images/template.png" width=300px align="left"><br clear="left">
 
 ***
 `変更履歴`  

@@ -21,8 +21,6 @@ Azure Machine Learning で使用するリソースの名前付け規則として
   > |workspaces&nbsp;&nbsp;|resource group&nbsp;&nbsp;|3-33&nbsp;&nbsp;|英数字とハイフン&nbsp;&nbsp;|
   > |workspaces / computes&nbsp;&nbsp;|ワークスペース|2-16&nbsp;&nbsp;|英数字とハイフン&nbsp;&nbsp;|  
 
-<br>
-
 また、Azure Machine Learning スタジオ上でコンピューティング リソースを作成する場合には、下記画像のように有効な文字の情報が表示され、名前の検証が行われますので、これに従い名前を指定下さい。  
 
 <img src="https://jpmlblog.github.io/images/AML_dataset-name/naming-rule-of-compute-instance.png" width=700px align="left"><br clear="left">
