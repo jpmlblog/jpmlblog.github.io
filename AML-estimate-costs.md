@@ -28,10 +28,17 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 
 - 開発環境として Azure Machine Learning コンピューティング インスタンス (東日本リージョン、STANDARD_DS3_V2) を 1 日 10 時間、20 日間使用する場合  
 
-   → `45.808 [円/時間] x 10 [時間/日] x 20 [日] = 9161.6 [円]`
+   `45.808 [円/時間] x 10 [時間/日] x 20 [日] = 9161.6 [円]`
+
+   上記に加え、内部的に作成されるロード バランサーの課金がこれに追加されます。  
+
+   `2.800 [円/時間] x 24 [時間/日] x 20 [日] = 1344.0 [円]`
+
+   → 合計 `9161.6 + 1344.0 = 10505.6 [円]`
 
    - 参考サイト  
    [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
+   [Load Balancer の価格](https://azure.microsoft.com/ja-jp/pricing/details/load-balancer/)  
 
 - トレーニング ターゲットとして Azure Machine Learning コンピューティング クラスター (東日本リージョン、STANDARD_DS3_V2) を最小 0 ノード、最大 2 ノードで作成し、2 ノードで 1 日 4 時間、20 日間使用する場合  
 
@@ -56,10 +63,12 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
    Azure Machine Learning で ACI にモデルをデプロイする場合、指定したコンテナーに加えて azureml-init-aci および azureml-fe-aci (それぞれ vCPU 0.1、メモリ 0.5 GiB) が作成されます。
 
    (vCPU)  
-   0.0015743 [円/秒/vCPU] x 1.2 [vCPU] x 3600 [秒/時間] x 24 [時間/日] x 30 [日] = 4896.70272 [円]  
-   (メモリ)  
-   0.0001721 [円/秒/GiB] x 3 [Gib] x 3600 [秒/時間] x 24 [時間/日] x 30 [日] = 1338.2496 [円]  
-   → `4896.70272 + 1338.2496 = 6234.95232 [円]`
+   `0.0015743 [円/秒/vCPU] x 1.2 [vCPU] x 3600 [秒/時間] x 24 [時間/日] x 30 [日] = 4896.70272 [円]  
+   (メモリ)`  
+
+   `0.0001721 [円/秒/GiB] x 3 [Gib] x 3600 [秒/時間] x 24 [時間/日] x 30 [日] = 1338.2496 [円]`  
+
+   → 合計 `4896.70272 + 1338.2496 = 6234.95232 [円]`
 
    - 参考サイト  
    [Container Instances の価格](https://azure.microsoft.com/ja-jp/pricing/details/container-instances/)  
@@ -73,6 +82,10 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 - [Azure ブロック BLOB Storage (汎用 v1)](https://azure.microsoft.com/ja-jp/pricing/details/storage/blobs/)  
 - [Key Vault](https://azure.microsoft.com/ja-jp/pricing/details/key-vault/)  
 
+また、ワークスペースやストレージ等を仮想ネットワークに配置する場合、パブリック エンドポイントやプライベート DNS ゾーン、ロード バランサーの料金が追加で発生いたします。固定でかかる費用となりますので、こちらも一定期間ご利用いただい後、実際の課金額を基に見積もることをお勧めします。  
+
+- [仮想ネットワークの分離とプライバシーの概要](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-network-security-overview)
+
 ***
 ## 見積もりの依頼について
 弊社より見積もりの回答が必要な場合、営業担当のタスクとして対応しております。下記サイトよりご依頼ください。  
@@ -81,3 +94,4 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 ***
 `変更履歴`  
 `2020/06/18 created by Mochizuki`  
+`2020/10/20 created by Mochizuki`  
