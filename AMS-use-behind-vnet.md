@@ -67,10 +67,25 @@ New-AzResourceGroupDeployment `
   -containerRegistryName "amlvnetconreg"
 ```
 
->注意:  
+>注意 1 :  
 >10/28 現在、Application Insights は仮想ネットワーク背後へのデプロイをサポートしていません。また、Container Registry には幾つか[条件](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-workspace-vnet#enable-azure-container-registry-acr)があり、既定では仮想ネットワークに配置できません。
 
+>注意 2 :  
+>key vault リソースは一度削除してから同名で作り直すと soft-delete のエラーが発生します。    
+>
+>```
+>New-AzResourceGroupDeployment : xx:xx:xx - Resource >Microsoft.KeyVault/vaults 'amlvnetkeyvault' failed with message '{  
+>  "error": {  
+>    "code": "ConflictError",  
+>    "message": "Exist soft deleted vault with the same name. "  
+>  }  
+>}'
+>```  
+>
+>これは、[Key Vault の論理的な削除](https://docs.microsoft.com/ja-jp/azure/key-vault/general/soft-delete-overview)が働いているためです。[こちら](https://docs.microsoft.com/ja-jp/azure/key-vault/general/key-vault-recovery?tabs=azure-portal#list-recover-or-purge-a-soft-deleted-key-vault)の手順に従い、完全に削除ください。
 
+<br>
+※ 順次追加予定です。
 
 ***
 `変更履歴`  
