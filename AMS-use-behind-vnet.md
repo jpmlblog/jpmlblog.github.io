@@ -82,7 +82,7 @@ New-AzResourceGroupDeployment `
 >注意点 2 :  
 >10/28 現在、Application Insights は仮想ネットワーク背後へのデプロイをサポートしていません。
 
->注意点 2:  
+>注意点 3 :  
 >Container Registry を仮想ネットワーク背後にデプロイする場合、幾つか[条件](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-workspace-vnet#enable-azure-container-registry-acr)があります。使用したい場合、まず 「[プライベート エンドポイントとプライベート DNS クォータの引き上げ](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-manage-quotas#private-endpoint-and-private-dns-quota-increases)」 に従って、クォータ要求の引き上げをご依頼ください。  
 > >次のシナリオでは、場合によっては Microsoft が所有するサブスクリプションでクォータの割り当てを依頼する必要があります。
 > >
