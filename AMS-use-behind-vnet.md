@@ -82,7 +82,7 @@ New-AzResourceGroupDeployment `
 >}'
 >```
 >
->これは、[Key Vault の論理的な削除](https://docs.microsoft.com/ja-jp/azure/key-vault/general/soft-delete-overview)が働いているためです。[こちら](https://docs.microsoft.com/ja-jp/azure/key-vault/general/key-vault-recovery?tabs=azure-portal#list-recover-or-purge-a-soft-deleted-key-vault)の手順に従い、完全に削除ください。
+>これは、[Key Vault の論理的な削除](https://docs.microsoft.com/ja-jp/azure/key-vault/general/soft-delete-overview)が働いているためです。[こちら](https://docs.microsoft.com/ja-jp/azure/key-vault/general/key-vault-recovery?tabs=azure-portal#list-recover-or-purge-a-soft-deleted-key-vault)の手順に従い、完全に削除後に手順を実行ください。  
 
 <br>
 ※ 順次追加予定です。

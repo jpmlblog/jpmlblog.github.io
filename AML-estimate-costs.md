@@ -27,15 +27,8 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 ※ ご利用方法によって試算より誤差が生じる場合がありますので、予めご留意ください。
 
 - 開発環境として Azure Machine Learning コンピューティング インスタンス (東日本リージョン、STANDARD_DS3_V2) を 1 日 10 時間、20 日間使用する場合  
-   ※ 内部的に作成されるロード バランサーの課金が VM の価格に追加されます。  
-
-   (仮想マシン)  
-   `45.808 [円/時間] x 10 [時間/日] x 20 [日] = 9161.6 [円]`
-
-   (ロード バランサー)  
-   `2.800 [円/時間] x 24 [時間/日] x 20 [日] = 1344.0 [円]`
-
-   → 合計 `9161.6 + 1344.0 = 10505.6 [円]`
+   
+   → `45.808 [円/時間] x 10 [時間/日] x 20 [日] = 9161.6 [円]`
 
    - 参考サイト  
    [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
@@ -95,4 +88,3 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 ***
 `変更履歴`  
 `2020/06/18 created by Mochizuki`  
-`2020/10/20 created by Mochizuki`  
