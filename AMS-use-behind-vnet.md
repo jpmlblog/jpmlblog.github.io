@@ -68,9 +68,27 @@ New-AzResourceGroupDeployment `
 ```
 
 >注意 1 :  
->10/28 現在、Application Insights は仮想ネットワーク背後へのデプロイをサポートしていません。また、Container Registry には幾つか[条件](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-workspace-vnet#enable-azure-container-registry-acr)があり、既定では仮想ネットワークに配置できません。
+>10/28 現在、Application Insights は仮想ネットワーク背後へのデプロイをサポートしていません。
 
->注意 2 :  
+>注意 2:  
+>Container Registry を仮想ネットワーク背後にデプロイ擦る場合、幾つか[条件](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-workspace-vnet#enable-azure-container-registry-acr)があります。使用したい場合、まず 「[プライベート エンドポイントとプライベート DNS クォータの引き上げ](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-manage-quotas#private-endpoint-and-private-dns-quota-increases)」 に従って、クォータ要求の引き上げをご依頼ください。  
+> >次のシナリオでは、場合によっては Microsoft が所有するサブスクリプションでクォータの割り当てを依頼する必要があります。
+> >
+> >- カスタマーマネージド キー (CMK) を使用する Private Link 対応ワークスペース
+> >- 仮想ネットワークの背後にあるワークスペースの Azure Container Registry
+> >- Private Link 対応の Azure Kubernetes Service クラスターのワークスペースへのアタッチ 。
+>
+>クォータ引き上げ後、上述のコマンドの最後の部分を以下の通り変更することで仮想ネットワーク背後へのデプロイを実行することが可能です。  
+>
+>```powershell
+>  -containerRegistryName "amlvnetconreg" `
+>  -containerRegistryBehindVNet "true" `
+>  -containerRegistryOption "new" `
+>  -containerRegistrySku "Premium"
+>```
+
+
+>注意 3 :  
 >key vault リソースは一度削除してから同名で作り直すと soft-delete のエラーが発生します。    
 >
 >```powershell  
