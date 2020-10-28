@@ -74,11 +74,11 @@ New-AzResourceGroupDeployment `
 >key vault リソースは一度削除してから同名で作り直すと soft-delete のエラーが発生します。    
 >
 >```PowerShell
->New-AzResourceGroupDeployment : xx:xx:xx - Resource >Microsoft.KeyVault/vaults 'amlvnetkeyvault' failed with message '{  
->  "error": {  
->    "code": "ConflictError",  
->    "message": "Exist soft deleted vault with the same name. "  
->  }  
+>New-AzResourceGroupDeployment : xx:xx:xx - Resource Microsoft.KeyVault/vaults 'amlvnetkeyvault' failed with message '{
+>  "error": {
+>    "code": "ConflictError",
+>    "message": "Exist soft deleted vault with the same name. "
+>  }
 >}'
 >```
 >
