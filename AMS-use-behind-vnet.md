@@ -23,7 +23,7 @@ Azure Machine Learning を仮想ネットワーク環境で使用する場合に
 
 - [仮想ネットワークの背後にワークスペースをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-create-workspace-template?wt.mc_id=ignite2020_presentations&tabs=azpowershell#deploy-workspace-behind-a-virtual-network)  
 
-まずは各リソースを作成するリソース グループを作成します。基本パラメータおよび実行コマンドは以下の通りです。  
+まずは各リソースを作成するリソース グループを作成します。なんらかのリソースの作成に失敗した際に、残存リソースの削除を簡単にするため、新たにリソース グループを作成することをおススメします。リソース基本パラメータおよび実行コマンドは以下の通りです。  
 
 |項目|パラメータ|
 |:--|:--|
@@ -82,7 +82,7 @@ New-AzResourceGroupDeployment `
 >}'
 >```
 >
->これは、[Key Vault の論理的な削除](https://docs.microsoft.com/ja-jp/azure/key-vault/general/soft-delete-overview)が働いているためです。[こちら](https://docs.microsoft.com/ja-jp/azure/key-vault/general/key-vault-recovery?tabs=azure-portal#list-recover-or-purge-a-soft-deleted-key-vault)の手順に従い、完全に削除後に手順を実行ください。  
+>これは、[Key Vault の論理的な削除](https://docs.microsoft.com/ja-jp/azure/key-vault/general/soft-delete-overview)が働いているためです。[こちら](https://docs.microsoft.com/ja-jp/azure/key-vault/general/key-vault-recovery?tabs=azure-portal#list-recover-or-purge-a-soft-deleted-key-vault)の手順で完全に削除することが可能です。  
 
 <br>
 ※ 順次追加予定です。
