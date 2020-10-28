@@ -67,10 +67,22 @@ New-AzResourceGroupDeployment `
   -containerRegistryName "amlvnetconreg"
 ```
 
->注意 1 :  
+>注意点 1 :  
+>Key Vault リソースは一度削除してから同名で作り直すと soft-delete のエラーが発生します。これは、[Key Vault の論理的な削除](https://docs.microsoft.com/ja-jp/azure/key-vault/general/soft-delete-overview)が働いているためです。「[論理的に削除されたキー コンテナーを一覧表示、回復、または消去する](https://docs.microsoft.com/ja-jp/azure/key-vault/general/key-vault-recovery?tabs=azure-portal#list-recover-or-purge-a-soft-deleted-key-vault)」 の手順により、完全に削除することが可能です。 
+>
+>```powershell  
+> New-AzResourceGroupDeployment : xx:xx:xx - Resource Microsoft.KeyVault/vaults 'amlvnetkeyvault' failed with message '{
+>  "error": {
+>    "code": "ConflictError",
+>    "message": "Exist soft deleted vault with the same name. "
+>  }
+> }'
+>```  
+
+>注意点 2 :  
 >10/28 現在、Application Insights は仮想ネットワーク背後へのデプロイをサポートしていません。
 
->注意 2:  
+>注意点 3:  
 >Container Registry を仮想ネットワーク背後にデプロイ擦る場合、幾つか[条件](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-workspace-vnet#enable-azure-container-registry-acr)があります。使用したい場合、まず 「[プライベート エンドポイントとプライベート DNS クォータの引き上げ](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-manage-quotas#private-endpoint-and-private-dns-quota-increases)」 に従って、クォータ要求の引き上げをご依頼ください。  
 > >次のシナリオでは、場合によっては Microsoft が所有するサブスクリプションでクォータの割り当てを依頼する必要があります。
 > >
@@ -86,21 +98,10 @@ New-AzResourceGroupDeployment `
 >  -containerRegistryOption "new" `
 >  -containerRegistrySku "Premium"
 >```
-
-
->注意 3 :  
->key vault リソースは一度削除してから同名で作り直すと soft-delete のエラーが発生します。    
 >
->```powershell  
-> New-AzResourceGroupDeployment : xx:xx:xx - Resource Microsoft.KeyVault/vaults 'amlvnetkeyvault' failed with message '{
->  "error": {
->    "code": "ConflictError",
->    "message": "Exist soft deleted vault with the same name. "
->  }
-> }'
->```
+>Container Registry を含めて仮想ネットワーク背後への配置した状態は、下記イメージのような状態となります。詳細は 「[ワークスペースと関連するリソースをセキュリティで保護する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-network-security-overview#secure-the-workspace-and-associated-resources)」 を参照ください。    
 >
->これは、[Key Vault の論理的な削除](https://docs.microsoft.com/ja-jp/azure/key-vault/general/soft-delete-overview)が働いているためです。[こちら](https://docs.microsoft.com/ja-jp/azure/key-vault/general/key-vault-recovery?tabs=azure-portal#list-recover-or-purge-a-soft-deleted-key-vault)の手順で完全に削除することが可能です。  
+><img src="https://docs.microsoft.com/ja-jp/azure/machine-learning/media/how-to-network-security-overview/secure-workspace-resources.png" width=500px align="left" border="1"><br clear="left">
 
 <br>
 ※ 順次追加予定です。
