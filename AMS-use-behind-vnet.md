@@ -107,12 +107,12 @@ New-AzResourceGroupDeployment `
 ## 利用上の留意点
 仮想ネットワーク上のマシンからアクセスしない場合、下記の通りエラーが発生します。
 
-- Home
+- Home アクセス時
   <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Home-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
   >REQUEST_SEND_ERROR: Your request for data wasn’t sent. Here are some things to try: Check your network and internet connection, make sure a proxy server is not blocking your connection, follow our guidelines if you’re using a private link, and check if you have AdBlock turned on.
 
-- Notebooks
+- Notebooks アクセス時
   <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Notebooks-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
   >403: You are not authorized to access this resource. You are not authorized to access this resource.
@@ -121,12 +121,15 @@ New-AzResourceGroupDeployment `
 
   後者のエラーは、ワークスペースで Private Link を有効にしていなくても、ストレージ アカウントが VNET 背後にある場合に発生します。  
 
-- Compute
+- Compute アクセス時
   <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Compute-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
   >403: You are not authorized to access this resource. You are not authorized to access this resource.
 
-  上述のエラーは出力されますが、各コンピューティング リソースの操作は可能です。
+  上述のエラーは出力されますが、各コンピューティング リソースの操作は可能です。  
+  必要に応じて、以下サイトを参考にロールベースでのアクセス制御 (RBAC) を実装いただくことをお勧めいたします。  
+
+  - [Azure Machine Learning ワークスペースへのアクセスの管理](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-assign-roles)
 
 
 
