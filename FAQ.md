@@ -110,6 +110,31 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 </details>
 
 ***
+#### コンピューティング インスタンスとコンピューティング クラスターの違いについて
+<details><summary style="font-size: 10pt">回答</summary>
+
+下記サイトに情報が纏められております。
+
+- (Azure Machine Learning のしくみ:アーキテクチャと概念 #コンピューティング)[https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-azure-machine-learning-architecture#computes]
+
+   >**コンピューティング インスタンス:** コンピューティング インスタンスは、機械学習用にインストールされた複数のツールと環境を含む VM です。 コンピューティング インスタンスの主な用途は、開発ワークステーションです。 セットアップを行うことなく、サンプル ノートブックの実行を開始できます。 コンピューティング インスタンスは、トレーニング ジョブと推論ジョブのコンピューティング先として使用できます。  
+   
+   >**コンピューティング クラスター:** コンピューティング クラスターは、マルチノード スケーリング機能を備えた VM のクラスターです。 コンピューティング クラスターは、大規模なジョブと運用環境のコンピューティング先に適しています。 クラスターは、ジョブが送信されるときに自動的にスケールアップされます。 トレーニング コンピューティング ターゲットとして、または開発/テスト デプロイのために使用します。
+
+コンピューティング インスタンス関連情報:  
+
+- [Azure Machine Learning コンピューティング インスタンスとは](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-compute-instance)
+- [Azure Machine Learning コンピューティング インスタンスを作成して管理する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-create-manage-compute-instance?tabs=python)
+- [Azure Machine Learning コンピューティング インスタンスへのモデルのデプロイ](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-local-container-notebook-vm)
+
+コンピューティング クラスター関連情報:  
+
+- [Azure Machine Learning でのコンピューティング先とは](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-compute-target)
+- [Azure Machine Learning コンピューティング クラスターの作成](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-create-attach-compute-cluster?tabs=python)
+- [チュートリアル:バッチ スコアリング用の Azure Machine Learning パイプラインを作成する](https://docs.microsoft.com/ja-jp/azure/machine-learning/tutorial-pipeline-batch-scoring-classification)
+</details>
+
+***
 #### Azure Machine Learning Studio (Classic) と Azure Machine Learning のデザイナー機能はどのような違いがあるか
 <details><summary style="font-size: 10pt">回答</summary>
 
@@ -144,11 +169,16 @@ Azure Functions を使用して、特定の時間に停止させる方法を以�
 - [Azure Functions を使用してコンピューティング インスタンスを自動停止する方法について](https://jpmlblog.github.io/blog/2020/09/24/AML-functions-autostop/)  
 </details>
 
+<br>
+※ 適宜追加更新します。  
+
 ***
 `変更履歴`  
 `2020/04/22 created by Mochizuki`  
 `2020/06/18 modified by Mochizuki`  
 `2020/08/26 modified by Mochizuki`  
 `2020/10/12 modified by Mochizuki`  
+`2020/10/29 modified by Mochizuki`  
 <br>
-※ 適宜追加更新します。  
+※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
+※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  

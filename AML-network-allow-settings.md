@@ -4,9 +4,8 @@ date: 2020-10-10 12:00:00
 categories:
 - Azure Machine Learning
 tags:
-- Network
-- Firewall
-- Proxy
+- ファイアウォール
+- プロキシ
 ---
 オンプレミスの環境から Azure Machine Learning のサービスを利用する際、外部ネットワーク宛の通信をファイアウォールやプロキシ サーバー等によって制御している場合に、許可すべきホスト名等の情報をご紹介します。  
 

@@ -1,5 +1,5 @@
 ---
-title: 仮想ネットワーク上で Azure Machine Learnining を使用する方法について
+title: 仮想ネットワーク (Vnet) 上で Azure Machine Learnining を使用する方法について
 date: 2020-10-28 12:00:00
 categories:
 - Azure Machine Learning
@@ -103,12 +103,40 @@ New-AzResourceGroupDeployment `
 >
 ><img src="https://docs.microsoft.com/ja-jp/azure/machine-learning/media/how-to-network-security-overview/secure-workspace-resources.png" width=500px align="left" border="1"><br clear="left">
 
+***
+## 利用上の留意点
+仮想ネットワーク上のマシンからアクセスしない場合、下記の通りエラーが発生します。
+
+- Home
+  <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Home-menu-error.png" width=700px align="left" border="1"><br clear="left">  
+
+  >REQUEST_SEND_ERROR: Your request for data wasn’t sent. Here are some things to try: Check your network and internet connection, make sure a proxy server is not blocking your connection, follow our guidelines if you’re using a private link, and check if you have AdBlock turned on.
+
+- Notebooks
+  <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Notebooks-menu-error.png" width=700px align="left" border="1"><br clear="left">  
+
+  >403: You are not authorized to access this resource. You are not authorized to access this resource.
+
+  >Request authorization to storage account failed. Storage account might be behind a VNET. Please go to the Compute tab, create a compute instance, and launch Jupyter or Jupyter Lab to use your files and notebooks.
+
+  後者のエラーは、ワークスペースで Private Link を有効にしていなくても、ストレージ アカウントが VNET 背後にある場合に発生します。  
+
+- Compute
+  <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Compute-menu-error.png" width=700px align="left" border="1"><br clear="left">  
+
+  >403: You are not authorized to access this resource. You are not authorized to access this resource.
+
+  上述のエラーは出力されますが、各コンピューティング リソースの操作は可能です。
+
+
+
 <br>
 ※ 順次追加予定です。
 
 ***
 `変更履歴`  
-`2020/10/28 created by Mochizuki`
+`2020/10/28 created by Mochizuki`  
+`2020/11/05 created by Mochizuki`  
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  

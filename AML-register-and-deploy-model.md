@@ -4,8 +4,8 @@ date: 2020-08-25 17:00:00
 categories:
 - Azure Machine Learning
 tags:
-- Studio
 - モデル登録
+- デプロイ
 ---
 Azure Machine Learning Studio でモデル登録する場合の留意点についてお纏めします。
 <!-- more -->
