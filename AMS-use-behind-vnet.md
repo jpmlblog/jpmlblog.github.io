@@ -112,27 +112,27 @@ Azure Machine Learning スタジオ利用に関しましては以下サイトに
 
 仮想ネットワーク上のリソースからアクセスしない場合、下記の通りエラーが発生してほとんどの操作は行えません。ただし、Compute の操作は行えるため、RBAC などでアカウントへのアクセス制御を実施いただくことをお勧めいたします。  
 
-- Home アクセス時  
-  <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Home-menu-error.png" width=700px align="left" border="1"><br clear="left">  
+### Home アクセス時  
+<img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Home-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
-  >REQUEST_SEND_ERROR: Your request for data wasn’t sent. Here are some things to try: Check your network and internet connection, make sure a proxy server is not blocking your connection, follow our guidelines if you’re using a private link, and check if you have AdBlock turned on.
+>REQUEST_SEND_ERROR: Your request for data wasn’t sent. Here are some things to try: Check your network and internet connection, make sure a proxy server is not blocking your connection, follow our guidelines if you’re using a private link, and check if you have AdBlock turned on.
 
-- Notebooks アクセス時  
-  <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Notebooks-menu-error.png" width=700px align="left" border="1"><br clear="left">  
+### Notebooks アクセス時  
+<img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Notebooks-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
-  >403: You are not authorized to access this resource. You are not authorized to access this resource.
+>403: You are not authorized to access this resource. You are not authorized to access this resource.
 
-  >Request authorization to storage account failed. Storage account might be behind a VNET. Please go to the Compute tab, create a compute instance, and launch Jupyter or Jupyter Lab to use your files and notebooks.
+>Request authorization to storage account failed. Storage account might be behind a VNET. Please go to the Compute tab, create a compute instance, and launch Jupyter or Jupyter Lab to use your files and notebooks.
 
-- Compute アクセス時  
-  エラーは出力されますが、各コンピューティング リソースの操作は可能です。  
+### Compute アクセス時  
+エラーは出力されますが、各コンピューティング リソースの操作は可能です。  
   必要に応じて、以下サイトを参考にロールベースでのアクセス制御 (RBAC) を実装いただくことをお勧めいたします。  
 
-  - [Azure Machine Learning ワークスペースへのアクセスの管理](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-assign-roles)
+- [Azure Machine Learning ワークスペースへのアクセスの管理](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-assign-roles)
 
-  <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Compute-menu-error.png" width=700px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Compute-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
-  >403: You are not authorized to access this resource. You are not authorized to access this resource.
+>403: You are not authorized to access this resource. You are not authorized to access this resource.
 
 <br>
 ※ 順次追加予定です。
