@@ -1,5 +1,5 @@
 ---
-title: 仮想ネットワーク (Vnet) 上で Azure Machine Learnining を使用する方法について
+title: 仮想ネットワーク (Vnet) 上で Azure Machine Learning を使用する方法について
 date: 2020-10-28 12:00:00
 categories:
 - Azure Machine Learning
