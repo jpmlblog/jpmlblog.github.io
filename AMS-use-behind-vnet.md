@@ -13,12 +13,13 @@ Azure Machine Learning を仮想ネットワーク環境で使用する場合に
 - [仮想ネットワークを使用して Azure Machine Learning ワークスペースをセキュリティで保護する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-workspace-vnet)  
 - [Azure 仮想ネットワークで Azure Machine Learning Studio を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-studio-virtual-network)  
 - [Azure Machine Learning ワークスペース用に Azure Private Link を構成する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-private-link?tabs=azure-resource-manager)  
+- [仮想ネットワークの背後にワークスペースをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-create-workspace-template?wt.mc_id=ignite2020_presentations&tabs=azpowershell#deploy-workspace-behind-a-virtual-network)  
 
 <!-- more -->
 <br>
 
 ***
-## 作成方法について
+## 構築方法について
 ここでは新しく仮想ネットワークを作成し、その配下に各リソースを作成する手順を紹介します。主に以下サイトの手順に従っております。  
 
 - [仮想ネットワークの背後にワークスペースをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-create-workspace-template?wt.mc_id=ignite2020_presentations&tabs=azpowershell#deploy-workspace-behind-a-virtual-network)  
@@ -105,33 +106,33 @@ New-AzResourceGroupDeployment `
 
 ***
 ## 利用上の留意点
-仮想ネットワーク上のマシンからアクセスしない場合、下記の通りエラーが発生します。
+Azure Machine Learning スタジオ利用に関しましては以下サイトに情報が纏められております。  
 
-- Home アクセス時
+- [Azure 仮想ネットワークで Azure Machine Learning Studio を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-studio-virtual-network)  
+
+仮想ネットワーク上のリソースからアクセスしない場合、下記の通りエラーが発生してほとんどの操作は行えません。ただし、Compute の操作は行えるため、RBAC などでアカウントへのアクセス制御を実施いただくことをお勧めいたします。  
+
+- Home アクセス時  
   <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Home-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
   >REQUEST_SEND_ERROR: Your request for data wasn’t sent. Here are some things to try: Check your network and internet connection, make sure a proxy server is not blocking your connection, follow our guidelines if you’re using a private link, and check if you have AdBlock turned on.
 
-- Notebooks アクセス時
+- Notebooks アクセス時  
   <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Notebooks-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
   >403: You are not authorized to access this resource. You are not authorized to access this resource.
 
   >Request authorization to storage account failed. Storage account might be behind a VNET. Please go to the Compute tab, create a compute instance, and launch Jupyter or Jupyter Lab to use your files and notebooks.
 
-  後者のエラーは、ワークスペースで Private Link を有効にしていなくても、ストレージ アカウントが VNET 背後にある場合に発生します。  
-
-- Compute アクセス時
-  <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Compute-menu-error.png" width=700px align="left" border="1"><br clear="left">  
-
-  >403: You are not authorized to access this resource. You are not authorized to access this resource.
-
-  上述のエラーは出力されますが、各コンピューティング リソースの操作は可能です。  
+- Compute アクセス時  
+  エラーは出力されますが、各コンピューティング リソースの操作は可能です。  
   必要に応じて、以下サイトを参考にロールベースでのアクセス制御 (RBAC) を実装いただくことをお勧めいたします。  
 
   - [Azure Machine Learning ワークスペースへのアクセスの管理](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-assign-roles)
 
+  <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Compute-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
+  >403: You are not authorized to access this resource. You are not authorized to access this resource.
 
 <br>
 ※ 順次追加予定です。
