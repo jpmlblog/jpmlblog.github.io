@@ -170,7 +170,7 @@ Azure Functions を使用して、特定の時間に停止させる方法を以�
 </details>
 
 ***
-#### 価格ページで表示される Av2 
+#### 価格ページで表示される VM シリーズのうち使用できないものがある
 <details><summary style="font-size: 10pt">回答</summary>
 
 [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/) のサイトに表示される VM サイズのうち、コンピューティング インスタンスとして選択できない場合があります。例えば、東日本リージョンの場合には Bs および Av2 Standard が使用できると表示されますが、コンピューティング インスタンスで使用可能な VM サイズの一覧およびクォータ一覧芋このシリーズは表示されません。  
