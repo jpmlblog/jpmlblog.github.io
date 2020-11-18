@@ -61,7 +61,7 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
   [サポートされている VM シリーズおよびサイズ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-compute-target#supported-vm-series-and-sizes)  
   [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service) 
 
-### 推論様クラスター (Azure Kubernetes Service, AKS)
+### 推論クラスター (Azure Kubernetes Service, AKS)
 推論用クラスターとして Azure Kubernetes Service の仮想マシン (東日本リージョン、STANDARD_DS12_V2) を 3 ノードで作成し、20 日間使用する場合  
 > 注意:  
 コア数合計を 12 以上で作成する必要があります。  
