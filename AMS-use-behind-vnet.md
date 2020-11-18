@@ -106,18 +106,22 @@ New-AzResourceGroupDeployment `
 
 ***
 ## 利用上の留意点
-Azure Machine Learning スタジオ利用に関しましては以下サイトに情報が纏められております。  
+ワークスペースの Private Link を有効化することで、パブリック インターネット経由のアクセスが制限され、仮想ネットワーク上のリソースからのみアクセスが可能になります。また、Mozilla Firefox を使用した場合には別の問題も報告されておりますので、Microsoft Edge または Google Chrome のご利用をお勧めいたします。  
 
-- [Azure 仮想ネットワークで Azure Machine Learning Studio を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-studio-virtual-network)  
+- [Azure Machine Learning ワークスペース用に Azure Private Link を構成する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-private-link?tabs=python)
+  > 重要  
+  >Azure Private Link は、ワークスペースの削除やコンピューティング リソースの管理などの Azure コントロール プレーン (管理操作) には影響しません。 たとえば、コンピューティング先の作成、更新、削除などです。 これらの操作は、通常どおりパブリック インターネット経由で実行されます。 Azure Machine Learning Studio を使用するなどのデータ プレーン操作、API (公開されたパイプラインを含む)、または SDK では、プライベート エンドポイントが使用されます。  
+  >
+  >Mozilla Firefox を使用している場合、ワークスペースのプライベート エンドポイントにアクセスしようとしたときに問題が発生することがあります。 この問題は、Mozilla の DNS over HTTPS に関連している可能性があります。 回避策として、Microsoft Edge または Google Chrome を使用することをお勧めします。
 
-仮想ネットワーク上のリソースからアクセスしない場合、下記の通りエラーが発生してほとんどの操作は行えません。ただし、Compute の操作は行えるため、RBAC などでアカウントへのアクセス制御を実施いただくことをお勧めいたします。  
+パブリック インターネット経由でアクセスした際に表示されるエラーメッセージを以下に紹介します。  
 
-### Home アクセス時  
+### Home アクセス時のエラー  
 <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Home-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
 >REQUEST_SEND_ERROR: Your request for data wasn’t sent. Here are some things to try: Check your network and internet connection, make sure a proxy server is not blocking your connection, follow our guidelines if you’re using a private link, and check if you have AdBlock turned on.
 
-### Notebooks アクセス時  
+### Notebooks アクセス時のエラー  
 <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Notebooks-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
 >403: You are not authorized to access this resource. You are not authorized to access this resource.
@@ -125,8 +129,7 @@ Azure Machine Learning スタジオ利用に関しましては以下サイトに
 >Request authorization to storage account failed. Storage account might be behind a VNET. Please go to the Compute tab, create a compute instance, and launch Jupyter or Jupyter Lab to use your files and notebooks.
 
 ### Compute アクセス時  
-エラーは出力されますが、各コンピューティング リソースの作成、起動、停止、削除などの操作は可能です。  
-必要に応じて、以下サイトを参考にロールベースでのアクセス制御 (RBAC) を実装いただくことをお勧めいたします。  
+エラーは出力されますが、各コンピューティング リソースの作成、起動、停止、削除などの操作は可能です。必要に応じて、以下サイトを参考にロールベースでのアクセス制御 (RBAC) を実装いただくことをお勧めいたします。  
 
 - [Azure Machine Learning ワークスペースへのアクセスの管理](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-assign-roles)
 
@@ -134,11 +137,22 @@ Azure Machine Learning スタジオ利用に関しましては以下サイトに
 
 >403: You are not authorized to access this resource. You are not authorized to access this resource.
 
-なお、Vnet に配置した Compute Instance のアプリケーション URI (Jupyter および Jupyter Lab のリンク) へアクセスしても、以下のメッセージが表示されアクセスはできません。  
+Vnet に配置した Compute Instance のアプリケーション URI (Jupyter および Jupyter Lab のリンク) へのアクセスも、以下のメッセージが表示され失敗します。  
 
 >User \<User Name\> does not have access to compute instance \<Compute Instance Name\>.
 >
 >Only the creator can access a compute instance.
+
+### Web ブラウザのアクセス自体が失敗する場合
+<img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Studio-error.png" width=400px align="left" border="1"><br clear="left"> 
+
+NSG を使用してインターネット接続を制限している場合、仮想ネットワーク上のリソースからであっても Azure Machine Learning Studio へのアクセスが出来ない場合があります。下記サイトに記載されております通り、AzureFrontDoor.Frontend のサービス タグ宛の通信を許可する必要がある点についてご留意ください。  
+
+- [Azure 仮想ネットワークで Azure Machine Learning Studio を使用する #VNet 内のリソースから Studio にアクセスする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-studio-virtual-network#access-the-studio-from-a-resource-inside-the-vnet)  
+  >仮想ネットワーク内のリソース (コンピューティング インスタンスや仮想マシンなど) からスタジオにアクセスする場合は、仮想ネットワークからスタジオへの送信トラフィックを許可する必要があります。  
+  >
+  >たとえば、ネットワーク セキュリティ グループ (NSG) を使用して送信トラフィックを制限している場合は、 AzureFrontDoor.Frontend の サービス タグ 宛先に規則を追加します。
+
 
 <br>
 ※ 順次追加予定です。

@@ -27,9 +27,14 @@ Internet Explorer 11 は弊社サービスに限らず幅広い Web サービス
 
 ***
 ## その他のブラウザーの事例について
-Microsoft Edge および Chrome のご利用環境において、Azure Machine Learning ポータルの一部のメニューが表示されなかったり、機能の実行が失敗するなどといった事象が報告されています。こうした事象は古いバージョンのブラウザーを使用していることに起因している可能性があるため、原因の切り分けとして以下の対処の実施をご検討ください。
+Mozilla Firefox を使用する環境において、ワークスペースのプライベート エンドポイントにアクセスしようとしたときに問題が発生するといった報告がございます。この問題は、Mozilla の DNS over HTTPS に関連している可能性があり、Microsoft Edge および Chrome のご利用をお勧めしております。  
+
+- [Azure Machine Learning ワークスペース用に Azure Private Link を構成する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-private-link?tabs=python)
+   >Mozilla Firefox を使用している場合、ワークスペースのプライベート エンドポイントにアクセスしようとしたときに問題が発生することがあります。 この問題は、Mozilla の DNS over HTTPS に関連している可能性があります。 回避策として、Microsoft Edge または Google Chrome を使用することをお勧めします。
+
+また、Microsoft Edge および Chrome のご利用環境においても、Azure Machine Learning ポータルの一部のメニューが表示されなかったり、機能の実行が失敗するなどといった事象が報告されています。こうした事象は古いバージョンのブラウザーを使用していることに起因している可能性があるため、原因の切り分けとして以下の切り分けの実施をご検討ください。  
+
 - ブラウザーを最新バージョンにアップデートする
-- 別のブラウザーを使用する
 
 ***
 `変更履歴`  
