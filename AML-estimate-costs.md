@@ -109,4 +109,8 @@ Azure Machine Learning で ACI にモデルをデプロイする場合、指定�
 ***
 `変更履歴`  
 `2020/06/18 created by Mochizuki`  
-`2020/11/12 created by Mochizuki`  
+`2020/11/12 modified by Mochizuki`  
+`2020/11/18 modified by Mochizuki`  
+
+※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
+※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
