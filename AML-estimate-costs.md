@@ -32,7 +32,11 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 
    - 参考サイト  
    [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
-   [Load Balancer の価格](https://azure.microsoft.com/ja-jp/pricing/details/load-balancer/)  
+   [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service) 
+
+   <font color="#FF0000">**注意:  
+   コンピューティング インスタンス停止時にもロードバランサーやディスク、ネットワーク利用の料金が発生することが確認できております。公開情報への反映を含めて現在調整中となります。**  
+   </font>
 
 - トレーニング ターゲットとして Azure Machine Learning コンピューティング クラスター (東日本リージョン、STANDARD_DS3_V2) を最小 0 ノード、最大 2 ノードで作成し、2 ノードで 1 日 4 時間、20 日間使用する場合  
 
@@ -88,3 +92,4 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 ***
 `変更履歴`  
 `2020/06/18 created by Mochizuki`  
+`2020/11/12 created by Mochizuki`  

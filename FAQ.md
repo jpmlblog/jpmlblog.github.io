@@ -169,6 +169,16 @@ Azure Functions を使用して、特定の時間に停止させる方法を以�
 - [Azure Functions を使用してコンピューティング インスタンスを自動停止する方法について](https://jpmlblog.github.io/blog/2020/09/24/AML-functions-autostop/)  
 </details>
 
+***
+#### 価格ページで表示される Av2 
+<details><summary style="font-size: 10pt">回答</summary>
+
+[Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/) のサイトに表示される VM サイズのうち、コンピューティング インスタンスとして選択できない場合があります。例えば、東日本リージョンの場合には Bs および Av2 Standard が使用できると表示されますが、コンピューティング インスタンスで使用可能な VM サイズの一覧およびクォータ一覧芋このシリーズは表示されません。  
+
+これは、リージョンとしては使用できるものの、コンピューティング インスタンスやクラスターの様に、「マネージド コンピューティング」 としては使用できない事を示します。「マネージド コンピューティング」 として使用できる VM シリーズの一覧は、下記サイトを参照ください。  
+
+- [サポートされている VM シリーズおよびサイズ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-compute-target#supported-vm-series-and-sizes)
+
 <br>
 ※ 適宜追加更新します。  
 
