@@ -27,13 +27,7 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 ※ ご利用方法によって試算より誤差が生じる場合がありますので、予めご留意ください。
 
 ### コンピューティング インスタンス
-開発環境として Azure Machine Learning コンピューティング インスタンス (東日本リージョン、STANDARD_D11_V2) を 1 日 10 時間、20 日間使用する場合  
-   
-→ `25.648 [円/時間] x 10 [時間/日] x 20 [日] = 5129.6 [円]`
-
-- 参考サイト  
-  [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
-  [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service) 
+開発環境として Azure Machine Learning コンピューティング インスタンス (東日本リージョン、STANDARD_D11_V2) を 1 日 10 時間起動し、20 日間使用する場合の月額  
 
 <font color="#FF0000">**注意:**  
 上記金額に加え、定常的に下記のリソースの課金が発生いたします。これは、コンピューティング インスタンスで使用する VMSS (仮想マシン スケール セット) に紐づいており、コンピューティング インスタンスを停止しても VMSS は削除されないため、課金も継続いたします。  
@@ -44,16 +38,22 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 
 </font>
 
-上記を合計すると以下の通りです。  
+(VM)  
+`25.648 [円/時間] x 10 [時間/日] x 20 [日] = 5129.6 [円]`  
 
-→ `(42.336 + 8.467 + 4.268 [円/日]) x 30 [日] = 1652.13 [円]`
+(関連リソース)
+`(42.336 + 8.467 + 4.268 [円/日]) x 30 [日] = 1652.13 [円]`  
+
+→ 合計 `5129.6 + 1652.13 = 6781.73 [円]`  
 
 - 参考サイト  
-  [Managing a compute instance](https://docs.microsoft.com/en-us/azure/machine-learning/concept-compute-instance#managing-a-compute-instance)
+  [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
+  [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service)  
+  [Managing a compute instance](https://docs.microsoft.com/en-us/azure/machine-learning/concept-compute-instance#managing-a-compute-instance)  
   >Start, stop, and restart a compute instance. You do pay for the instance whenever it is running. Stop the compute instance when you are not using it to reduce cost. Stopping a compute instance deallocates it. Then start it again when you need it. **Please note stopping the compute instance stops the billing for compute hours but you will still be billed for disk, public IP, and standard load balancer.**
 
 ### コンピューティング クラスター
-トレーニング ターゲットとして Azure Machine Learning コンピューティング クラスター (東日本リージョン、STANDARD_DS3_V2) を最小 0 ノード、最大 2 ノードで作成し、2 ノードで 1 日 4 時間、20 日間使用する場合  
+トレーニング ターゲットとして Azure Machine Learning コンピューティング クラスター (東日本リージョン、STANDARD_DS3_V2) を最小 0 ノード、最大 2 ノードで作成し、2 ノードで 1 日 4 時間、20 日間使用する場合の月額  
 
 → `45.808 [円/時間/ノード] x 2 [ノード] x 4 [時間/日] x 20 [日] = 7329.28 [円]`
 
@@ -62,7 +62,8 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
   [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service) 
 
 ### 推論クラスター (Azure Kubernetes Service, AKS)
-推論用クラスターとして Azure Kubernetes Service の仮想マシン (東日本リージョン、STANDARD_DS12_V2) を 3 ノードで作成し、20 日間使用する場合  
+推論用クラスターとして Azure Kubernetes Service の仮想マシン (東日本リージョン、STANDARD_DS12_V2) を 3 ノードで作成し、20 日間使用する場合の月額  
+
 > 注意:  
 コア数合計を 12 以上で作成する必要があります。  
 
@@ -73,7 +74,8 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
   [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service)  
 
 ### Azure Container Instance (ACI)
-モデルを Azure Container Instance (vCPU 1、メモリ 2 GiB) にデプロイし、30 日間使用する場合  
+モデルを Azure Container Instance (vCPU 1、メモリ 2 GiB) にデプロイし、30 日間使用する場合の月額  
+
 > 注意:  
 Azure Machine Learning で ACI にモデルをデプロイする場合、指定したコンテナーに加えて azureml-init-aci および azureml-fe-aci (それぞれ vCPU 0.1、メモリ 0.5 GiB) が作成されます。
 
