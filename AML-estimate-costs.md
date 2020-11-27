@@ -74,18 +74,18 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
   [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service)  
 
 ### Azure Container Instance (ACI)
-モデルを Azure Container Instance (vCPU 1、メモリ 2 GiB) にデプロイし、30 日間使用する場合の月額  
+モデルを Azure Container Instance (vCPU 1.8、メモリ 4 GiB) にデプロイし、30 日間使用する場合の月額  
 
 > 注意:  
-Azure Machine Learning で ACI にモデルをデプロイする場合、指定したコンテナーに加えて azureml-init-aci および azureml-fe-aci (それぞれ vCPU 0.1、メモリ 0.5 GiB) が作成されます。
+Azure Machine Learning で ACI にモデルをデプロイする場合、指定したコンテナーに加えて azureml-fe-aci (それぞれ vCPU 0.1、メモリ 0.5 GiB) が作成されます。
 
 (vCPU)  
-`0.0015743 [円/秒/vCPU] x 1.2 [vCPU] x 3600 [秒/時間] x 24 [時間/日] x 30 [日] = 4896.70272 [円]`  
+`0.0015743 [円/秒/vCPU] x 1.9 [vCPU] x 3600 [秒/時間] x 24 [時間/日] x 30 [日] = 7753.11264 [円]`  
    
 (メモリ)  
-`0.0001721 [円/秒/GiB] x 3 [Gib] x 3600 [秒/時間] x 24 [時間/日] x 30 [日] = 1338.2496 [円]`  
+`0.0001721 [円/秒/GiB] x 4.5 [Gib] x 3600 [秒/時間] x 24 [時間/日] x 30 [日] = 2007.3744 [円]`  
 
-→ 合計 `4896.70272 + 1338.2496 = 6234.95232 [円]`
+→ 合計 `7753.11264 + 2007.3744 = 9760.48704 [円]`
 
 - 参考サイト  
   [Container Instances の価格](https://azure.microsoft.com/ja-jp/pricing/details/container-instances/)  
@@ -113,6 +113,7 @@ Azure Machine Learning で ACI にモデルをデプロイする場合、指定�
 `2020/06/18 created by Mochizuki`  
 `2020/11/12 modified by Mochizuki`  
 `2020/11/18 modified by Mochizuki`  
+`2020/11/27 modified by Mochizuki`  
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
