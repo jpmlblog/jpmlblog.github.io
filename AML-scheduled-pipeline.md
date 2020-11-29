@@ -6,14 +6,22 @@ categories:
 tags:
 - Azure Functions
 ---
-Azure Functions のタイマー トリガーを使用して、Azure Machine Learning で公開したパイプラインを定期的に実行する方法を紹介します。
+Azure Functions のタイマー トリガーを使用して、Azure Machine Learning で発行されたパイプラインを定期的に実行する方法を紹介します。
 <!-- more -->
 <br>
 
 ***
-前述
+Azure Machine Learning で発行されたパイプラインを定期的に実行する方法は、以下の 3 つが考えられます。
+A. [Azure Machine Learning SDK for Python を使用して機械学習パイプラインのスケジュールを設定する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-schedule-pipelines)
+B. [ロジック アプリから Machine Learning パイプラインの実行をトリガーする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-trigger-published-pipeline)
+C. Azure Functions を使用してパイプラインを定期的に実行する
+
+C については、詳細な手順を紹介する公開ドキュメントがないため、本記事では C 方法を紹介します。
 
 (参考情報) 
+
+- [Azure Machine Learning パイプラインとは](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-ml-pipelines)
+- [パイプラインを発行する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-pipelines#publish-a-pipeline)
 - [Azure でタイマーによってトリガーされる関数を作成する](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-create-scheduled-function) 
 
 ***
@@ -23,6 +31,7 @@ Azure Functions のタイマー トリガーを使用して、Azure Machine Lear
 - Azure Machine Learning [ワークスペース リソースの作成](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#create-a-workspace)
 - Azure Machine Learning ワークスペース リソースへの[サービス プリンシパル認証設定](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-setup-authentication#service-principal-authentication)  
   (手順参考) 「[Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb)」 の Service Principal Authentication セクション  
+- Azure Machine Learning [ワークスペース リソースの作成](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#create-a-workspace)
 - [Visual Studio Code](https://code.visualstudio.com/) のインストール
 - [Azure Functions 拡張機能](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-develop-vs-code?tabs=csharp#install-the-azure-functions-extension) のインストール
 
@@ -204,4 +213,4 @@ Azure ポータルより、作成したタイマー トリガーが存在し、�
 
 ***
 `変更履歴`  
-`2020/12/01 created by Chao`
+`2020/11/30 created by Chao`
