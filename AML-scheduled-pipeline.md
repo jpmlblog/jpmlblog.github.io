@@ -192,7 +192,7 @@ Azure ポータルより、作成したタイマー トリガーが存在し、�
 
 - Function App の動作を確認します。デプロイ先の Function App リソースに移動して、「関数」ボタンをクリックします。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-16.png" width=300px>
+<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-16.png" width=200px>
 
 - 作成した Function の名前をクリックします。
 
