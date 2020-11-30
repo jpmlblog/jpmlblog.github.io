@@ -52,7 +52,7 @@ Azure ポータルより Function App リソースを作成します。設定項
 &emsp;&emsp;バージョン：3.8
 &emsp;&emsp;地域：任意
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-resource-01.png" width=600px>  
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-resource-01.png" width=600px>  
 
 - 「ホスティング」情報を設定します。
 &emsp;設定例:
@@ -60,7 +60,7 @@ Azure ポータルより Function App リソースを作成します。設定項
 &emsp;&emsp;オペレーティング システム：Linux
 &emsp;&emsp;プランの種類：既定値
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-resource-02.png" width=600px>  
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-resource-02.png" width=600px>  
 
 
 ### Azure Functions プロジェクトの作成  
@@ -68,38 +68,38 @@ Visual Studio Code を起動し、新しいプロジェクトを作成します�
 
 - 「Create New Project」ボタンをクリックします。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-01.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-01.png" width=600px>
 
 - 作業用のローカル フォルダーを選択します。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-02.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-02.png" width=600px>
 
 - プログラミング言語を選択します。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-03.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-03.png" width=600px>
 
 - 言語のバージョンを選択します。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-04.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-04.png" width=600px>
 
 - 「Timer trigger」を選択します。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-05.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-05.png" width=600px>
 
 - Function App の名前を付けます。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-06.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-06.png" width=600px>
 
 - 実行間隔を表す NCRONTAB 式※の値を入力します。ここでは、 5 分ごとに 1 回トリガーする、という意味になります。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-07.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-07.png" width=600px>
 
 ※ NCRONTAL 式の入力規則については下記ドキュメントをご参照ください。
 - [NCRONTAB 式](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=csharp#ncrontab-expressions) 
 
 - 「Add to workspace」を選択します。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-08.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-08.png" width=600px>
 
 - 画面が更新されるのを待って、サンプルコードを「\_\_init\_\_.py」ファイルにコピーして、保存します。なお、下記の箇所の値を置き換える必要があります。
 &lt;Client_Secret_Value&gt;：シート「サービス プリンシパル 認証設定」のステップ 8 で取得した「クライアント シークレット」の値
@@ -109,7 +109,7 @@ Visual Studio Code を起動し、新しいプロジェクトを作成します�
 &lt;Pipeline_Id&gt;：実行したいパイプラインの ID ※
 &lt;Experiment_Name&gt;：実験の名前
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-09.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-09.png" width=600px>
 
 サンプルコード
 ```python
@@ -163,27 +163,27 @@ requests
 azureml-pipeline-core
 ```
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-10.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-10.png" width=600px>
 
 - Azure アイコンをクリックして、Function App を右クリックして、「Deploy to Function App...」を選択します。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-11.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-11.png" width=600px>
 
 - サブスクリプションを選択します。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-12.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-12.png" width=600px>
 
 - デプロイ先の Function App リソースを選択します。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-13.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-13.png" width=600px>
 
 - 「Deploy」ボタンをクリックします。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-14.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-14.png" width=600px>
 
 - デプロイが完了したら、画面右下に下記のメッセージが表示されます。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-15.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-15.png" width=600px>
 
 
 ***
@@ -192,23 +192,23 @@ Azure ポータルより、作成したタイマー トリガーが存在し、�
 
 - Function App の動作を確認します。デプロイ先の Function App リソースに移動して、「関数」ボタンをクリックします。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-16.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-16.png" width=600px>
 
 - 作成した Function の名前をクリックします。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-17.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-17.png" width=600px>
 
 - 「モニター」ボタンをクリックして、呼び出しのトレースを確認できます。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-18.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-18.png" width=600px>
 
 - 上記の「日付」項目をクリックしますと、ログを確認できます。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-19.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-19.png" width=600px>
 
 - Machine Learning リソースの実験画面で、Function App の Timer Trigger にトリガーされたパイプラインの実行を確認できます。
 
-<img src="https://jpmlblog.github.io/images\AML-scheduled-pipeline/create-function-project-20.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-20.png" width=600px>
 
 
 ***
