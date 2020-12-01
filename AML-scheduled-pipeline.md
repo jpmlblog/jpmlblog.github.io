@@ -52,7 +52,7 @@ Azure ポータルより Function App リソースを作成します。設定項
 &emsp;&emsp;バージョン：3.8
 &emsp;&emsp;地域：任意
 
-<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-resource-01.png" width=400px>  
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-resource-01.png" width=600px>  
 
 - 「ホスティング」情報を設定します。
 &emsp;設定例:
@@ -68,11 +68,11 @@ Visual Studio Code を起動し、新しいプロジェクトを作成します�
 
 - 「Create New Project」ボタンをクリックします。
 
-<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-01.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-01.png" width=400px>
 
 - 作業用のローカル フォルダーを選択します。
 
-<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-02.png" width=600px>
+<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-02.png" width=700px>
 
 - プログラミング言語を選択します。
 
