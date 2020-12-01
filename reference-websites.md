@@ -71,7 +71,7 @@ Azure Machine Learning の導入によるメリットや考慮事項、事例な
 
 - [Azure Machine Learning](https://azure.microsoft.com/ja-jp/services/machine-learning/)  
 - [Microsoft の機械学習製品およびテクノロジの比較](https://docs.microsoft.com/ja-jp/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning)  
-- [Azure Machine Learning と Machine Learning Studio (classic) の違い](https://docs.microsoft.com/ja-jp/azure/machine-learning/compare-azure-ml-to-studio-classic)  
+- [Azure Machine Learning と Machine Learning Studio (classic) の違い](https://docs.microsoft.com/ja-jp/azure/machine-learning/overview-what-is-machine-learning-studio#ml-studio-classic-vs-azure-machine-learning-studio)  
 - [お客様事例の検索 (?sq="Azure Machine Learning")](https://customers.microsoft.com/ja-jp/search?sq=%22Azure%20Machine%20Learning%22&ff=&p=2&so=story_publish_date%20desc)  
 - [Azure のアーキテクチャ (#ai--machine-learning)](https://docs.microsoft.com/ja-jp/azure/architecture/browse/#ai--machine-learning)  
 - [Azure ソリューション アーキテクチャ (?query=machine+learning)](https://azure.microsoft.com/ja-jp/solutions/architecture/?query=machine+learning)  
