@@ -185,6 +185,7 @@ azureml-pipeline-core
 
 <img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-15.png" width=600px>
 
+<br>
 
 ***
 ## 動作確認
