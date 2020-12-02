@@ -101,17 +101,17 @@ Visual Studio Code を起動し、新しいプロジェクトを作成します�
 
 <img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-08.png" width=800px>
 
-- 画面が更新されるのを待って、サンプルコードを「\_\_init\_\_.py」ファイルにコピーして、保存します。なお、下記の箇所の値を置き換える必要があります。
-&lt;Client_Secret_Value&gt;：シート「サービス プリンシパル 認証設定」のステップ 8 で取得した「クライアント シークレット」の値
-&lt;Tenant_Id&gt;：シート「サービス プリンシパル 認証設定」のステップ 10 で取得した「ディレクトリ (テナント) ID」の値
-&lt;Application_Id&gt;：シート「サービス プリンシパル 認証設定」のステップ 10 で取得した「アプリケーション (クライアント) ID」の値
+- 画面が更新されるのを待って、以下のサンプルコードを「\_\_init\_\_.py」ファイルにコピーして、保存します。なお、下記箇所の値を置き換える必要があります。
+&lt;Client_Secret_Value&gt;：サービス プリンシパル 認証設定で生成された「クライアント シークレット」の値
+&lt;Tenant_Id&gt;：ディレクトリ (テナント) ID の値
+&lt;Application_Id&gt;：サービス プリンシパル 認証設定で登録した「アプリケーション (クライアント) ID」の値
 &lt;Subscription_Id&gt;：Azure サブスクリプション ID
 &lt;Pipeline_Id&gt;：実行したいパイプラインの ID 
 &lt;Experiment_Name&gt;：実験の名前
 
 <img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-09.png" width=800px>
 
-サンプルコード
+- サンプルコード
 ```python
 import datetime
 import logging
@@ -210,6 +210,7 @@ Azure ポータルより、作成したタイマー トリガーが存在し、�
 
 <img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-20.png" width=600px>
 
+Azure Functions を使用してパイプラインを定期的に実行する手順は以上となります。
 
 ***
 `変更履歴`  
