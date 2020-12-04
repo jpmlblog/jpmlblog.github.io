@@ -100,6 +100,9 @@ Azure Functions プロジェクトに含まれるコード ファイル (\_\_ini
     (参考サイト) [Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb)
   - \<Workspace Name>、\<Subscription ID>、\<Resource Group Name> は、ご利用の Azure Machine Learning ワークスペース リソースの情報を入力ください。
   - 停止したいコンピューティング インスタンス名を指定する場合、\<Compute Instance Name> に停止したいコンピューティング インスタンス名を指定した配列 compute_name を定義します。  
+  - 「type(computes[c]) == ComputeInstance」 部分の "ComputeInstance" を "AmlCompute" に変更することでコンピューティング クラスターを指定することも可能です。  
+  (参考サイト) [compute Package
+](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.compute?view=azure-ml-py#classes)
   - コンピューティング インスタンスの停止処理は、下記サイトの ComputeInstance クラスの stop 関数を使用します。起動させる場合には、state が "Stopped" という条件で、start 関数を実行するようにします。  
   (参考サイト) [ComputeInstance class](https://docs.microsoft.com/ja-jp/python/api/azureml-core/azureml.core.compute.computeinstance.computeinstance?view=azure-ml-py)  
   ```python
