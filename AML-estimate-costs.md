@@ -31,11 +31,14 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 
 <font color="#FF0000">**注意:**  
   VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。これは、コンピューティング インスタンスで使用する VMSS (仮想マシン スケール セット) に紐づいており、コンピューティング インスタンスを停止しても VMSS は削除されないため、課金も継続いたします。  
-   
+
+例 (東日本リージョン):  
 - ロード バランサー (約 42.336 [円/日])
 - パブリック IP アドレス (約 8.467 [円/日])
 - マネージド ディスク (VM サイズや利用状況に依存 例: Standard_D11_v2 作成直後で約 4.268 [円/日])
 
+(参考) [Managing a compute instance](https://docs.microsoft.com/en-us/azure/machine-learning/concept-compute-instance#managing-a-compute-instance)  
+>Please note stopping the compute instance stops the billing for compute hours but you will still be billed for disk, public IP, and standard load balancer.
 </font>
 
 (VM)  
@@ -48,9 +51,10 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 
 - 参考サイト  
   [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
+  [Load Balancer の価格](https://azure.microsoft.com/ja-jp/pricing/details/load-balancer/)  
+  [パブリック IP アドレスの料金](https://azure.microsoft.com/ja-jp/pricing/details/ip-addresses/)  
   [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service)  
-  [Managing a compute instance](https://docs.microsoft.com/en-us/azure/machine-learning/concept-compute-instance#managing-a-compute-instance)  
-  >Start, stop, and restart a compute instance. You do pay for the instance whenever it is running. Stop the compute instance when you are not using it to reduce cost. Stopping a compute instance deallocates it. Then start it again when you need it. **Please note stopping the compute instance stops the billing for compute hours but you will still be billed for disk, public IP, and standard load balancer.**
+
 
 ### コンピューティング クラスター
 トレーニング ターゲットとして Azure Machine Learning コンピューティング クラスター (東日本リージョン、STANDARD_DS3_V2) を最小 0 ノード、最大 2 ノードで作成し、2 ノードで 1 日 4 時間、20 日間使用する場合の月額  
