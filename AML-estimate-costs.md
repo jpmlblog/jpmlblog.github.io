@@ -37,8 +37,8 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
 - パブリック IP アドレス (約 8.467 [円/日])
 - マネージド ディスク (VM サイズや利用状況に依存 例: Standard_D11_v2 作成直後で約 4.268 [円/日])
 
-(参考) [Managing a compute instance](https://docs.microsoft.com/en-us/azure/machine-learning/concept-compute-instance#managing-a-compute-instance)  
->Start, stop, and restart a compute instance. You do pay for the instance whenever it is running. Stop the compute instance when you are not using it to reduce cost. Stopping a compute instance deallocates it. Then start it again when you need it. **Please note stopping the compute instance stops the billing for compute hours but you will still be billed for disk, public IP, and standard load balancer.**
+(参考) [Managing a compute instance](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-compute-instance#managing-a-compute-instance )  
+>コンピューティング インスタンスを開始、停止、再起動する。 インスタンスは、実行されるたびに支払いが発生します。 コンピューティング インスタンスを使用していないときは、コストを削減するために、コンピューティング インスタンスを停止します。 **コンピューティング インスタンスを停止すると、そのインスタンスは解放されます。 その後、必要なときにもう一度開始します。 コンピューティング インスタンスを停止すると、コンピューティング時間の課金は停止しますが、ディスク、パブリック IP、および Standard Load Balancer に対しては引き続き課金されます。**  
 </font>
 
 (VM)  
