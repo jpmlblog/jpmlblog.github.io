@@ -33,8 +33,8 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。これは、コンピューティング インスタンスで使用する VMSS (仮想マシン スケール セット) に紐づいており、コンピューティング インスタンスを停止しても VMSS は削除されないため、課金も継続いたします。  
 
 例 (東日本リージョン):  
-- ロード バランサー (約 42.336 [円/日])
-- パブリック IP アドレス (約 8.467 [円/日])
+- スタンダード ロード バランサー (約 42.336 [円/日])
+- スタンダード (静的) パブリック IP アドレス (約 8.467 [円/日])
 - マネージド ディスク (VM サイズや利用状況に依存 例: Standard_D11_v2 作成直後で約 4.268 [円/日])
 
 (参考) [Managing a compute instance](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-compute-instance#managing-a-compute-instance )  
