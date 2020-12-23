@@ -1,12 +1,12 @@
 ---
-title: 自動機械学習 (AutoML) の分類タスクのディープラーニングの有効化について
+title: 自動機械学習 (AutoML) の分類タスクのディープ ラーニング有効化について
 date: 2020-12-24 12:00:00
 categories:
 - Azure Machine Learning
 tags:
 - Automated Machine Learning
 ---
-Azure Machine Learning Studio から自動機械学習を実行する際、"ディープラーニングの有効化" のチェックを入れた場合の動作について紹介いたします。
+Azure Machine Learning Studio から自動機械学習を実行する際、"ディープ ラーニングの有効化" のチェックを入れた場合の動作について紹介いたします。
 <!-- more -->
 <br>
 
