@@ -1,5 +1,5 @@
 ---
-title: 自動機械学習 (AutoML) の分類タスクの "ディープラーニングの有効化" について
+title: 自動機械学習 (AutoML) の分類タスクのディープラーニングの有効化について
 date: 2020-12-24 12:00:00
 categories:
 - Azure Machine Learning
