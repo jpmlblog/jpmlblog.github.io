@@ -1,10 +1,10 @@
 ---
-title: AutoML の同時実行数制限について
+title: 自動機械学習 (AutoML) の同時実行数制限について
 date: 2020-04-06 12:00:00
 categories:
 - Azure Machine Learning
 tags:
-- 自動機械学習
+- Automated Machine Learning
 ---
 [Microsoft Azure Machine Learning ポータル](https://ml.azure.com/) より Automated Machine Learninig (以降、AutoML と記載) を複数同時実行する際の制限事項について紹介します。  
 <!-- more -->

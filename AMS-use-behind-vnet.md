@@ -121,6 +121,10 @@ New-AzResourceGroupDeployment `
 
 >REQUEST_SEND_ERROR: Your request for data wasn’t sent. Here are some things to try: Check your network and internet connection, make sure a proxy server is not blocking your connection, follow our guidelines if you’re using a private link, and check if you have AdBlock turned on.
 
+仮想ネットワーク上からアクセスしても同様のエラーが出力する場合があります。これは、各サービスの URL アクセス時に、DNS 名前解決でプライベート IP アドレスのが返されていない可能性があります。例えば、仮想ネットワークでカスタム DNS を使用しているとこのような状態になるため、下記の情報に従い必要な設定をご検討ください。  
+- [カスタム DNS サーバーでワークスペースを使用する方法](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-custom-dns?tabs=azure-portal)
+
+
 ### Notebooks アクセス時のエラー  
 <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Notebooks-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
@@ -129,19 +133,19 @@ New-AzResourceGroupDeployment `
 >Request authorization to storage account failed. Storage account might be behind a VNET. Please go to the Compute tab, create a compute instance, and launch Jupyter or Jupyter Lab to use your files and notebooks.
 
 ### Compute アクセス時  
-エラーは出力されますが、各コンピューティング リソースの作成、起動、停止、削除などの操作は可能です。必要に応じて、以下サイトを参考にロールベースでのアクセス制御 (RBAC) を実装いただくことをお勧めいたします。  
-
-- [Azure Machine Learning ワークスペースへのアクセスの管理](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-assign-roles)
-
 <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Compute-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
 >403: You are not authorized to access this resource. You are not authorized to access this resource.
 
-Vnet に配置した Compute Instance のアプリケーション URI (Jupyter および Jupyter Lab のリンク) へのアクセスも、以下のメッセージが表示され失敗します。  
+エラーは出力されますが、各コンピューティング リソースの作成、起動、停止、削除などの操作は可能です。必要に応じて、以下サイトを参考にロールベースでのアクセス制御 (RBAC) を実装いただくことをお勧めいたします。  
+
+なお、Vnet に配置した Compute Instance のアプリケーション URI (Jupyter および Jupyter Lab のリンク) へのアクセスも、以下のメッセージが表示され失敗します。  
 
 >User \<User Name\> does not have access to compute instance \<Compute Instance Name\>.
 >
 >Only the creator can access a compute instance.
+
+- [Azure Machine Learning ワークスペースへのアクセスの管理](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-assign-roles)
 
 ### Web ブラウザのアクセス自体が失敗する場合
 <img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Studio-error.png" width=400px align="left" border="1"><br clear="left"> 
@@ -152,7 +156,6 @@ NSG を使用してインターネット接続を制限している場合、仮�
   >仮想ネットワーク内のリソース (コンピューティング インスタンスや仮想マシンなど) からスタジオにアクセスする場合は、仮想ネットワークからスタジオへの送信トラフィックを許可する必要があります。  
   >
   >たとえば、ネットワーク セキュリティ グループ (NSG) を使用して送信トラフィックを制限している場合は、 AzureFrontDoor.Frontend の サービス タグ 宛先に規則を追加します。
-
 
 <br>
 ※ 順次追加予定です。
