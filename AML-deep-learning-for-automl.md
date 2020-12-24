@@ -11,7 +11,7 @@ Azure Machine Learning Studio から自動機械学習を実行する際、"デ�
 <br>
 
 ***
-Azure Machine Learning Studio から、UI ベースで自動機械学習を実行することが出来ます。詳細な手順は以下の公開情報を参照ください。  
+Azure Machine Learning Studio (https://ml.azure.com/) では、UI ベースで自動機械学習を実行することが出来ます。詳細な手順は以下の公開情報を参照ください。  
 
 - [Azure Machine Learning を使用して自動機械学習モデルを作成、確認、デプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-use-automated-ml-for-ml-models)
 
