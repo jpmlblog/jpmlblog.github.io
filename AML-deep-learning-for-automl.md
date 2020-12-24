@@ -19,7 +19,7 @@ Azure Machine Learning Studio から、UI ベースで自動機械学習を実�
 
 ![enable-deep-learning-for-classification.png](https://jpmlblog.github.io/images/AML-deep-learning-for-automl/enable-deep-learning-for-classification.png)
 
-BERT を適用する場合、コンピューティング クラスターに GPU コンピューティング (例: VM サイズ "STANDARD_NC6"、またはそれ以上の GPU) を使用する必要があります。CPU コンピューティングを使用した場合には、BiLSTM DNN 特徴抽出器が有効になります。詳細は以下サイトをご確認ください。  
+BERT を適用する場合、コンピューティング クラスターに GPU コンピューティング (例: VM サイズ "STANDARD_NC6"、またはそれ以上の GPU) を使用する必要があります。CPU コンピューティングを使用した場合には、BiLSTM DNN 特徴抽出器が有効になります。詳細は以下の公開情報をご確認ください。  
 
 - [BERT 統合](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-auto-features#bert-integration)
 
