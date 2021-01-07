@@ -113,9 +113,9 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
 #### コンピューティング インスタンスとコンピューティング クラスターの違いについて
 <details><summary style="font-size: 10pt">回答</summary>
 
-下記サイトに情報が纏められております。
+下記サイトに情報が纏められております。いずれも Microsoft によって管理されるマネージド クラウドベース ワークステーションであり、Azure ポータルのリソースとしては確認することは出来ません。
 
-- (Azure Machine Learning のしくみ:アーキテクチャと概念 #コンピューティング)[https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-azure-machine-learning-architecture#computes]
+- [Azure Machine Learning のしくみ:アーキテクチャと概念 #コンピューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-azure-machine-learning-architecture#computes)
 
    >**コンピューティング インスタンス:** コンピューティング インスタンスは、機械学習用にインストールされた複数のツールと環境を含む VM です。 コンピューティング インスタンスの主な用途は、開発ワークステーションです。 セットアップを行うことなく、サンプル ノートブックの実行を開始できます。 コンピューティング インスタンスは、トレーニング ジョブと推論ジョブのコンピューティング先として使用できます。  
    

@@ -111,6 +111,7 @@ Azure Machine Learning で ACI にモデルをデプロイする場合、指定�
 ## 見積もりの依頼について
 弊社より見積もりの回答が必要な場合、営業担当のタスクとして対応しております。下記サイトよりご依頼ください。  
 
+- [Azure 価格について 1 対 1 でのガイダンスを受ける](https://azure.microsoft.com/ja-jp/pricing/contact-sales/)
 - [Azure 営業担当者に問い合わせる](https://azure.microsoft.com/ja-jp/overview/sales-number/)  
 ***
 `変更履歴`  
