@@ -22,13 +22,13 @@ tags:
 
 モデルは、VotingEnsemble を選択します。  
 
-<img src="https://jpmlblog.github.io/images/AML-test-inference/AML-algorithm-list.png" width=800px>  
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-list.png" align="left" border="1"><br clear="left">  
 
 「詳細」 タブより実行 ID を確認します。  
 
-<img src="https://jpmlblog.github.io/images/AML-test-inference/AML-algorithm-details.png" width=400px>  
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-details.png" align="left" border="1"><br clear="left">  
 
-Notebooks メニューより任意のフォルダーに新しいノートブックを作成し、以下のコードを入力、実行します。
+Notebooks メニューより任意のフォルダーに新しいノートブックを作成し、以下のコードを入力、実行します。experiment_name や run_id は、ご利用環境に合わせて適宜変更ください。  
 
 ```Python
 # 実行 ID より Run オブジェクトを作成します。
@@ -69,48 +69,38 @@ test_df = test.to_pandas_dataframe()
 
 # predict メソッドを使用して推論を実行します。
 pred  = model.predict(test_df)
+pred.tolist()
 ```
 
+以下の通り推論結果を表示できたかと思います。
+
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-inference-result.png" align="left" border="1"><br clear="left">  
 
 
 ## Web サービスとしてデプロイされたモデルを使用する
-作成したモデルを ACI または AKS を使用して Web サービスとしてデプロイした場合、要求データを REST エンドポイントに対して送信することで推論結果を得られます。  
+作成したモデルをローカル、ACI、AKS のいずれかに Web サービスとしてデプロイした場合、要求データを REST エンドポイントに対して送信することで推論結果を得られます。  
 
-モデルのデプロイ方法は下記公開情報が参考になります。  
+モデルのデプロイ方法は下記公開情報に纏められています。  
 
 - [Azure Machine Learning を使用してモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-and-where?tabs=azcli)
 
-AzureML SDK ベースの ACI または AKS へのデプロイ方法は、下記公開情報が参考になります。  
+SDK ベースになりますが、ローカル、ACI、AKS それぞれの公開情報を抜粋します。  
 
+- [Azure Machine Learning コンピューティング インスタンスへのモデルのデプロイ](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-local-container-notebook-vm)  
 - [Azure Container Instances にモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance)
-- [Azure Kubernetes Service クラスターにモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-kubernetes-service)
+- [Azure Kubernetes Service クラスターにモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-kubernetes-service?tabs=python)
 
-ACI または AKS へのデプロイは [Azure Machine Learning 専用ポータル](https://ml.azure.com/) のユーザー インターフェイスからも実行できます。
+デプロイした Web サービスの呼び出し方は、下記公開情報が参考になります。  
 
-<img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-nsg.png" width=800px>  
+- [Web サービスとしてデプロイされた Azure Machine Learning モデルを使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-consume-web-service?tabs=python)  
 
-自動 ML によって
+<br>
+※ 現在更新中]
+<br>
 
-
-
-各 Web サービスのエンドポイントは、[Azure Machine Learning](https://ml.azure.com/) の [アセット] - [エンドポイント] に表示されます。  
-
-
-
-
-
-Azure Machine Learning を使用してモデルをデプロイする
-https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-and-where?tabs=azcli
-
-
-Web サービスとしてデプロイされた Azure Machine Learning モデルを使用する
-https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-consume-web-service
-
-    model_1_path = Model.get_model_path(model_name='my_first_model')
-    model_2_path = Model.get_model_path(model_name='my_second_model')
-    
-    model_1 = joblib.load(model_1_path)
-    model_2 = joblib.load(model_2_path)
-
-![Template](https://jpmlblog.github.io/images/template.png "ファイルの説明")
 ***
+`変更履歴`  
+`2021/01/13 created by Mochizuki`
+
+※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
+※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
