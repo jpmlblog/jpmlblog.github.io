@@ -22,11 +22,11 @@ tags:
 
 モデルは、VotingEnsemble を選択します。  
 
-<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-list.png" width=500px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-list.png" width=700px align="left" border="1"><br clear="left">  
 
 「詳細」 タブより実行 ID を確認します。  
 
-<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-details.png" width=300px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-details.png" width=600px align="left" border="1"><br clear="left">  
 
 Notebooks メニューより任意のフォルダーに新しいノートブックを作成し、以下のコードを入力、実行します。experiment_name や run_id は、ご利用環境に合わせて適宜変更ください。  
 
@@ -74,7 +74,7 @@ pred.tolist()
 
 以下の通り推論結果を表示できたかと思います。
 
-<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-inference-result.png" width=400px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-inference-result.png" width=700px align="left" border="1"><br clear="left">  
 
 ***
 ## Web サービスとしてデプロイされたモデルを使用する
