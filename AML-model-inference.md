@@ -54,8 +54,10 @@ model_path = 'download/outputs/model.pkl'
 model = joblib.load(model_path)
 ```
 
+推論のテストに使用するデータは、トレーニング データに含まれていないものをご用意頂く必要があります。今回は既に用意されているテスト データを使用しますが、一般的にはトレーニング用に収集したデータの 1 割程度をテスト用に分割しておくことをお勧めします。
+
 ```Python
-# トレーニングで使用したデータをそのままテスト用データとして使用します。
+# チュートリアルのテスト用データをデータセットとして読み込みます。
 from azureml.core.dataset import Dataset
 
 test_data = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_test.csv"
@@ -72,9 +74,11 @@ pred  = model.predict(test_df)
 pred.tolist()
 ```
 
-以下の通り推論結果を表示できたかと思います。
+以下の通り推論結果を表示できたかと思います。  
 
 <img src="https://jpmlblog.github.io/images/AML-model-inference/AML-inference-result.png" width=700px align="left" border="1"><br clear="left">  
+
+これらのコードは下記サンプル ノートブック [auto-ml-classification-bank-marketing-all-features.ipynb](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/classification-bank-marketing-all-features/auto-ml-classification-bank-marketing-all-features.ipynb) を参考にしておりますので、併せて参照ください。 
 
 >**注意点**  
 >時系列予測モデルの ForecastingParameters として target_rolling_window_size パラメーターを指定していると、predict の実行が失敗することが確認できています。これは predict メソッドが target_rolling_window_size パラメーターを使用したモデルでの実行をサポートしていないためです。このような場合、以下サンプル ノートブック [auto-ml-forecasting-orange-juice-sales.ipynb](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/forecasting-orange-juice-sales/auto-ml-forecasting-orange-juice-sales.ipynb) 、にありますとおり、predict メソッドではなく forecast メソッドの利用をご検討ください。  
