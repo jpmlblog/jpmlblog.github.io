@@ -26,7 +26,7 @@ tags:
 
 「詳細」 タブより実行 ID を確認します。  
 
-<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-details.png" width=600px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-details.png" width=500px align="left" border="1"><br clear="left">  
 
 Notebooks メニューより任意のフォルダーに新しいノートブックを作成し、以下のコードを入力、実行します。experiment_name や run_id は、ご利用環境に合わせて適宜変更ください。  
 
@@ -41,7 +41,7 @@ experiment_name = "my-1st-automl-experiment"
 experiment = Experiment(workspace, experiment_name)
 run = Run(experiment=experiment, run_id='AutoML_66d0eb73-e09c-435d-ae80-da060d204b09_69')
 
-# モデル等の情報を download フォルダー配下に格納します
+# モデル等の情報を download フォルダー配下に格納します。
 run.download_files(output_directory='download')
 ```
 
@@ -75,6 +75,11 @@ pred.tolist()
 以下の通り推論結果を表示できたかと思います。
 
 <img src="https://jpmlblog.github.io/images/AML-model-inference/AML-inference-result.png" width=700px align="left" border="1"><br clear="left">  
+
+>注意点  
+>時系列予測モデルの ForecastingParameters として target_rolling_window_size パラメーターを指定していると、predict の実行が失敗することが確認できています。これは predict メソッドが target_rolling_window_size パラメーターを使用したモデルでの実行をサポートしていないためです。
+>このような場合、以下サンプル ノートブック [auto-ml-forecasting-orange-juice-sales.ipynb](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/forecasting-orange-juice-sales/auto-ml-forecasting-orange-juice-sales.ipynb) 、にありますとおり、predict メソッドではなく forecast メソッドの利用をご検討ください。  
+><img src="https://jpmlblog.github.io/images/AML-model-inference/AML-forecasting-sample.png" width=600px align="left" border="1"><br clear="left">  
 
 ***
 ## Web サービスとしてデプロイされたモデルを使用する
