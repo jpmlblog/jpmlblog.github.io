@@ -92,19 +92,26 @@ pred.tolist()
 
 - [Azure Machine Learning を使用してモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-and-where?tabs=azcli)
 
-SDK ベースになりますが、ローカル、ACI、AKS それぞれの公開情報を抜粋します。  
-
-- [Azure Machine Learning コンピューティング インスタンスへのモデルのデプロイ](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-local-container-notebook-vm)  
-- [Azure Container Instances にモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance)
-- [Azure Kubernetes Service クラスターにモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-kubernetes-service?tabs=python)
-
 デプロイした Web サービスの呼び出し方は、下記公開情報が参考になります。  
 
 - [Web サービスとしてデプロイされた Azure Machine Learning モデルを使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-consume-web-service?tabs=python)  
 
-<br>
-※ 現在更新中
-<br>
+デプロイ先がローカル、ACI、AKS それぞれのドキュメントおよびサンプル ノートブックを紹介します。  
+
+- ローカル  
+   docs: [Azure Machine Learning コンピューティング インスタンスへのモデルのデプロイ](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-local-container-notebook-vm)  
+   sample: [Register model and deploy locally with advanced usages](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/deployment/deploy-to-local/register-model-deploy-local-advanced.ipynb)  
+
+- ACI  
+   docs: [Azure Container Instances にモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance)  
+   sample: [Register model and deploy as webservice in ACI](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/deployment/deploy-to-cloud/model-register-and-deploy.ipynb)  
+   sample: [Deploy Multiple Models as Webservice](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/deployment/deploy-multi-model/multi-model-register-and-deploy.ipynb)  
+
+- AKS  
+   docs: [Azure Kubernetes Service クラスターにモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-kubernetes-service?tabs=python)  
+   sample: [Deploying a web service to Azure Kubernetes Service (AKS)](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/deployment/production-deploy-to-aks/production-deploy-to-aks.ipynb)  
+   sample: [Deploying a web service to Azure Kubernetes Service (AKS) + SSL](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/deployment/production-deploy-to-aks/production-deploy-to-aks-ssl.ipynb)  
+   sample: [Deploying a web service to Azure Kubernetes Service (AKS) + GPU](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/deployment/production-deploy-to-aks-gpu/production-deploy-to-aks-gpu.ipynb)  
 
 
 ***
