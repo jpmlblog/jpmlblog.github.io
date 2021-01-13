@@ -22,11 +22,11 @@ tags:
 
 モデルは、VotingEnsemble を選択します。  
 
-<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-list.png" align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-list.png" width=500px align="left" border="1"><br clear="left">  
 
 「詳細」 タブより実行 ID を確認します。  
 
-<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-details.png" align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-details.png" width=300px align="left" border="1"><br clear="left">  
 
 Notebooks メニューより任意のフォルダーに新しいノートブックを作成し、以下のコードを入力、実行します。experiment_name や run_id は、ご利用環境に合わせて適宜変更ください。  
 
@@ -74,9 +74,9 @@ pred.tolist()
 
 以下の通り推論結果を表示できたかと思います。
 
-<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-inference-result.png" align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-inference-result.png" width=400px align="left" border="1"><br clear="left">  
 
-
+***
 ## Web サービスとしてデプロイされたモデルを使用する
 作成したモデルをローカル、ACI、AKS のいずれかに Web サービスとしてデプロイした場合、要求データを REST エンドポイントに対して送信することで推論結果を得られます。  
 
@@ -95,8 +95,9 @@ SDK ベースになりますが、ローカル、ACI、AKS それぞれの公開
 - [Web サービスとしてデプロイされた Azure Machine Learning モデルを使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-consume-web-service?tabs=python)  
 
 <br>
-※ 現在更新中]
+※ 現在更新中
 <br>
+
 
 ***
 `変更履歴`  
