@@ -76,10 +76,9 @@ pred.tolist()
 
 <img src="https://jpmlblog.github.io/images/AML-model-inference/AML-inference-result.png" width=700px align="left" border="1"><br clear="left">  
 
->注意点  
->時系列予測モデルの ForecastingParameters として target_rolling_window_size パラメーターを指定していると、predict の実行が失敗することが確認できています。これは predict メソッドが target_rolling_window_size パラメーターを使用したモデルでの実行をサポートしていないためです。
->このような場合、以下サンプル ノートブック [auto-ml-forecasting-orange-juice-sales.ipynb](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/forecasting-orange-juice-sales/auto-ml-forecasting-orange-juice-sales.ipynb) 、にありますとおり、predict メソッドではなく forecast メソッドの利用をご検討ください。  
-><img src="https://jpmlblog.github.io/images/AML-model-inference/AML-forecasting-sample.png" width=600px align="left" border="1"><br clear="left">  
+>**注意点**  
+>時系列予測モデルの ForecastingParameters として target_rolling_window_size パラメーターを指定していると、predict の実行が失敗することが確認できています。これは predict メソッドが target_rolling_window_size パラメーターを使用したモデルでの実行をサポートしていないためです。このような場合、以下サンプル ノートブック [auto-ml-forecasting-orange-juice-sales.ipynb](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/forecasting-orange-juice-sales/auto-ml-forecasting-orange-juice-sales.ipynb) 、にありますとおり、predict メソッドではなく forecast メソッドの利用をご検討ください。  
+><img src="https://jpmlblog.github.io/images/AML-model-inference/AML-forecasting-sample.png" width=800px align="left" border="1"><br clear="left">  
 
 ***
 ## Web サービスとしてデプロイされたモデルを使用する
