@@ -113,6 +113,13 @@ Azure Machine Learning で ACI にモデルをデプロイする場合、指定�
 
 - [Azure 価格について 1 対 1 でのガイダンスを受ける](https://azure.microsoft.com/ja-jp/pricing/contact-sales/)
 - [Azure 営業担当者に問い合わせる](https://azure.microsoft.com/ja-jp/overview/sales-number/)  
+
+***
+## 実際にかかったコストに関する問い合わせ
+
+
+
+
 ***
 `変更履歴`  
 `2020/06/18 created by Mochizuki`  

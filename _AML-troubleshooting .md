@@ -13,7 +13,12 @@ Azure Machine Learning のご利用において問題が発生した捌い、参
 - [ParallelRunStep のデバッグとトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-debug-parallel-run-step)  
 - [モデル デプロイのトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-troubleshoot-deployment?tabs=azcli)  
 - [ローカルでのモデル デプロイのトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-troubleshoot-deployment-local)  
-- [デザイナーの例外とエラー コード](https://docs.microsoft.com/ja-jp/azure/machine-learning/algorithm-module-reference/designer-error-codes)
+- [デザイナーの例外とエラー コード](https://docs.microsoft.com/ja-jp/azure/machine-learning/algorithm-module-reference/designer-error-codes)  
+
+※ 以下、現時点で英語のみのサイトとなります。
+- [Configure and submit training runs #Troubleshooting](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-set-up-training-targets#troubleshooting)  
+- [Troubleshoot environment image builds](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-troubleshoot-environments)  
+
 
 <!-- more -->
 <br>

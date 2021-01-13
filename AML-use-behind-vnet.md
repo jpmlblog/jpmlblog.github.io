@@ -117,7 +117,7 @@ New-AzResourceGroupDeployment `
 パブリック インターネット経由でアクセスした際に表示されるエラーメッセージを以下に紹介します。  
 
 ### Home アクセス時のエラー  
-<img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Home-menu-error.png" width=700px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-use-behind-vnet/AML-Home-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
 >REQUEST_SEND_ERROR: Your request for data wasn’t sent. Here are some things to try: Check your network and internet connection, make sure a proxy server is not blocking your connection, follow our guidelines if you’re using a private link, and check if you have AdBlock turned on.
 
@@ -126,14 +126,14 @@ New-AzResourceGroupDeployment `
 
 
 ### Notebooks アクセス時のエラー  
-<img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Notebooks-menu-error.png" width=700px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-use-behind-vnet/AML-Notebooks-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
 >403: You are not authorized to access this resource. You are not authorized to access this resource.
 
 >Request authorization to storage account failed. Storage account might be behind a VNET. Please go to the Compute tab, create a compute instance, and launch Jupyter or Jupyter Lab to use your files and notebooks.
 
 ### Compute アクセス時  
-<img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Compute-menu-error.png" width=700px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-use-behind-vnet/AML-Compute-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
 >403: You are not authorized to access this resource. You are not authorized to access this resource.
 
@@ -148,7 +148,7 @@ New-AzResourceGroupDeployment `
 - [Azure Machine Learning ワークスペースへのアクセスの管理](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-assign-roles)
 
 ### Web ブラウザのアクセス自体が失敗する場合
-<img src="https://jpmlblog.github.io/images/AMS-use-behind-vnet/AML-Studio-error.png" width=400px align="left" border="1"><br clear="left"> 
+<img src="https://jpmlblog.github.io/images/AML-use-behind-vnet/AML-Studio-error.png" width=400px align="left" border="1"><br clear="left"> 
 
 NSG を使用してインターネット接続を制限している場合、仮想ネットワーク上のリソースからであっても Azure Machine Learning Studio へのアクセスが出来ない場合があります。下記サイトに記載されております通り、AzureFrontDoor.Frontend のサービス タグ宛の通信を許可する必要がある点についてご留意ください。  
 
