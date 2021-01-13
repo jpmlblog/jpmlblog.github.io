@@ -22,7 +22,7 @@ tags:
 
 モデルは、VotingEnsemble を選択します。  
 
-<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-list.png" width=700px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-model-inference/AML-algorithm-list.png" width=800px align="left" border="1"><br clear="left">  
 
 「詳細」 タブより実行 ID を確認します。  
 
