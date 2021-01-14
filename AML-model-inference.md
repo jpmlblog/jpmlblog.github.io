@@ -64,6 +64,15 @@ test_data = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sampl
 test_dataset = Dataset.Tabular.from_delimited_files(test_data)
 ```
 
+>既存のデータセットを使用する場合、上記コード セルを以下に変更します。
+>```Python
+># 既存のデータセットを読み込みます。
+>from azureml.core.dataset import Dataset
+>
+># detaset_name をデータセット名に置き換えて実行します。
+>test_dataset = Dataset.get_by_name(workspace, >name='dataset_name')
+>```
+
 ```Python
 # y 列を削除して pandas のデータフレーム形式に変換します。
 test = test_dataset.drop_columns(columns=['y'])
@@ -113,6 +122,8 @@ pred.tolist()
 - sample: [Deploying a web service to Azure Kubernetes Service (AKS) + SSL](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/deployment/production-deploy-to-aks/production-deploy-to-aks-ssl.ipynb)  
 - sample: [Deploying a web service to Azure Kubernetes Service (AKS) + GPU](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/deployment/production-deploy-to-aks-gpu/production-deploy-to-aks-gpu.ipynb)  
 
+***
+- [スタジオを使用して、デザイナーでトレーニングされたモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-model-designer)
 
 ***
 `変更履歴`  
