@@ -17,26 +17,27 @@ tags:
 Azure Machine Learning で使用する通信先ホスト名の一覧は以下サイトに一覧化されております。これらのホスト名宛の送信方向の通信を許可するよう設定ください。  
 
 - [ファイアウォールの内側で Azure Machine Learning のワークスペースを使用する - # Microsoft のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#microsoft-hosts)
-
-  >login.microsoftonline.com  
-  >management.azure.com  
-  >*.batchai.core.windows.net  
-  >ml.azure.com  
-  >default.exp-tas.com  
-  >*.azureml.ms  
-  >*.experiments.azureml.net  
-  >*.modelmanagement.azureml.net  
-  >mlworkspace.azure.ai  
-  >*.aether.ms  
-  >*.instances.azureml.net  
-  >*.instances.azureml.ms  
-  >windows.net  
-  >vault.azure.net  
-  >azurecr.io  
-  >mcr.microsoft.com  
-  >\<your-acr-server-name\>.azurecr.io  
-  >*.notebooks.azure.net  
-  >graph.windows.net  
+  > login.microsoftonline.com  
+  > management.azure.com  
+  > ml.azure.com  
+  > *.azureml.ms  
+  > *.experiments.azureml.net  
+  > *.modelmanagement.azureml.net  
+  > *.aether.ms  
+  > *.studioservice.azureml.com  
+  > *.notebooks.azure.net  
+  > *.file.core.windows.net  
+  > *.dfs.core.windows.net  
+  > *.blob.core.windows.net  
+  > graph.microsoft.com  
+  > *.aznbcontent.net  
+  > *.batchai.core.windows.net  
+  > *.instances.azureml.net  
+  > *.instances.azureml.ms  
+  > core.windows.net  
+  > vault.azure.net  
+  > azurecr.io  
+  > mcr.microsoft.com  
 
   ※ 各ホスト名宛の通信の概要は[抜粋元](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#microsoft-hosts)を参照ください。  
   ※ 機能別に列挙されておりますので、一部設定上重複するものがあります。  

@@ -70,7 +70,7 @@ test_dataset = Dataset.Tabular.from_delimited_files(test_data)
 >from azureml.core.dataset import Dataset
 >
 ># detaset_name をデータセット名に置き換えて実行します。
->test_dataset = Dataset.get_by_name(workspace, >name='dataset_name')
+>test_dataset = Dataset.get_by_name(workspace, >name='bankmarketing_test')
 >```
 
 ```Python
