@@ -107,7 +107,7 @@ pred.tolist()
 
 デプロイ先がローカル、ACI、AKS それぞれのドキュメントおよびサンプル ノートブックを紹介します。  
 
-### ローカル  
+### ローカル
 - docs: [Azure Machine Learning コンピューティング インスタンスへのモデルのデプロイ](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-local-container-notebook-vm)  
 - sample: [Register model and deploy locally with advanced usages](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/deployment/deploy-to-local/register-model-deploy-local-advanced.ipynb)  
 
@@ -123,11 +123,65 @@ pred.tolist()
 - sample: [Deploying a web service to Azure Kubernetes Service (AKS) + GPU](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/deployment/production-deploy-to-aks-gpu/production-deploy-to-aks-gpu.ipynb)  
 
 ***
+## そのほか参考となる情報
+
+### Web サービスの入力データについて
+Web サービスを呼び出す Json データは、{"data": [[ 数値,数値, ... ], [ 数値,数値, ... ]]} という形式である必要があります。または、辞書形式で {"data": [{ "列名":数値, "列名":数値, ... }, { "列名":数値, "列名":数値, ... }]} としても推論を実行可能です。  
+
+以下に、csv ファイルを入力データに変更する方法を紹介させていただきます。まず、下記のコードで推論用データ predictdata.csv を作成します。事前に作成されたデータを使用しても問題ありません。  
+
+```Python
+%%writefile predictdata.csv
+Name,age,job,hobby,deposit
+test1,15,none,car,150000
+test2,28,office worker,200000
+test3,35,bank,fishing,3600000
+test4,40,journalist,1520000
+```
+
+下記コードにて、入力用のデータへ変換します。
+
+```Python
+import csv
+import json
+
+json_list = []
+
+# CSV ファイルの読み込み
+with open('predictdata.csv', 'r') as f:
+    for row in csv.DictReader(f):
+        json_list.append(row)
+
+# JSON ファイルへの書き込み
+with open('predict.json', 'w') as f:
+    json.dump(json_list, f, ensure_ascii=False, indent=4)
+
+# JSON ファイルのロード
+with open('predict.json', 'r') as f:
+    json_output = json.load(f)
+
+# 入力用データへの成型
+data = {'data': [json_output]}
+
+# String 形式に変換
+input_data = json.dumps(data)
+```
+
+このとき、input_data 以下の通りです。
+
+```
+'{"data": [[{"Name": "test1", "age": "15", "job": "none", "hobby": "car", "deposit": "150000"}, {"Name": "test2", "age": "28", "job": "office worker", "hobby": "200000", "deposit": null}, {"Name": "test3", "age": "35", "job": "bank", "hobby": "fishing", "deposit": "3600000"}, {"Name": "test4", "age": "40", "job": "journalist", "hobby": "1520000", "deposit": null}]]}'
+```
+
+### デザイナーで作成したモデルのデプロイ
+デザイナーでは作成したパイプラインを公開するだけではなく、作成したモデルをデプロイする方法がございます。以下公開情報に纏められておりますので、参考にご参照ください。
+
 - [スタジオを使用して、デザイナーでトレーニングされたモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-model-designer)
 
 ***
 `変更履歴`  
-`2021/01/13 created by Mochizuki`
+`2021/01/13 created by Mochizuki`  
+`2021/01/21 created by Mochizuki`  
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
