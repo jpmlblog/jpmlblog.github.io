@@ -95,6 +95,7 @@ Azure Machine Learning を使用して機械学習を開発するための API �
 `2020/06/08 modified by Mochizuki`  
 `2020/06/18 modified by Mochizuki`  
 `2020/09/08 modified by Mochizuki`  
+`2021/01/27 modified by Mochizuki`  
 <br>
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 適宜追加更新します。  
