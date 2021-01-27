@@ -16,6 +16,7 @@ Azure Machine Learninig のご利用にあたり、参考となる公開情報�
 
 Azure Machine Learning の技術ドキュメント、価格、更新情報など。専用ポータルは [こちら (https://ml.azure.com/)](https://ml.azure.com/)。
 
+- [Azure Machine Learning (概要)](https://azure.microsoft.com/ja-jp/services/machine-learning/)  
 - [Azure Machine Learning のドキュメント](https://docs.microsoft.com/ja-jp/azure/machine-learning/)  
 - [Azure Machine Learning デザイナーのアルゴリズムとモジュールのリファレンス (プレビュー)](https://docs.microsoft.com/ja-jp/azure/machine-learning/algorithm-module-reference/module-reference)  
 - [Azure Machine Learning のリリース ノート](https://docs.microsoft.com/ja-jp/azure/machine-learning/azure-machine-learning-release-notes)  
@@ -70,7 +71,6 @@ Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、�
 Azure Machine Learning の導入によるメリットや考慮事項、事例など。
 
 - [Data science Best practices with Azure](https://github.com/Azure/data-science-best-practices)
-- [Azure Machine Learning](https://azure.microsoft.com/ja-jp/services/machine-learning/)  
 - [Microsoft の機械学習製品およびテクノロジの比較](https://docs.microsoft.com/ja-jp/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning)  
 - [Azure Machine Learning と Machine Learning Studio (classic) の違い](https://docs.microsoft.com/ja-jp/azure/machine-learning/overview-what-is-machine-learning-studio#ml-studio-classic-vs-azure-machine-learning-studio)  
 - [お客様事例の検索 (?sq="Azure Machine Learning")](https://customers.microsoft.com/ja-jp/search?sq=%22Azure%20Machine%20Learning%22&ff=&p=2&so=story_publish_date%20desc)  
