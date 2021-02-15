@@ -18,7 +18,7 @@ tags:
 
 - [チュートリアル:Azure Machine Learning の自動 ML で分類モデルを作成する](https://docs.microsoft.com/ja-jp/azure/machine-learning/tutorial-first-experiment-automated-ml)  
 
-自動機械学習では、複数のアルゴリズムと前処理の組み合わせを試し、それぞれの実行でモデルを作成します。上記チュートリアルのとおりに実行すると、「my-1st-automl-experiment」 という名前の実験の中で、複数のモデルが作成されます。このうちひとつのモデルをローカルにロードして、推論実行する方法を紹介します。
+自動機械学習では、複数のアルゴリズムと前処理の組み合わせを試し、それぞれの実行でモデルを作成します。上記チュートリアルのとおりに実行すると、「my-1st-automl-experiment」 という名前の実験の中で、複数のモデルが作成されます。このうちひとつのモデルをローカルにロードして、推論実行する方法を紹介します。  
 
 モデルは、VotingEnsemble を選択します。  
 
@@ -47,7 +47,7 @@ run.download_files(output_directory='download')
 
 ```Python
 # ダウンロードしたモデルをローカルにロードします。
-from sklearn.externals import joblib
+import joblib
 from azureml.core.model import Model
 
 model_path = 'download/outputs/model.pkl'

@@ -70,7 +70,6 @@ Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、�
 
 Azure Machine Learning の導入によるメリットや考慮事項、事例など。
 
-- [Data science Best practices with Azure](https://github.com/Azure/data-science-best-practices)
 - [Microsoft の機械学習製品およびテクノロジの比較](https://docs.microsoft.com/ja-jp/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning)  
 - [Azure Machine Learning と Machine Learning Studio (classic) の違い](https://docs.microsoft.com/ja-jp/azure/machine-learning/overview-what-is-machine-learning-studio#ml-studio-classic-vs-azure-machine-learning-studio)  
 - [お客様事例の検索 (?sq="Azure Machine Learning")](https://customers.microsoft.com/ja-jp/search?sq=%22Azure%20Machine%20Learning%22&ff=&p=2&so=story_publish_date%20desc)  

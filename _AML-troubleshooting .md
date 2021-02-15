@@ -14,6 +14,7 @@ Azure Machine Learning のご利用において問題が発生した捌い、参
 - [モデル デプロイのトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-troubleshoot-deployment?tabs=azcli)  
 - [ローカルでのモデル デプロイのトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-troubleshoot-deployment-local)  
 - [デザイナーの例外とエラー コード](https://docs.microsoft.com/ja-jp/azure/machine-learning/algorithm-module-reference/designer-error-codes)  
+- [Azure Machine Learning ワークスペースを作成して管理する #トラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-manage-workspace?tabs=python#troubleshooting)  
 
 ※ 以下、現時点で英語のみのサイトとなります。
 - [Configure and submit training runs #Troubleshooting](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-set-up-training-targets#troubleshooting)  
