@@ -32,6 +32,7 @@ Azure Machine Learning で使用する通信先ホスト名の一覧は以下サ
   > graph.microsoft.com  
   > *.aznbcontent.net  
   > *.batchai.core.windows.net  
+  > graph.windows.net  
   > *.instances.azureml.net  
   > *.instances.azureml.ms  
   > core.windows.net  

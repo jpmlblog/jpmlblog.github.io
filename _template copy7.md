@@ -1,13 +1,23 @@
 ---
-title: Default-Workspace というリソース グル―プで課金が発生する
-date: -12-31 00:00:00
+title: テンプレート
+date: 9999-12-31 00:00:00
 categories:
-- Azure Machine Learning Studio (Classic)
+- template
 tags:
-- 課金
-- Default-Workspace
+- テンプレ
 ---
-Azure Machine Learning Studio (Classic) の
+121020326001501
+
+選択されたネットワークを使用する場合、仮想ネットワーク指定しないとコンピューティングインスタンスが作成できない
+Web デプロイする場合、インターネット経由でアクセスさせて、且つ利用を制限する場合、認証を有効化する
+
+ログの在処
+ストレージ アカウントの場所
+
+amlcliの使い方
+
+ACRとか必須のリソース
+
 <!-- more -->
 <br>
 
