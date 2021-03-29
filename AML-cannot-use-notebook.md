@@ -14,7 +14,11 @@ tags:
 ***
 # 対応方法
 ## Azure MachineLeaning Studio の Compute メニュー利用による回避
-Azure MachineLeaning Studio（以下 AML Studio） の Notebooks メニューで権限に関するエラーが表示された場合、コンピューティング メニュー のアプリケーション URI 配下のメニューから Notebook を開き直す対応で、問題が解消する場合があります。  
+Azure MachineLeaning Studio（以下 AML Studio） の Notebooks メニュー使用時に、権限に関するエラーが表示される場合があります。  
+
+<img src="https://jpmlblog.github.io/images/AML-cannot-use-notebook/error_message.jpg" width=400px border="1">  
+
+原因は Azure Active Directory 側の設定に依存する可能性がありますが、コンピューティング メニュー のアプリケーション URI 配下のメニューから Notebook を開き直す対応で、問題が解消する場合があります。  
 
 <img src="https://jpmlblog.github.io/images/AML-cannot-use-notebook/notebook1.jpg" width=800px border="1">  
 
