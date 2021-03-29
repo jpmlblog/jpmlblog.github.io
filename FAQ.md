@@ -170,7 +170,7 @@ Azure Functions を使用して、特定の時間に停止させる方法を以�
 </details>
 
 ***
-#### 追加
+#### ※ 適宜追加予定
 <details><summary style="font-size: 10pt">回答</summary>
 
 </details>
