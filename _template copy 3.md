@@ -21,13 +21,14 @@ Azure Machine Learning ワークスペースに対して、ユーザーが出来
 ## 設定方法について
 Azure Machine Learning では、[Azure Machinie Learning Studio](https://ml.azure.com/) や [Python SDK](https://docs.microsoft.com/ja-jp/python/api/overview/azure/ml/?view=azure-ml-py)、[Azure CLI](https://docs.microsoft.com/ja-jp/rest/api/azureml/workspacesandcomputes/machinelearningcompute)、[REST API](https://docs.microsoft.com/ja-jp/rest/api/azureml/) 等を使用してワークスペースにアクセスを行います。この時、各操作で実行される API 単位で権限を割り当てることが可能です。  
 
-ワークスペースの管理者としての権限を付与する場合、ワークスペースの作成を行う必要があるか、クォータ要求を行う必要があるか、カスタム ロールを作成する必要があるかといった観点で付与するスコープを決定します。  
+ワークスペースの管理者としての権限を付与する場合、ワークスペースの作成を行う必要があるか、クォータ要求を行う必要があるか、カスタム ロールを作成する必要があるかといった観点で付与するスコープを決定します。(※ [参考サイト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-assign-roles#common-scenarios))
 
 |アクティビティ|スコープ|
 |:--|:--|
 |新しいワークスペースを作成できる|リソースグループに Owner または Contributor|
 |クォータ要求を発行できる|サブスクリプションに Owner または Contributor|
 |新しいカスタム ロールを作成できる|サブスクリプションに Owner または Contributor|
+
 
 <img src="https://jpmlblog.github.io/images/template.png" width=400px>  
 
