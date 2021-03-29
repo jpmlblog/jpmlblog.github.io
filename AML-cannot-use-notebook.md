@@ -16,8 +16,7 @@ tags:
 ## Azure MachineLeaning Studio の Compute メニュー利用による回避
 Azure MachineLeaning Studio（以下 AML Studio） の Notebooks メニューで権限に関するエラーが表示された場合、Compute メニューから Notebook を開き直す対応で、問題が解消する場合があります。  
 
-<img src="https://jpmlblog.github.io/images/AML-cannot-use-notebook/notebook1.jpg" width=800px align="left" border="1">
-
+<img src="https://jpmlblog.github.io/images/AML-cannot-use-notebook/notebook1.jpg" width=800px border="1">  
 Notebooks メニューと Compute メニューにおいてはそれぞれのバックエンドの認証方法が異なります。  
 そのため、Compute メニューから Notebook を実行した場合には、AML Studio への認証情報がコンピューティングインスタンスに連携されて権限エラーが生じない可能性があります。  
 
@@ -41,9 +40,9 @@ Notebooks メニューと Compute メニューにおいてはそれぞれのバ�
 　・場所ベースの条件付きアクセスを構成する。  
 このクイック スタートでは、環境内でネームド ロケーションを構成する方法について説明します。
 
-追加登録対象となるコンピューティングインスタンスのIPアドレスは、AMLスタジオ の Compute メニューで確認可能です。
+追加登録対象となるコンピューティングインスタンスのIPアドレスは、AMLスタジオ の Compute メニューで確認可能です。  
 
-<img src="https://jpmlblog.github.io/images/AML-cannot-use-notebook/notebook2.jpg" width=800px align="left" border="1">
+<img src="https://jpmlblog.github.io/images/AML-cannot-use-notebook/notebook2.jpg" width=800px border="1">
 　　
 
 # エラーメッセージが表示される原因
