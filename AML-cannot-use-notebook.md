@@ -14,20 +14,20 @@ tags:
 ***
 # 対応方法
 ## Azure MachineLeaning Studio の Compute メニュー利用による回避
-Azure MachineLeaning Studio（以下 AML Studio） の Notebooks メニューで権限に関するエラーが表示された場合、Compute メニューから Notebook を開き直す対応で、問題が解消する場合があります。  
+Azure MachineLeaning Studio（以下 AML Studio） の Notebooks メニューで権限に関するエラーが表示された場合、コンピューティング メニュー のアプリケーション URI 配下のメニューから Notebook を開き直す対応で、問題が解消する場合があります。  
 
 <img src="https://jpmlblog.github.io/images/AML-cannot-use-notebook/notebook1.jpg" width=800px border="1">  
-Notebooks メニューと Compute メニューにおいてはそれぞれのバックエンドの認証方法が異なります。  
-そのため、Compute メニューから Notebook を実行した場合には、AML Studio への認証情報がコンピューティングインスタンスに連携されて権限エラーが生じない可能性があります。  
+Notebooks メニューと コンピューティング メニューにおいてはそれぞれのバックエンドの認証方法が異なります。  
+そのため、コンピューティング メニューから Notebook を実行した場合には、AML Studio への認証情報がコンピューティングインスタンスに連携されて権限エラーが生じない可能性があります。  
 
 なお、AML Studio を通じて配置された Notebook などのファイルが存在する階層の実体は、AMLワークスペース既定のストレージアカウントです。　　
 
 （コンピューティングインスタンス内部から参照した際のパス例： /mnt/batch/tasks/shared/LS_root/mounts/clusters/{コンピューティングインスタンス名}/code/Users/{ユーザー名}）　　
 
-そのため、Notebooksメニューと Compute メニューのどちらのメニューを通じた利用でも、ファイルの数や内容は同じです。  
-もし、Compute メニューの利用で問題が解消する場合には、こちらの回避策の利用のご検討をいただければ幸いです。  
+そのため、Notebooksメニューと コンピューティング メニューのどちらのメニューを通じた利用でも、ファイルの数や内容は同じです。  
+もし、コンピューティング メニューの利用で問題が解消する場合には、こちらの回避策の利用のご検討をいただければ幸いです。  
 
-もし、Compute メニュー利用による問題の回避が行えない場合には、次項の「Azure Active Directory へのネームドロケーションの登録追加」対応をご検討ください。
+もし、コンピューティング メニュー利用による問題の回避が行えない場合には、次項の「Azure Active Directory へのネームドロケーションの登録追加」対応をご検討ください。
 
 
 ## Azure Active Directory へのネームドロケーションの登録追加
