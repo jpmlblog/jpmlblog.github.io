@@ -46,7 +46,9 @@ Notebooks メニューと コンピューティング メニューにおいて�
 追加登録対象となるコンピューティングインスタンスのIPアドレスは、AMLスタジオ の Compute メニューで確認可能です。  
 
 <img src="https://jpmlblog.github.io/images/AML-cannot-use-notebook/notebook2.jpg" width=800px border="1">
-　　
+  
+<br>
+
 ***
 # エラーメッセージが表示される原因
 ## 「条件付きアクセス」の設定
@@ -61,6 +63,7 @@ Notebooks メニューと コンピューティング メニューにおいて�
 
 
 ***
+
 `変更履歴`  
 `2021/03/29 created by Uehara`
 
