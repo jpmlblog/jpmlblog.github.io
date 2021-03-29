@@ -17,6 +17,9 @@ tags:
 Azure MachineLeaning Studio（以下 AML Studio） の Notebooks メニューで権限に関するエラーが表示された場合、コンピューティング メニュー のアプリケーション URI 配下のメニューから Notebook を開き直す対応で、問題が解消する場合があります。  
 
 <img src="https://jpmlblog.github.io/images/AML-cannot-use-notebook/notebook1.jpg" width=800px border="1">  
+
+<br>  
+
 Notebooks メニューと コンピューティング メニューにおいてはそれぞれのバックエンドの認証方法が異なります。  
 そのため、コンピューティング メニューから Notebook を実行した場合には、AML Studio への認証情報がコンピューティングインスタンスに連携されて権限エラーが生じない可能性があります。  
 
@@ -29,7 +32,7 @@ Notebooks メニューと コンピューティング メニューにおいて�
 
 もし、コンピューティング メニュー利用による問題の回避が行えない場合には、次項の「Azure Active Directory へのネームドロケーションの登録追加」対応をご検討ください。
 
-
+***
 ## Azure Active Directory へのネームドロケーションの登録追加
 
 「アクセスできません」というエラーの権限の問題の根本的な対応として、テナント（Azure Active Directory）管理者様により、該当するコンピューティング インスタンスのIPアドレスをネームドロケーションとして追加登録していただくことで、問題が解消される可能性があります。
@@ -44,7 +47,7 @@ Notebooks メニューと コンピューティング メニューにおいて�
 
 <img src="https://jpmlblog.github.io/images/AML-cannot-use-notebook/notebook2.jpg" width=800px border="1">
 　　
-
+***
 # エラーメッセージが表示される原因
 ## 「条件付きアクセス」の設定
 コンピューティングインスタンスが不詳なデバイスとして認識され、組織データである Azure ML ワークスペースへのアクセスが叶わないことが、エラーの原因となっている可能性があります。   
