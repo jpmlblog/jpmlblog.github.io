@@ -54,6 +54,7 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
   [Load Balancer の価格](https://azure.microsoft.com/ja-jp/pricing/details/load-balancer/)  
   [パブリック IP アドレスの料金](https://azure.microsoft.com/ja-jp/pricing/details/ip-addresses/)  
   [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service)  
+  [Linux Virtual Machines の料金](https://azure.microsoft.com/ja-jp/pricing/details/virtual-machines/linux/)  
 
 
 ### コンピューティング クラスター
@@ -63,7 +64,8 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
 
 - 参考サイト  
   [サポートされている VM シリーズおよびサイズ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-compute-target#supported-vm-series-and-sizes)  
-  [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service) 
+  [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service)  
+  [Linux Virtual Machines の料金](https://azure.microsoft.com/ja-jp/pricing/details/virtual-machines/linux/)  
 
 ### 推論クラスター (Azure Kubernetes Service, AKS)
 推論用クラスターとして Azure Kubernetes Service の仮想マシン (東日本リージョン、STANDARD_DS12_V2) を 3 ノードで作成し、20 日間使用する場合の月額  
@@ -76,6 +78,7 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
 - 参考サイト  
   [Azure Kubernetes Service (AKS) の価格](https://azure.microsoft.com/ja-jp/pricing/details/kubernetes-service/)  
   [料金計算ツール (+Azure Kubernetes Service)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=kubernetes-service)  
+  [Linux Virtual Machines の料金](https://azure.microsoft.com/ja-jp/pricing/details/virtual-machines/linux/)  
 
 ### Azure Container Instance (ACI)
 モデルを Azure Container Instance (vCPU 1.8、メモリ 4 GiB) にデプロイし、30 日間使用する場合の月額  
