@@ -116,23 +116,19 @@ New-AzResourceGroupDeployment `
 
 パブリック インターネット経由でアクセスした際に表示されるエラーメッセージを以下に紹介します。  
 
-### Home アクセス時のエラー  
+### Home メニュー アクセス時のエラー  
 <img src="https://jpmlblog.github.io/images/AML-use-behind-vnet/AML-Home-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
 >REQUEST_SEND_ERROR: Your request for data wasn’t sent. Here are some things to try: Check your network and internet connection, make sure a proxy server is not blocking your connection, follow our guidelines if you’re using a private link, and check if you have AdBlock turned on.
 
-仮想ネットワーク上からアクセスしても同様のエラーが出力する場合があります。これは、各サービスの URL アクセス時に、DNS 名前解決でプライベート IP アドレスのが返されていない可能性があります。例えば、仮想ネットワークでカスタム DNS を使用しているとこのような状態になるため、下記の情報に従い必要な設定をご検討ください。  
-- [カスタム DNS サーバーでワークスペースを使用する方法](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-custom-dns?tabs=azure-portal)
-
-
-### Notebooks アクセス時のエラー  
+### Notebooks メニュー アクセス時のエラー  
 <img src="https://jpmlblog.github.io/images/AML-use-behind-vnet/AML-Notebooks-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
 >403: You are not authorized to access this resource. You are not authorized to access this resource.
 
 >Request authorization to storage account failed. Storage account might be behind a VNET. Please go to the Compute tab, create a compute instance, and launch Jupyter or Jupyter Lab to use your files and notebooks.
 
-### Compute アクセス時  
+### Compute メニュー アクセス時のエラー  
 <img src="https://jpmlblog.github.io/images/AML-use-behind-vnet/AML-Compute-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
 >403: You are not authorized to access this resource. You are not authorized to access this resource.
@@ -157,6 +153,28 @@ NSG を使用してインターネット接続を制限している場合、仮�
   >
   >たとえば、ネットワーク セキュリティ グループ (NSG) を使用して送信トラフィックを制限している場合は、 AzureFrontDoor.Frontend の サービス タグ 宛先に規則を追加します。
 
+## カスタム DNS サーバーを使用している場合
+
+仮想ネットワークにカスタム DNS サーバーを設定している場合、DNS 名前解決にプライベート IP アドレスが返されず、アクセスに失敗する可能性があります。下記の情報に従い必要な設定をご検討ください。  
+
+- [カスタム DNS サーバーでワークスペースを使用する方法](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-custom-dns?tabs=azure-portal)
+
+## ExpressRoute や Azure VPN 経由でアクセスする場合
+
+オンプレミスのマシンから ExpressRoute や Azure VPN 経由でワークスペースにアクセスする場合、名前解決で参照先 DNS サーバーの設定に依存してパブリック IP アドレスが返却されてしまい、アクセスが失敗する可能性があります。上述のカスタム DNS サーバーの設定をオンプレミスの DNS サーバーを対象に実施いただくことをご検討ください。
+
+## Conmpte Instance 作成時の留意点
+
+ワークスペースで Private Link を有効にしている場合、Compute Instance および Compute Cluster は仮想ネットワーク上にしか作成できなくなります。この時、Compute Instance を作成すると仮想ネットワーク リソースのあるリソース グループ配下に、Load Balancer、Public IP Address、Network Security Group が作成されます。これらのリソースは Compute Instance に紐づいて作成されるため、現時点で別リソース グループに移動したり、作成時点で別のリソース グループを指定できない仕様になっております。  
+
+リソース グループ単位での管理を行う必要がある場合、仮想ネットワークを Azure Machine Learning ワークスペースと同じリソース グループに作成いただく必要がございますこと、予めご竜願います。  
+
+※ 当該仕様変更リクエストを下記フィードバック サイトにて投稿しております。投票数が多いものから追加を検討される傾向にありますので、必要に応じてご投票およびコメントの追加にご協力いただけますと幸いです。  
+
+- [Change resource group for LB, Public IP, and NSG of Compute Instance](https://feedback.azure.com/forums/257792-machine-learning/suggestions/43181112-change-resource-group-for-lb-public-ip-and-nsg-o)
+
+
+
 <br>
 ※ 順次追加予定です。
 
@@ -164,6 +182,7 @@ NSG を使用してインターネット接続を制限している場合、仮�
 `変更履歴`  
 `2020/10/28 created by Mochizuki`  
 `2020/11/05 created by Mochizuki`  
+`2021/04/19 created by Mochizuki`
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
