@@ -153,17 +153,17 @@ NSG を使用してインターネット接続を制限している場合、仮�
   >
   >たとえば、ネットワーク セキュリティ グループ (NSG) を使用して送信トラフィックを制限している場合は、 AzureFrontDoor.Frontend の サービス タグ 宛先に規則を追加します。
 
-## カスタム DNS サーバーを使用している場合
+### カスタム DNS サーバーを使用している場合
 
 仮想ネットワークにカスタム DNS サーバーを設定している場合、DNS 名前解決にプライベート IP アドレスが返されず、アクセスに失敗する可能性があります。下記の情報に従い必要な設定をご検討ください。  
 
 - [カスタム DNS サーバーでワークスペースを使用する方法](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-custom-dns?tabs=azure-portal)
 
-## ExpressRoute や Azure VPN 経由でアクセスする場合
+### ExpressRoute や Azure VPN 経由でアクセスする場合
 
 オンプレミスのマシンから ExpressRoute や Azure VPN 経由でワークスペースにアクセスする場合、名前解決で参照先 DNS サーバーの設定に依存してパブリック IP アドレスが返却されてしまい、アクセスが失敗する可能性があります。上述のカスタム DNS サーバーの設定をオンプレミスの DNS サーバーを対象に実施いただくことをご検討ください。
 
-## Conmpte Instance 作成時の留意点
+### Conmpte Instance 作成時の留意点
 
 ワークスペースで Private Link を有効にしている場合、Compute Instance および Compute Cluster は仮想ネットワーク上にしか作成できなくなります。この時、Compute Instance を作成すると仮想ネットワーク リソースのあるリソース グループ配下に、Load Balancer、Public IP Address、Network Security Group が作成されます。これらのリソースは Compute Instance に紐づいて作成されるため、現時点で別リソース グループに移動したり、作成時点で別のリソース グループを指定できない仕様になっております。  
 
