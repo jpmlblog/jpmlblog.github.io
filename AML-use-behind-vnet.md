@@ -116,6 +116,16 @@ New-AzResourceGroupDeployment `
 
 パブリック インターネット経由でアクセスした際に表示されるエラーメッセージを以下に紹介します。  
 
+### Studio アクセスが失敗する場合
+<img src="https://jpmlblog.github.io/images/AML-use-behind-vnet/AML-Studio-error.png" width=400px align="left" border="1"><br clear="left"> 
+
+NSG を使用してインターネット接続を制限している場合、仮想ネットワーク上のリソースからであっても Azure Machine Learning Studio へのアクセスが出来ない場合があります。下記サイトに記載されております通り、AzureFrontDoor.Frontend のサービス タグ宛の通信を許可する必要がある点についてご留意ください。  
+
+- [Azure 仮想ネットワークで Azure Machine Learning Studio を使用する #VNet 内のリソースから Studio にアクセスする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-studio-virtual-network#access-the-studio-from-a-resource-inside-the-vnet)  
+  >仮想ネットワーク内のリソース (コンピューティング インスタンスや仮想マシンなど) からスタジオにアクセスする場合は、仮想ネットワークからスタジオへの送信トラフィックを許可する必要があります。  
+  >
+  >たとえば、ネットワーク セキュリティ グループ (NSG) を使用して送信トラフィックを制限している場合は、 AzureFrontDoor.Frontend の サービス タグ 宛先に規則を追加します。
+
 ### Home メニュー アクセス時のエラー  
 <img src="https://jpmlblog.github.io/images/AML-use-behind-vnet/AML-Home-menu-error.png" width=700px align="left" border="1"><br clear="left">  
 
@@ -142,16 +152,6 @@ New-AzResourceGroupDeployment `
 >Only the creator can access a compute instance.
 
 - [Azure Machine Learning ワークスペースへのアクセスの管理](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-assign-roles)
-
-### Web ブラウザのアクセス自体が失敗する場合
-<img src="https://jpmlblog.github.io/images/AML-use-behind-vnet/AML-Studio-error.png" width=400px align="left" border="1"><br clear="left"> 
-
-NSG を使用してインターネット接続を制限している場合、仮想ネットワーク上のリソースからであっても Azure Machine Learning Studio へのアクセスが出来ない場合があります。下記サイトに記載されております通り、AzureFrontDoor.Frontend のサービス タグ宛の通信を許可する必要がある点についてご留意ください。  
-
-- [Azure 仮想ネットワークで Azure Machine Learning Studio を使用する #VNet 内のリソースから Studio にアクセスする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-studio-virtual-network#access-the-studio-from-a-resource-inside-the-vnet)  
-  >仮想ネットワーク内のリソース (コンピューティング インスタンスや仮想マシンなど) からスタジオにアクセスする場合は、仮想ネットワークからスタジオへの送信トラフィックを許可する必要があります。  
-  >
-  >たとえば、ネットワーク セキュリティ グループ (NSG) を使用して送信トラフィックを制限している場合は、 AzureFrontDoor.Frontend の サービス タグ 宛先に規則を追加します。
 
 ### カスタム DNS サーバーを使用している場合
 
