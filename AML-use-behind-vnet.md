@@ -181,8 +181,8 @@ NSG を使用してインターネット接続を制限している場合、仮�
 ***
 `変更履歴`  
 `2020/10/28 created by Mochizuki`  
-`2020/11/05 created by Mochizuki`  
-`2021/04/19 created by Mochizuki`
+`2020/11/05 modified by Mochizuki`  
+`2021/04/19 modified by Mochizuki`
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
