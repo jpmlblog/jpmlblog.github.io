@@ -1,0 +1,48 @@
+---
+title: 既定のストレージ アカウント上のデータ配置について
+date: 2021-06-16 00:00:00
+categories:
+- Azure Machine Learning
+tags:
+- Blob コンテナー
+- ファイル共有
+---
+Azure Machine Learning ワークスペースが既定で使用するストレージ アカウントについて、作成したノートブック データや、実験時のログ、アップロードしたファイルなどの格納される場所について紹介します。  
+<!-- more -->
+<br>
+
+***
+## Notebooks メニューから参照可能なファイル
+Azure Machine Learning Studio の [Notebooks] メニューより参照可能なファイルやフォルダーは、ワークスペースが既定で使用するストレージ アカウントのファイル共有 `code-<GUID>/Users` 配下に格納されます。  
+
+- 例: Notebooks のフォルダー ツリー  
+<img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-notebooks.png" align="left"><br clear="left">  
+
+- 例: `code-<GUID>/Users` 配下  
+<img src="https://jpmlblog.github.io/images/AML-data-location/AML-Fileshare-code.png" align="left"><br clear="left">  
+
+---
+## 実験の成果物
+Azure Machine Learning Studio の [実験] メニューより参照可能な成果物 (ログ ファイルやモデル ファイル等) は、ワークスペースが既定で使用するストレージ アカウントの Blob コンテナー `azureml/ExperimentRun/dcid.<実行 ID>` 配下に格納されます。  
+
+- 例: 実験の [詳細] タブ    
+<img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-experiment-detail.png" align="left"><br clear="left">  
+
+- 例: 実験の [出力とログ] タブ  
+<img src="https://jpmlblog.github.io\images\AML-data-location\AML-UI-experiment-output.png" align="left"><br clear="left">  
+
+- 例: `azureml/ExperimentRun/dcid.<実行 ID>` 配下  
+<img src="https://jpmlblog.github.io\images\AML-data-location\AML-Blob-experimentrun.png" align="left"><br clear="left">  
+
+---
+
+※ 適宜追加予定です。
+
+
+
+***
+`変更履歴`  
+`2021/6/16 created by Mochizuki`
+
+※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
+※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
