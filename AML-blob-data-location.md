@@ -16,7 +16,7 @@ Azure Machine Learning ワークスペースが既定で使用するストレー
 Azure Machine Learning Studio の [Notebooks] メニューより参照可能なファイルやフォルダーは、ワークスペースが既定で使用するストレージ アカウントのファイル共有 `code-<GUID>/Users` 配下に格納されます。  
 
 - 例: Notebooks のフォルダー ツリー  
-<img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-notebooks.png" width=300px align="left"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-notebooks.png" width=350px align="left"><br clear="left">  
 
 - 例: ファイル共有 `code-<GUID>/Users` 配下  
 <img src="https://jpmlblog.github.io/images/AML-data-location/AML-Fileshare-code.png" width=500px align="left"><br clear="left">  
