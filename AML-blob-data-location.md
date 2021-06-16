@@ -16,23 +16,28 @@ Azure Machine Learning ワークスペースが既定で使用するストレー
 Azure Machine Learning Studio の [Notebooks] メニューより参照可能なファイルやフォルダーは、ワークスペースが既定で使用するストレージ アカウントのファイル共有 `code-<GUID>/Users` 配下に格納されます。  
 
 - 例: Notebooks のフォルダー ツリー  
-<img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-notebooks.png" width=350px align="left"><br clear="left">  
+   
+   <img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-notebooks.png" width=350px align="left"><br clear="left">  
 
 - 例: ファイル共有 `code-<GUID>/Users` 配下  
-<img src="https://jpmlblog.github.io/images/AML-data-location/AML-Fileshare-code.png" width=500px align="left"><br clear="left">  
+
+   <img src="https://jpmlblog.github.io/images/AML-data-location/AML-Fileshare-code.png" width=500px align="left"><br clear="left">  
 
 ---
 ## 実験の成果物
 Azure Machine Learning Studio の [実験] メニューより参照可能な成果物 (ログ ファイルやモデル ファイル等) は、ワークスペースが既定で使用するストレージ アカウントの Blob コンテナー `azureml/ExperimentRun/dcid.<実行 ID>` 配下に格納されます。  
 
-- 例: 実験の [詳細] タブ    
-<img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-experiment-detail.png" width=500px align="left"><br clear="left">  
+- 例: 実験の [詳細] タブ  
+   
+   <img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-experiment-detail.png" width=500px align="left"><br clear="left">  
 
 - 例: 実験の [出力とログ] タブ  
-<img src="https://jpmlblog.github.io\images\AML-data-location\AML-UI-experiment-output.png" width=600px align="left"><br clear="left">  
+   
+   <img src="https://jpmlblog.github.io\images\AML-data-location\AML-UI-experiment-output.png" width=600px align="left"><br clear="left">  
 
 - 例: Blob コンテナー `azureml/ExperimentRun/dcid.<実行 ID>` 配下  
-<img src="https://jpmlblog.github.io\images\AML-data-location\AML-Blob-experimentrun.png" width=600px align="left"><br clear="left">  
+
+   <img src="https://jpmlblog.github.io\images\AML-data-location\AML-Blob-experimentrun.png" width=600px align="left"><br clear="left">  
 
 ---
 
