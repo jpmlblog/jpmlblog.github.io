@@ -20,7 +20,7 @@ Azure Machine Learning Studio の [Notebooks] メニューより参照可能な�
    <img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-notebooks.png" width=350px align="left"><br clear="left">  
 
 - 例: ファイル共有 `code-<GUID>/Users` 配下  
-
+     
    <img src="https://jpmlblog.github.io/images/AML-data-location/AML-Fileshare-code.png" width=500px align="left"><br clear="left">  
 
 ---
