@@ -1,5 +1,5 @@
 ---
-title: 既定のストレージ アカウント上のデータ配置について
+title: Azure Machine Learning Studio で参照可能なデータの格納場所について
 date: 2021-06-16 00:00:00
 categories:
 - Azure Machine Learning
@@ -13,29 +13,35 @@ Azure Machine Learning ワークスペースが既定で使用するストレー
 
 ***
 ## Notebooks メニューから参照可能なファイル
-Azure Machine Learning Studio の [Notebooks] メニューより参照可能なファイルやフォルダーは、ワークスペースが既定で使用するストレージ アカウントのファイル共有 `code-<GUID>/Users` 配下に格納されます。  
+Azure Machine Learning Studio の [Notebooks] メニューより参照可能なファイルやフォルダーは、ワークスペースが既定で使用するストレージ アカウントの [ファイル共有] の `code-<GUID>/Users` 配下に格納されます。  
 
-- 例: Notebooks のフォルダー ツリー  
+また、このファイル共有はコンピューティング インスタンスにログオンした時に、`/mnt/batch/tasks/shared/LS_root/mounts/clusters/{コンピューティング インスタンス名}/code` というパスに自動でマウントされます。    
+
+- 例: Azure Machine Learning Studio の [Notebooks] メニューのフォルダー ツリー  
    
    <img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-notebooks.png" width=350px align="left"><br clear="left">  
 
-- 例: ファイル共有 `code-<GUID>/Users` 配下  
+- 例: ストレージ アカウントの [ファイル共有] `code-<GUID>/Users` 配下  
      
    <img src="https://jpmlblog.github.io/images/AML-data-location/AML-Fileshare-code.png" width=500px align="left"><br clear="left">  
 
+- 例: コンピューティング インスタンスの `/mnt/batch/tasks/shared/LS_root/mounts/clusters/{コンピューティング インスタンス名}/code` 配下
+   
+   <img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-terminal.png" width=500px align="left"><br clear="left">
+
 ---
 ## 実験の成果物
-Azure Machine Learning Studio の [実験] メニューより参照可能な成果物 (ログ ファイルやモデル ファイル等) は、ワークスペースが既定で使用するストレージ アカウントの Blob コンテナー `azureml/ExperimentRun/dcid.<実行 ID>` 配下に格納されます。  
+Azure Machine Learning Studio の [実験] メニューより参照可能な成果物 (ログ ファイルやモデル ファイル等) は、ワークスペースが既定で使用するストレージ アカウントの [Blob コンテナー] の `azureml/ExperimentRun/dcid.<実行 ID>` 配下に格納されます。  
 
-- 例: 実験の [詳細] タブ  
+- 例: Azure Machine Learning Studio の [実験] メニューの [詳細] タブ  
    
    <img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-experiment-detail.png" width=500px align="left"><br clear="left">  
 
-- 例: 実験の [出力とログ] タブ  
+- 例: Azure Machine Learning Studio の [実験] メニューの [出力とログ] タブ  
    
    <img src="https://jpmlblog.github.io\images\AML-data-location\AML-UI-experiment-output.png" width=600px align="left"><br clear="left">  
 
-- 例: Blob コンテナー `azureml/ExperimentRun/dcid.<実行 ID>` 配下  
+- 例: ストレージ アカウントの [Blob コンテナー] `azureml/ExperimentRun/dcid.<実行 ID>` 配下  
 
    <img src="https://jpmlblog.github.io\images\AML-data-location\AML-Blob-experimentrun.png" width=600px align="left"><br clear="left">  
 
