@@ -27,7 +27,7 @@ Azure Machine Learning Studio の [Notebooks] メニューより参照可能な�
 
 - 例: コンピューティング インスタンスの `/mnt/batch/tasks/shared/LS_root/mounts/clusters/{コンピューティング インスタンス名}/code` 配下
    
-   <img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-terminal.png" width=500px align="left"><br clear="left">
+   <img src="https://jpmlblog.github.io/images/AML-data-location/AML-UI-terminal.png" width=700px align="left"><br clear="left">
 
 ---
 ## 実験の成果物
