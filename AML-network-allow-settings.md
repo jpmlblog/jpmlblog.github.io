@@ -50,10 +50,10 @@ HTTPS または HTTP (443 および 80) のプロトコルで通信を行いま�
 ***
 ## WebSocket の考慮
 ネットワーク機器などで WebSocket の通信をブロックしている場合、上述したホスト名一覧について許可いただくことをお勧めいたします。  
-なお、現時点 (2020/10/10) では以下のホスト名について WebSocket の通信を行うことが確認できておりますので、宛先を絞り込む必要がある場合には、最低限以下ホスト名宛の WebSocket 通信を許可するよう設定ください。  
+以下のホスト名について WebSocket の通信を許可するよう設定ください。  
 
-*.azureml.ms  
-*.notebooks.azure.net  
+~~*.azureml.ms~~ (2021/6/17 削除)  
+~~*.notebooks.azure.net~~ (2021/6/17 削除)  
 *.instances.azureml.net  
 *.experiments.azureml.net  
 
