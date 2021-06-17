@@ -24,8 +24,6 @@ Azure Machine Learning で使用する通信先ホスト名の一覧は以下サ
   > *.experiments.azureml.net  
   > *.modelmanagement.azureml.net  
   > *.aether.ms  
-  > *.studioservice.azureml.com  
-  > *.notebooks.azure.net  
   > *.file.core.windows.net  
   > *.dfs.core.windows.net  
   > *.blob.core.windows.net  
