@@ -60,7 +60,7 @@ HTTPS または HTTP (443 および 80) のプロトコルで通信を行いま�
 今後サービス側機能の変更によって別のホスト名で WebSocket 通信を必須とする場合がございますので、その際には適宜許可を追加頂くことをご検討ください。
 
 - [(参考情報) コンピューティング クラスターとインスタンス](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-training-vnet#compute-clusters--instances)  
-  >コンピューティング インスタンスの Jupyter 機能を動作させるには、Web ソケット通信が無効になっていないことを確認してください。
+  >コンピューティング インスタンスの Jupyter 機能を動作させるには、Web ソケット通信が無効になっていないことを確認してください。 お使いのネットワークで、*.instances.azureml.net と *.instances.azureml.ms への websocket 接続が許可されていることを確認してください。
 
 ***
 ## IP アドレスの範囲指定で許可する場合
