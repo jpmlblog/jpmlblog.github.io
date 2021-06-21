@@ -48,7 +48,6 @@ Python パッケージをインストールして使用する要件がある場�
   > *.pytorch.org  
   > *.tensorflow.org  
 
-
 R パッケージをインストールして使用する要件がある場合、下記のようなホスト名宛の通信を許可する必要があります。こちらも、必要なホストの完全な一覧ではない点についてご留意ください。  
 
 - [ファイアウォールの内側で Azure Machine Learning のワークスペースを使用する - # R のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#r-hosts)
