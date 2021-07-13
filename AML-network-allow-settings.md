@@ -14,16 +14,15 @@ tags:
 
 ***
 ## ホスト名ベースの許可
-Azure Machine Learning で使用する通信先ホスト名の一覧は以下サイトに一覧化されております。これらのホスト名宛の送信方向の通信を許可するよう設定ください。  
+Azure Machine Learning で使用する通信先ホスト名の一覧は以下サイトに一覧化されております。これらのホスト名宛の送信方向の通信を許可するよう設定ください。(2021/7/13 時点)  
 
 - [ファイアウォールの内側で Azure Machine Learning のワークスペースを使用する - # Microsoft のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#microsoft-hosts)
   > login.microsoftonline.com  
   > management.azure.com  
+  > management.azure.com  
   > ml.azure.com  
   > *.azureml.ms  
-  > *.experiments.azureml.net  
-  > *.modelmanagement.azureml.net  
-  > *.aether.ms  
+  > *.notebooks.azure.net  
   > *.file.core.windows.net  
   > *.dfs.core.windows.net  
   > *.blob.core.windows.net  
@@ -33,10 +32,10 @@ Azure Machine Learning で使用する通信先ホスト名の一覧は以下サ
   > graph.windows.net  
   > *.instances.azureml.net  
   > *.instances.azureml.ms  
-  > core.windows.net  
-  > vault.azure.net  
-  > azurecr.io  
-  > mcr.microsoft.com  
+  > *.core.windows.net  
+  > *.vault.azure.net  
+  > *.azurecr.io  
+  > *.mcr.microsoft.com  
 
 Python パッケージをインストールして使用する要件がある場合、下記のようなホスト名宛の通信を許可する必要があります。なお、下記はインターネット上のすべての Python リソースに必要なホストの完全な一覧ではなく、最も一般的に使用されているもののみを取り上げています。たとえば、GitHub リポジトリまたはその他のホストにアクセスする必要がある場合は、そのシナリオに必要なホストを特定して追加する必要があることをご留意ください。  
 
@@ -81,8 +80,9 @@ HTTPS または HTTP (443 および 80) のプロトコルで通信を行いま�
 
 ***
 `変更履歴`  
-`2020/10/10 created by Mochizuki`
-`2021/06/17 modified by Mochizuki`
+`2020/10/10 created by Mochizuki`  
+`2021/06/17 modified by Mochizuki`  
+`2021/07/13 modified by Mochizuki`  
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
