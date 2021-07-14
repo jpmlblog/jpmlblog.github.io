@@ -56,7 +56,7 @@ Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、�
 - [機械学習とは何ですか?](https://azure.microsoft.com/ja-jp/overview/what-is-machine-learning-platform/)
 - [機械学習アルゴリズム](https://azure.microsoft.com/ja-jp/overview/machine-learning-algorithms/)
 - [ラーニング パス (?term=機械学習)](https://docs.microsoft.com/ja-jp/learn/browse/?term=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92)
-- [ラーニング パス (?products=azure-machine-learning-service)](https://docs.microsoft.com/ja-jp/learn/browse/?products=azure-machine-learning-service)  
+- [ラーニング パス (?products=azure-machine-learning)](https://docs.microsoft.com/ja-jp/learn/browse/?products=azure-machine-learning)  
 - [とっても便利! Azure Machine Leaning](https://www.youtube.com/watch?v=xx-meKk03YY)  
 - 初心者向けデータ サイエンス解説ビデオ
    >- [データ サイエンスが回答する 5 つの質問](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers)
