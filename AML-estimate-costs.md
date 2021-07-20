@@ -49,8 +49,9 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
 
 - 参考サイト  
   [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
-  [Load Balancer の価格](https://azure.microsoft.com/ja-jp/pricing/details/load-balancer/)  
-  [パブリック IP アドレスの料金](https://azure.microsoft.com/ja-jp/pricing/details/ip-addresses/)  
+  [負荷分散 の価格](https://azure.microsoft.com/ja-jp/pricing/details/load-balancer/)  
+  [IP アドレス の価格](https://azure.microsoft.com/ja-jp/pricing/details/ip-addresses/)  
+  [Managed Disks の価格](https://azure.microsoft.com/ja-jp/pricing/details/managed-disks/)  
   [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service)  
   [Linux Virtual Machines の料金](https://azure.microsoft.com/ja-jp/pricing/details/virtual-machines/linux/)  
 
