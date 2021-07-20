@@ -18,6 +18,7 @@ Azure Machine Learning のコスト見積もりについて、参考となる情
 
 ***
 ## コスト見積もり例について
+
 Azure Machine Learning のワークスペース自体には課金は発生しません。ワークスペースで作成したリソースに課金が発生します。  
 
 例えば、開発環境として使用する Azure Machine Learning コンピューティング インスタンスや、トレーニングの実行環境として使用する Azure Machine Learning コンピューティング クラスターは、稼働時間分が課金対象となります。また、作成したモデルをデプロイした場合、デプロイ先のサービスについても比較的大きな課金が発生します。参考に見積もり例を後述に紹介します。  
@@ -25,25 +26,26 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 ※ ご利用方法によって試算より誤差が生じる場合がありますので、予めご留意ください。
 
 ### コンピューティング インスタンス
-開発環境として Azure Machine Learning コンピューティング インスタンス (東日本リージョン、STANDARD_DS3_V2) を 1 日 10 時間起動し、20 日間使用する場合の月額  
+開発環境として Azure Machine Learning コンピューティング インスタンス (東日本リージョン、STANDARD_DS3_V2) を 1 日 10 時間起動し、30 日間使用する場合の月額  
 
-<font color="#FF0000">**注意 (2021/6/7 修正):**  
-VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。このうちマネージド ディスクの料金はコンピューティング インスタンスを停止していても課金されます。  
+<font color="#FF0000">**注意:**  
+VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。これらの料金はコンピューティング インスタンスを停止していても課金されます。  
 
 例 (東日本リージョン):  
-- スタンダード ロード バランサー (約 0.7467 [円/時間])  
-- スタンダード (静的) パブリック IP アドレス (約 0.1867 [円/時間])  
-- マネージド ディスク (VM サイズや利用状況に依存 例: Standard_DS3_v2 作成直後で約 44.8 [円/日])  
+- スタンダード ロード バランサー (約 2.8 [円/時間])  
+- スタンダード (静的) パブリック IP アドレス (約 0.56 [円/時間])  
+- マネージド ディスク p10 (約 2,539.04 [円/月]  
+  ※ 30 [日/月] の場合、約 3.5264 [円/時間], 31 [日/月] の場合、約 3.4127 [円/時間])  
 
 </font>
 
 (VM)  
-`25.648 [円/時間] x 10 [時間/日] x 20 [日] = 5129.6 [円]`  
+`45.808 [円/時間] x 10 [時間/日] x 30 [日] = 13742.4 [円]`  
 
-(関連サービス) 
-`(0.7467 + 0.1867 [円/時間]) x 10 [時間/日] x 20 [日] + 44.8 [円/日] x 30 [日] ≒ 1382.1 [円]`  
+(関連サービス ※ 30 [日/月] の場合) 
+`(2.8 + 0.56 + 3.5264 [円/時間]) x 24 [時間/日] x 30 [日] = 4958.208 [円]`  
 
-→ 合計 `5129.6 + 1382.1 ≒ 6512 [円]`  
+→ 合計 `13742.4 + 4958.208 = 18700.608 [円]`  
 
 - 参考サイト  
   [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
@@ -64,7 +66,7 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
   [Linux Virtual Machines の料金](https://azure.microsoft.com/ja-jp/pricing/details/virtual-machines/linux/)  
 
 ### 推論クラスター (Azure Kubernetes Service, AKS)
-推論用クラスターとして Azure Kubernetes Service の仮想マシン (東日本リージョン、STANDARD_DS12_V2) を 3 ノードで作成し、20 日間使用する場合の月額  
+推論用クラスターとして Azure Kubernetes Service の仮想マシン (東日本リージョン、STANDARD_DS12_V2) を 3 ノードで作成し、30 日間使用する場合の月額  
 
 > 注意:  
 コア数合計を 12 以上で作成する必要があります。  
@@ -77,18 +79,20 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
   [Linux Virtual Machines の料金](https://azure.microsoft.com/ja-jp/pricing/details/virtual-machines/linux/)  
 
 ### Azure Container Instance (ACI)
-モデルを Azure Container Instance (vCPU 1.8、メモリ 4 GiB) にデプロイし、30 日間使用する場合の月額  
+モデルを Azure Container Instance (vCPU 1、メモリ 1 GiB) にデプロイし、30 日間使用する場合の月額  
 
 > 注意:  
-Azure Machine Learning で ACI にモデルをデプロイする場合、指定したコンテナーに加えて azureml-fe-aci (それぞれ vCPU 0.1、メモリ 0.5 GiB) が作成されます。
+Azure Machine Learning で ACI にモデルをデプロイする場合、指定したコンテナーに加えて azureml-fe-aci (それぞれ vCPU 0.1、メモリ 0.5 GiB) が作成されます。また、vCPU は小数点第一位で切り上げされて計上されます。また、メモリは小数点第二位で切り上げされて計上されます。  
 
 (vCPU)  
-`0.0015120 [円/秒/vCPU] x 1.9 [vCPU] x 3600 [秒/時間] x 24 [時間/日] x 30 [日] = 7446.2976 [円]`  
+`0.0015743 [円/秒/vCPU] x 2 [vCPU] x 3600 [秒/時間] x 24 [時間/日] = 272.03904 [円/日]`  
+`272.03904 [円/日] x 30 [日] = 8161.1712 [円]`  
    
 (メモリ)  
-`0.0001659 [円/秒/GiB] x 4.5 [Gib] x 3600 [秒/時間] x 24 [時間/日] x 30 [日] = 1935.0576 [円]`  
+`0.0001721 [円/秒/GiB] x 1.5 [Gib] x 3600 [秒/時間] x 24 [時間/日] = 22.30416 [円/日]`  
+`22.30416 [円/日] x 30 [日] = 669.1248 [円]`  
 
-→ 合計 `7446.2976 + 1935.0576 = 9381.3552 [円]`
+→ 合計 `8161.1712 + 669.1248 = 8830.296 [円]`
 
 - 参考サイト  
   [Container Instances の価格](https://azure.microsoft.com/ja-jp/pricing/details/container-instances/)  
@@ -127,6 +131,7 @@ Azure Machine Learning で ACI にモデルをデプロイする場合、指定�
 `2020/11/27 modified by Mochizuki`  
 `2021/05/26 modified by Mochizuki`  
 `2021/06/07 modified by Mochizuki`  
+`2021/07/20 modified by Mochizuki`  
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
