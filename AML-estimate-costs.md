@@ -29,7 +29,7 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 開発環境として Azure Machine Learning コンピューティング インスタンス (東日本リージョン、STANDARD_DS3_V2) を 1 日 10 時間起動し、30 日間使用する場合の月額  
 
 <font color="#FF0000">**注意:**  
-VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。これらの料金はコンピューティング インスタンスを停止していても課金されます。  
+VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。これらの課金はコンピューティング インスタンスを停止していても継続されます。  
 
 例 (東日本リージョン):  
 - スタンダード ロード バランサー (約 2.8 [円/時間])  
@@ -48,6 +48,7 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
 → 合計 `13742.4 + 4958.208 = 18700.608 [円]`  
 
 - 参考サイト  
+  [サポートされている VM シリーズおよびサイズ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-compute-target#supported-vm-series-and-sizes)  
   [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
   [負荷分散 の価格](https://azure.microsoft.com/ja-jp/pricing/details/load-balancer/)  
   [IP アドレス の価格](https://azure.microsoft.com/ja-jp/pricing/details/ip-addresses/)  
@@ -57,14 +58,37 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
 
 
 ### コンピューティング クラスター
-トレーニング ターゲットとして Azure Machine Learning コンピューティング クラスター (東日本リージョン、STANDARD_DS3_V2) を最小 0 ノード、最大 2 ノードで作成し、2 ノードで 1 日 4 時間、20 日間使用する場合の月額  
+トレーニング ターゲットとして Azure Machine Learning コンピューティング クラスター (東日本リージョン、STANDARD_DS3_V2) を最小 0 ノード、最大 2 ノードで作成し、2 ノードで 1 日 4 時間、30 日間使用する場合の月額  
 
-→ `45.808 [円/時間/ノード] x 2 [ノード] x 4 [時間/日] x 20 [日] = 7329.28 [円]`
+<font color="#FF0000">**注意:**  
+VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。環境情報を維持しないといけないコンピューティング インスタンスとは異なり、停止している場合 (起動しているノード数が 0 の場合) には割り当てが完全に解除されるため、課金は停止します。  
+
+例 (東日本リージョン):  
+- スタンダード ロード バランサー (約 2.8 [円/時間])  
+- スタンダード (静的) パブリック IP アドレス (約 0.56 [円/時間])  
+- マネージド ディスク p10 (約 2,539.04 [円/月]  
+  ※ 30 [日/月] の場合、約 3.5264 [円/時間], 31 [日/月] の場合、約 3.4127 [円/時間])  
+
+</font>
+
+(VM)  
+`45.808 [円/時間/ノード] x 2 [ノード] x 4 [時間/日] x 30 [日] = 10993.92 [円]`  
+
+(関連サービス ※ 30 [日/月] の場合) 
+`(2.8 + 0.56 + 3.5264 [円/時間]) x 4 [時間/日] x 30 [日] = 826.368 [円]`  
+
+→ 合計 `10993.92 + 826.368 = 11820.288 [円]`  
 
 - 参考サイト  
   [サポートされている VM シリーズおよびサイズ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-compute-target#supported-vm-series-and-sizes)  
+  [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
+  [負荷分散 の価格](https://azure.microsoft.com/ja-jp/pricing/details/load-balancer/)  
+  [IP アドレス の価格](https://azure.microsoft.com/ja-jp/pricing/details/ip-addresses/)  
+  [Managed Disks の価格](https://azure.microsoft.com/ja-jp/pricing/details/managed-disks/)  
   [料金計算ツール (+Azure Machine Learning)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=machine-learning-service)  
   [Linux Virtual Machines の料金](https://azure.microsoft.com/ja-jp/pricing/details/virtual-machines/linux/)  
+
+
 
 ### 推論クラスター (Azure Kubernetes Service, AKS)
 推論用クラスターとして Azure Kubernetes Service の仮想マシン (東日本リージョン、STANDARD_DS12_V2) を 3 ノードで作成し、30 日間使用する場合の月額  
