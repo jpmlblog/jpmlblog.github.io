@@ -37,8 +37,7 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
 - マネージド ディスク p10 (約 2,539.04 [円/月]  
   ※ 30 [日/月] の場合、約 3.5264 [円/時間], 31 [日/月] の場合、約 3.4127 [円/時間])  
 
-参考 URL:  
-[Azure Machine Learning コンピューティング インスタンスを作成して管理する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-create-manage-compute-instance?tabs=python#manage)  
+参考: [Azure Machine Learning コンピューティング インスタンスを作成して管理する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-create-manage-compute-instance?tabs=python#manage)  
 >  コンピューティング インスタンスを停止すると、コンピューティング時間の課金は停止しますが、ディスク、パブリック IP、および Standard Load Balancer に対しては引き続き課金されます。
 
 </font>
