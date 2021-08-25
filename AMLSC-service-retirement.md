@@ -17,9 +17,9 @@ Azure Machine Learning Studio (classic) は、2024 年 8 月 31 日を持ちま�
 
 | 日時 | サービスの制限 |
 | :---- | :---- |
-| 現時点 | 公開ドキュメント・不具合等の修正は基本的に対応不可<BR>(影響の大きな事象は修正される可能性はあります) |
-| 2021 年 12 月 1 日以降 | 新規リソースの作成不可 |
-| 2024 年 8 月 31 日以降 | リソース使用不可 |
+| 現時点   | 公開ドキュメント・不具合等の修正は基本的に対応不可<BR>(影響の大きな事象は修正される可能性はあります) |
+| 2021 年 12 月 1 日以降   | 新規リソースの作成不可 |
+| 2024 年 8 月 31 日以降   | リソース使用不可 |
 
 ***
 ## 対象リソース
@@ -39,7 +39,7 @@ Azure Machine Learning Studio (classic) は、2024 年 8 月 31 日を持ちま�
 
 基本的に、Azure Machine Learning Studio (classic) で使用していた機能を、移行先サービス Azure Machine Learning Service で再作成する方針となります。ボタン一つでまとめて移行できるようなものではないため、期間的に十分な余裕をもって実行いただくことをお勧めいたします。  
 
->**参考**: 移行先のサービスとの比較に関する情報は下記公開情報に纏められております。  
+>移行先のサービスとの比較に関する情報は下記公開情報に纏められております。  
 >[ML Studio (classic) と Azure Machine Learning スタジオ](https://docs.microsoft.com/ja-jp/azure/machine-learning/overview-what-is-machine-learning-studio#ml-studio-classic-vs-azure-machine-learning-studio)  
 
 ***
