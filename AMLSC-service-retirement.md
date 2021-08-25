@@ -7,8 +7,10 @@ tags:
 - サービス終了
 ---
 Azure Machine Learning Studio (classic) は、2024 年 8 月 31 日を持ちましてサービスを終了いたします。関連する公開情報や留意事項についてご紹介させていただきます。  
+
+- [Machine Learning Studio (classic) will retire on 31 August 2024](https://azure.microsoft.com/en-us/updates/machine-learning-studio-classic-will-retire-on-31-august-2024/)  
+
 <!-- more -->
-<br>
 
 ***
 ## サービス終了時期   

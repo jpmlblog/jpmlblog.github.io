@@ -34,6 +34,11 @@ Azure Machine Learning の技術ドキュメント、価格、更新情報など
 ***
 ## Azure Machine Learning Studio (Classic) 関連サイト  
 
+<font color="#FF0000">**注意**  
+当該サービスは 2024 年 8 月 31 日に廃止されます。Azure Machine Learning への早めの移行をご計画ください。参考情報は [こちら](https://azure.microsoft.com/en-us/updates/machine-learning-studio-classic-will-retire-on-31-august-2024/)。  
+ 
+</font>  
+
 Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、更新情報など。専用ポータルは [こちら (https://studio.azureml.net/)](https://studio.azureml.net/)。
 
 - [Azure Machine Learning Studio (classic) のドキュメント](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/)  
