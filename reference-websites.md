@@ -18,10 +18,9 @@ Azure Machine Learning の技術ドキュメント、価格、更新情報など
 
 - [Azure Machine Learning (概要)](https://azure.microsoft.com/ja-jp/services/machine-learning/)  
 - [Azure Machine Learning のドキュメント](https://docs.microsoft.com/ja-jp/azure/machine-learning/)  
-- [Azure Machine Learning デザイナーのアルゴリズムとモジュールのリファレンス (プレビュー)](https://docs.microsoft.com/ja-jp/azure/machine-learning/algorithm-module-reference/module-reference)  
+- [Azure Machine Learning デザイナーのアルゴリズムとモジュールのリファレンス](https://docs.microsoft.com/ja-jp/azure/machine-learning/algorithm-module-reference/module-reference)  
 - [Azure Machine Learning のリリース ノート](https://docs.microsoft.com/ja-jp/azure/machine-learning/azure-machine-learning-release-notes)  
 - [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
-- [Azure Machine Learning の既知の問題とトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/resource-known-issues)  
 - [Azure の更新情報 (?product=machine-learning-service)](https://azure.microsoft.com/ja-jp/updates/?product=machine-learning-service)  
 
 過去の Q&A、新規 Q&A、機能改善のフィードバックなど。
