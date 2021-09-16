@@ -156,8 +156,8 @@ Azure には、マイクロソフトがお客様のご意見を収集するた�
    > Microsoft.MachineLearningServices  
    >|Entity|Scope|長さ|有効な文字|  
    >|:-----|:----|:---|:--------|  
-   >|workspaces|resource group|3-33|英数字とハイフン。|  
-   >|workspaces / computes|ワークスペース|2-16|英数字とハイフン。|  
+   >|workspaces&nbsp;&nbsp;&nbsp; |resource group&nbsp;&nbsp;&nbsp; |3-33&nbsp;&nbsp;&nbsp; |英数字とハイフン。|  
+   >|workspaces / computes&nbsp;&nbsp;&nbsp; |ワークスペース&nbsp;&nbsp;&nbsp; |2-16&nbsp;&nbsp;&nbsp; |英数字とハイフン。|  
 </details>
 
 ***
