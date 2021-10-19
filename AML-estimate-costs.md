@@ -25,11 +25,12 @@ Azure Machine Learning のワークスペース自体には課金は発生しま
 
 ※ ご利用方法によって試算より誤差が生じる場合がありますので、予めご留意ください。
 
+
 ### コンピューティング インスタンス
 開発環境として Azure Machine Learning コンピューティング インスタンス (東日本リージョン、STANDARD_DS3_V2) を 1 日 10 時間起動し、30 日間使用する場合の月額  
 
 <font color="#FF0000">**注意**  
-VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。これらの課金はコンピューティング インスタンスを停止していても継続されます。  
+VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。これらの課金はコンピューティング インスタンスを停止していても継続されます。これらのサブ リソースが作成される理由については、"サブ リソースについて" セクションをご参照ください。  
 
 例 (東日本リージョン):  
 - スタンダード ロード バランサー (約 2.8 [円/時間])  
@@ -38,8 +39,7 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
   ※ 30 [日/月] の場合、約 3.5264 [円/時間], 31 [日/月] の場合、約 3.4127 [円/時間])  
 
 参考: [Azure Machine Learning コンピューティング インスタンスを作成して管理する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-create-manage-compute-instance?tabs=python#manage)  
->  コンピューティング インスタンスを停止すると、コンピューティング時間の課金は停止しますが、ディスク、パブリック IP、および Standard Load Balancer に対しては引き続き課金されます。
-
+>  コンピューティング インスタンスを停止すると、コンピューティング時間の課金は停止しますが、ディスク、パブリック IP、および Standard Load Balancer に対しては引き続き課金されます。  
 </font>
 
 (VM)  
@@ -64,7 +64,7 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
 トレーニング ターゲットとして Azure Machine Learning コンピューティング クラスター (東日本リージョン、STANDARD_DS3_V2) を最小 0 ノード、最大 2 ノードで作成し、2 ノードで 1 日 4 時間、30 日間使用する場合の月額  
 
 <font color="#FF0000">**注意:**  
-VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。環境情報を維持しないといけないコンピューティング インスタンスとは異なり、停止している場合 (起動しているノード数が 0 の場合) には割り当てが完全に解除されるため、課金は停止します。  
+VM としての料金に加えて、下記 3 つのサービスに対して課金が発生いたします。環境情報を維持しないといけないコンピューティング インスタンスとは異なり、停止している場合 (起動しているノード数が 0 の場合) には割り当てが完全に解除されるため、課金は停止します。これらのサブ リソースが作成される理由については、"サブ リソースについて" セクションをご参照ください。    
 
 例 (東日本リージョン):  
 - スタンダード ロード バランサー (約 2.8 [円/時間])  
@@ -85,6 +85,7 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
 - 参考サイト  
   [サポートされている VM シリーズおよびサイズ](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-compute-target#supported-vm-series-and-sizes)  
   [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
+  [Batch の価格](https://azure.microsoft.com/ja-jp/pricing/details/batch/)  
   [負荷分散 の価格](https://azure.microsoft.com/ja-jp/pricing/details/load-balancer/)  
   [IP アドレス の価格](https://azure.microsoft.com/ja-jp/pricing/details/ip-addresses/)  
   [Managed Disks の価格](https://azure.microsoft.com/ja-jp/pricing/details/managed-disks/)  
@@ -106,6 +107,7 @@ VM としての料金に加えて、下記 3 つのサービスに対して課�
   [料金計算ツール (+Azure Kubernetes Service)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=kubernetes-service)  
   [Linux Virtual Machines の料金](https://azure.microsoft.com/ja-jp/pricing/details/virtual-machines/linux/)  
 
+
 ### Azure Container Instance (ACI)
 モデルを Azure Container Instance (vCPU 1、メモリ 1 GiB) にデプロイし、30 日間使用する場合の月額  
 
@@ -125,6 +127,50 @@ Azure Machine Learning で ACI にモデルをデプロイする場合、指定�
 - 参考サイト  
   [Container Instances の価格](https://azure.microsoft.com/ja-jp/pricing/details/container-instances/)  
   [料金計算ツール (+Container Instance)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=container-instances)  
+
+
+***
+### サブ リソースについて
+Azure Machine Learning では、コンピューティング リソース作成時に VM の料金に加えてネットワークに関連したリソースが作成されます。作成されたノードとの通信を維持するために必要であり、現時点 (2021/10/15 現在) ではこれらの課金を回避する方法はございません。  
+
+参考: [サブ リソース](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#sub-resources)
+> これらのサブ リソースは、AML ワークスペースで作成される主要なリソースです。
+>
+> - VM: AML ワークスペースのコンピューティング能力を提供します。モデルのデプロイとトレーニングに不可欠な要素です。
+> - ロード バランサー: コンピューティング インスタンスおよびクラスターが停止している場合でもトラフィックを管理するために、コンピューティング インスタンスとコンピューティング クラスターごとにネットワーク ロード バランサーが作成されます。
+> - 仮想ネットワーク: これらは、Azure リソースが互いに通信したり、インターネットやその他のオンプレミス ネットワークと通信したりするために役立ちます。
+> - 帯域幅: リージョン間のすべてのアウトバウンド データ転送をカプセル化します。
+
+参考: [リソースの削除前にコストが発生する可能性がある](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-plan-manage-cost#costs-might-accrue-before-resource-deletion)
+> Azure portal 内で、または Azure CLI を使用して Azure Machine Learning ワークスペースを削除する前、ワークスペース内でアクティブに作業していない場合でも、次のサブ リソースは一般的なコストとして蓄積されます。 後でご自身の Azure Machine Learning ワークスペースに戻る予定がある場合、これらのリソースには引き続きコストが発生する可能性があります。    
+>
+> - VM  
+> - Load Balancer  
+> - Virtual Network  
+> - 帯域幅
+>  
+> VM はそれぞれ、実行している時間ごとに課金されます。 コストは VM の仕様によって異なります。 実行中であっても、データセットに対してアクティブに動作していない VM については、ロード バランサー経由で課金されます。 コンピューティング インスタンスごとに、1 日あたり 1 つのロード バランサーに対して請求が発生します。 コンピューティング クラスターの 50 ノードごとに、1 つの Standard ロード バランサーが課金されます。 ロード バランサーあたりの課金額は 1 日あたり約 0.33 ドルです。 停止しているコンピューティング インスタンスとコンピューティング クラスターに対してロード バランサーのコストが発生するのを回避するには、コンピューティング リソースを削除します。 サブスクリプションごと、およびリージョンごとに 1 つの仮想ネットワークが課金されます。 仮想ネットワークは、複数のリージョンまたはサブスクリプションにまたがることはできません。 vNet 設定内でプライベート エンドポイントを設定しても、料金が発生することがあります。 帯域幅は使用量に基づいて課金されます。転送データが多いほど、料金は高くなります。
+
+***
+## ワークスペース削除時の留意点について
+Azure ポータルまたは Azure CLI で Azure Machine Learning ワークスペースを削除した後も、次のリソースは引き続き存在します。 これらを削除するまで、これらのコストは発生し続けます。  
+
+- Azure Container Registry
+- Azure Storage Account
+- Key Vault
+- Application Insights
+
+これらのリソースと共にワークスペースを削除するには、SDK を使用します。
+
+```Python
+ws.delete(delete_dependent_resources=True)
+```
+
+ワークスペースに Azure Kubernetes Service (AKS) を作成する場合、またはワークスペースにコンピューティング リソースをアタッチする場合は、Azure ポータルで個別に削除する必要があります。
+
+- 参考サイト  
+  [リソースの削除後にコストが発生する可能性がある](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-plan-manage-cost#costs-might-accrue-after-resource-deletion)  
+  [関連するリソース](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#associated-resources)
 
 ***
 ## 見積もりが難しいコストについて
@@ -161,6 +207,7 @@ Azure Machine Learning で ACI にモデルをデプロイする場合、指定�
 `2021/06/07 modified by Mochizuki`  
 `2021/07/20 modified by Mochizuki`  
 `2021/07/28 modified by Mochizuki`  
+`2021/10/15 modified by Mochizuki` 
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
