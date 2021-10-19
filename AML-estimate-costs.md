@@ -16,6 +16,8 @@ Azure Machine Learning のコスト見積もりについて、参考となる情
 
 - [Azure Machine Learning のコストを計画して管理する](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-plan-manage-cost)  
 
+- [Azure Machine Learning のコストを管理して最適化する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-manage-optimize-cost)  
+
 ***
 ## コスト見積もり例について
 
