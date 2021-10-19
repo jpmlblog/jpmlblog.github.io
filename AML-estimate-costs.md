@@ -128,6 +128,18 @@ Azure Machine Learning で ACI にモデルをデプロイする場合、指定�
   [Container Instances の価格](https://azure.microsoft.com/ja-jp/pricing/details/container-instances/)  
   [料金計算ツール (+Container Instance)](https://azure.microsoft.com/ja-jp/pricing/calculator/?service=container-instances)  
 
+***
+## 見積もりが難しいコストについて
+上記に加えて以下リソースの課金が発生いたします。これらはご利用方法によって金額が大きく異なりますため、試算を含めた見積もりを例示することができません。一般的に上述の料金と比較して数パーセント程度の小さい金額となりますため、一定期間ご利用いただいた後、実際の課金額を基に見積もることをお勧めします。  
+
+- [Azure Container Registry Basic アカウント](https://azure.microsoft.com/ja-jp/pricing/details/container-registry/)  
+- [Azure ブロック BLOB Storage (汎用 v1)](https://azure.microsoft.com/ja-jp/pricing/details/storage/blobs/)  
+- [Key Vault](https://azure.microsoft.com/ja-jp/pricing/details/key-vault/)  
+- [Application Insights](https://azure.microsoft.com/ja-jp/pricing/details/monitor/)  
+
+また、ワークスペースやストレージ等を仮想ネットワークに配置する場合、パブリック エンドポイントやプライベート DNS ゾーン、ロード バランサーの料金が追加で発生いたします。固定でかかる費用となりますので、こちらも一定期間ご利用いただい後、実際の課金額を基に見積もることをお勧めします。  
+
+- [仮想ネットワークの分離とプライバシーの概要](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-network-security-overview)
 
 ***
 ### サブ リソースについて
@@ -171,18 +183,6 @@ ws.delete(delete_dependent_resources=True)
 - 参考サイト  
   [リソースの削除後にコストが発生する可能性がある](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-plan-manage-cost#costs-might-accrue-after-resource-deletion)  
   [関連するリソース](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#associated-resources)
-
-***
-## 見積もりが難しいコストについて
-上記に加えて以下リソースの課金が発生いたします。これらはご利用方法によって金額が大きく異なりますため、試算を含めた見積もりを例示することができません。一般的に上述の料金と比較して数パーセント程度の小さい金額となりますため、一定期間ご利用いただいた後、実際の課金額を基に見積もることをお勧めします。  
-
-- [Azure Container Registry Basic アカウント](https://azure.microsoft.com/ja-jp/pricing/details/container-registry/)  
-- [Azure ブロック BLOB Storage (汎用 v1)](https://azure.microsoft.com/ja-jp/pricing/details/storage/blobs/)  
-- [Key Vault](https://azure.microsoft.com/ja-jp/pricing/details/key-vault/)  
-
-また、ワークスペースやストレージ等を仮想ネットワークに配置する場合、パブリック エンドポイントやプライベート DNS ゾーン、ロード バランサーの料金が追加で発生いたします。固定でかかる費用となりますので、こちらも一定期間ご利用いただい後、実際の課金額を基に見積もることをお勧めします。  
-
-- [仮想ネットワークの分離とプライバシーの概要](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-network-security-overview)
 
 ***
 ## 見積もりの依頼について
