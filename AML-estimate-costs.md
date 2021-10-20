@@ -15,7 +15,6 @@ Azure Machine Learning のコスト見積もりについて、参考となる情
 コストの管理に関する基本的な考え方は、下記サイトの内容を参照ください。  
 
 - [Azure Machine Learning のコストを計画して管理する](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-plan-manage-cost)  
-
 - [Azure Machine Learning のコストを管理して最適化する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-manage-optimize-cost)  
 
 ***
@@ -144,8 +143,8 @@ Azure Machine Learning で ACI にモデルをデプロイする場合、指定�
 - [仮想ネットワークの分離とプライバシーの概要](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-network-security-overview)
 
 ***
-### サブ リソースについて
-Azure Machine Learning では、コンピューティング リソース作成時に VM の料金に加えてネットワークに関連したリソースが作成されます。作成されたノードとの通信を維持するために必要であり、現時点 (2021/10/15 現在) ではこれらの課金を回避する方法はございません。  
+## サブ リソースについて
+コンピューティング インスタンスおよびコンピューティング クラスターを作成すると、VM の料金に加えてネットワークに関連したリソースが併せて作成されます。これらは作成されたノードとの通信を維持するために使用され、課金の対象になります。  
 
 参考: [サブ リソース](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#sub-resources)
 > これらのサブ リソースは、AML ワークスペースで作成される主要なリソースです。
@@ -166,8 +165,8 @@ Azure Machine Learning では、コンピューティング リソース作成�
 > VM はそれぞれ、実行している時間ごとに課金されます。 コストは VM の仕様によって異なります。 実行中であっても、データセットに対してアクティブに動作していない VM については、ロード バランサー経由で課金されます。 コンピューティング インスタンスごとに、1 日あたり 1 つのロード バランサーに対して請求が発生します。 コンピューティング クラスターの 50 ノードごとに、1 つの Standard ロード バランサーが課金されます。 ロード バランサーあたりの課金額は 1 日あたり約 0.33 ドルです。 停止しているコンピューティング インスタンスとコンピューティング クラスターに対してロード バランサーのコストが発生するのを回避するには、コンピューティング リソースを削除します。 サブスクリプションごと、およびリージョンごとに 1 つの仮想ネットワークが課金されます。 仮想ネットワークは、複数のリージョンまたはサブスクリプションにまたがることはできません。 vNet 設定内でプライベート エンドポイントを設定しても、料金が発生することがあります。 帯域幅は使用量に基づいて課金されます。転送データが多いほど、料金は高くなります。
 
 ***
-## ワークスペース削除時の留意点について
-Azure ポータルまたは Azure CLI で Azure Machine Learning ワークスペースを削除した後も、次のリソースは引き続き存在します。 これらを削除するまで、これらのコストは発生し続けます。  
+## ワークスペース削除
+Azure ポータルまたは Azure CLI で Azure Machine Learning ワークスペースを削除した後も、次のリソースは引き続き存在します。これらは削除されるまでコストが発生し続けます。  
 
 - Azure Container Registry
 - Azure Storage Account
@@ -187,17 +186,17 @@ ws.delete(delete_dependent_resources=True)
   [関連するリソース](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-workspace#associated-resources)
 
 ***
+## サービスの価格に関する問い合わせ
+各サービスの価格に関するご質問 (Azure Machine Learning で発生する費用の内訳を知りたい、または発生したコストがどのリソースで消費しているか、など) は、弊社課金サポートで承っております。以下の画像を参考に、サポート リクエストを発行いただきお問い合わせください。  
+
+<img src="https://jpmlblog.github.io/images/AML-estimate-costs/support-request-for-billing.png" width=600px align="left"><br clear="left">
+
+***
 ## 見積もりの依頼について
-弊社より見積もりの回答が必要な場合、営業担当のタスクとして対応しております。下記サイトよりご依頼ください。  
+貴社ご利用方法における見積もりの回答が必要な場合、営業担当のタスクとして対応させていただいております。下記サイトを参考によりご依頼ください。  
 
 - [Azure 価格について 1 対 1 でのガイダンスを受ける](https://azure.microsoft.com/ja-jp/pricing/contact-sales/)
 - [Azure 営業担当者に問い合わせる](https://azure.microsoft.com/ja-jp/overview/sales-number/)  
-
-***
-## 実際にかかったコストに関する問い合わせ
-各製品サポート担当では請求書情報を参照することができないため、発生したコストがどのリソースで消費しているかなどを調査することができません。お手数ですが、以下の通りサポート リクエストを発行いただきお問い合わせください。  
-
-<img src="https://jpmlblog.github.io/images/AML-estimate-costs/support-request-for-billing.png" width=600px align="left"><br clear="left">
 
 ***
 `変更履歴`  
