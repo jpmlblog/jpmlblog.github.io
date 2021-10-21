@@ -24,7 +24,7 @@ Azure Machine Learning のライフサイクルを実現する Azure Machine Lea
 - [aml-pipeline-sample_1.ipynb](https://jpmlblog.github.io/files/AML_example_pipeline_lifecycle/aml-pipeline-sample_1.ipynb "aml-pipeline-sample_1.ipynb")  
 - [machineData.csv](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/machineData.csv "machineData.csv")  
 
-<img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle/pipeline-image.png" width=600px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle/pipeline-image.png" width=700px align="middle" border="1">  
 
 ### データの配置
 
@@ -36,7 +36,7 @@ Azure Machine Learning のライフサイクルを実現する Azure Machine Lea
 
 aml-pipeline-sample_1.ipynb ファイルは、以下の通り Azure Machine Learning Studio の Notebooks のフォルダーにアップロードし、`[カーネルを再起動し、すべてのセルを実行する]` をクリックします。(実行時に cpu-cluster という名前の STANDARD_DS12_V2 のコンピューティング クラスターが作成されます。既に存在する場合はそのコンピューティング クラスターを使用します。)
 
-<img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle/azureml-studio-notebook.png" width=600px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle/azureml-studio-notebook.png" width=700px align="left" border="1"><br clear="left">  
 
 ### パイプラインの公開
 
@@ -56,7 +56,7 @@ aml-pipeline-sample_1.ipynb ファイルは、以下の通り Azure Machine Lear
 
 公開したパイプライン エンドポイントの REST エンドポイントに対し、POST メソッドで要求を送信するとパイプラインを実行されます。これにより、`azureml-blobstore-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx (xxx 部分はランダムな英数字)` / `Datasets` フォルダー配下の machineData.csv ファイルを新しいファイルに変更してパイプラインを実行するだけで、新しいファイルを使用した自動機械学習、モデルの登録、ACI エンドポイントの作成を簡単に行うことが可能になります。  
 
-<img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle/azureml-studio-published-pipeline-REST.png" width=600px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle/azureml-studio-published-pipeline-REST.png" width=800px align="left" border="1"><br clear="left">  
 
 REST エンドポイントへの要求送信方法は多種ありますが、後述に Python および PowherShell を使用した実行方法を紹介させていただきます。  
 
