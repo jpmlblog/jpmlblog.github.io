@@ -90,7 +90,6 @@ response = requests.post("<公開したパイプラインの REST エンドポ�
                                "aciservice_name": "aciservice"}})
 ```
 
-
 ### PowerShell での実行
 
 下記コマンドの <公開したパイプラインの REST エンドポイント> を上述の REST エンドポイント URL に置き換えて PowerShell コマンド プロンプト上で実行するだけで、パイプラインをトリガーすることが可能です。  
