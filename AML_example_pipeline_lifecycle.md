@@ -24,7 +24,7 @@ Azure Machine Learning のライフサイクルを実現する Azure Machine Lea
 - [aml-pipeline-sample_1.ipynb](https://jpmlblog.github.io/files/AML_example_pipeline_lifecycle/aml-pipeline-sample_1.ipynb "aml-pipeline-sample_1.ipynb")  
 - [machineData.csv](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/machineData.csv "machineData.csv")  
 
-// 上記を使って以下のような処理を行うパイプラインを作成します。
+// 上記ファイルを使って以下のような処理を行うパイプラインを作成します。
 <img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle/pipeline-image.png" width=700px align="left" border="1"><br clear="left">  
 
 ### データの配置
