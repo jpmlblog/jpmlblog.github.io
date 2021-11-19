@@ -75,7 +75,6 @@ json 形式で実験名やパイプライン パラメーターを引数とし�
 
 ```Python
 from azureml.core.authentication import InteractiveLoginAuthentication
-from azureml.pipeline.core import PublishedPipeline, Workspace
 import requests
 
 auth = InteractiveLoginAuthentication()
