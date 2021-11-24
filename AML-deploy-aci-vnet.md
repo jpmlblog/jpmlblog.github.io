@@ -21,7 +21,7 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 
 仮想ネットワーク上の ACI にモデルをデプロイする方法は、以下の公開情報に記載されておりますが、手順が分かりづらいため、後述に具体的な手順を紹介させていただきます。
 
-- [Azure Container Instances (ACI) を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-enable-virtual-network#use-azure-container-instances-aci)  
+- [Azure Container Instances (ACI) を有効にする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#enable-azure-container-instances-aci)  
 ---
 ## 仮想ネットワークの作成例
 「[サブネットの委任を追加または削除する - 仮想ネットワークの作成](https://docs.microsoft.com/ja-jp/azure/virtual-network/manage-subnet-delegation#create-the-virtual-network)」 の手順に従って進めます。  
