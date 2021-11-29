@@ -170,7 +170,8 @@ Azure Functions プロジェクトに含まれるコード ファイル (\_\_ini
   ```
 
 - requirements.txt  
-  azureml-core を追加します。
+  azureml-core を追加します。  
+  
   ```python
   # DO NOT include azure-functions-worker in this file
   # The Python Worker is managed by Azure Functions platform
