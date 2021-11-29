@@ -171,7 +171,7 @@ Azure Functions プロジェクトに含まれるコード ファイル (\_\_ini
 
 - requirements.txt  
   azureml-core を追加します。  
-  
+
   ```python
   # DO NOT include azure-functions-worker in this file
   # The Python Worker is managed by Azure Functions platform
@@ -242,3 +242,6 @@ az ml computetarget computeinstance stop -n <コンピューティング イン�
 `変更履歴`  
 `2020/09/24 created by Mochizuki`  
 `2020/09/28 modified by Mochizuki`  
+
+※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
+※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
