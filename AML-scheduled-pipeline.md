@@ -96,7 +96,7 @@ Visual Studio Code を起動し、新しいプロジェクトを作成します�
 
 - 「Add to workspace」を選択します。
 
-<img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-08.png" width=800px>
+  <img src="https://jpmlblog.github.io/images/AML-scheduled-pipeline/create-function-project-08.png" width=800px>
 
 
 ### コード ファイルの編集
@@ -160,7 +160,7 @@ Azure Functions プロジェクトに含まれるコード ファイル (\_\_ini
   - (参考サイト) [NCRONTAB の例](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-examples)
   - (参考サイト) [NCRONTAB タイム ゾーン](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=python#ncrontab-time-zones)
 
-  なお、UTC 指定となりますので、JST で指定する場合には 9 時間を差し引いた時刻を指定ください。以下画像では、毎日 21:25:00 JST に実行する設定としています。  
+  なお、UTC 指定となりますので、JST で指定する場合には 9 時間を差し引いた時刻を指定ください。以下画像では、毎日 8:30:00 JST に実行する設定としています。  
 
   ```json
   {
@@ -170,7 +170,7 @@ Azure Functions プロジェクトに含まれるコード ファイル (\_\_ini
       "name": "mytimer",
       "type": "timerTrigger",
       "direction": "in",
-      "schedule": "0 25 12 * * *"
+      "schedule": "0 30 23 * * *"
       }
     ]
   }
