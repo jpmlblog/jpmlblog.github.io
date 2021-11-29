@@ -107,7 +107,7 @@ Azure Functions プロジェクトに含まれるコード ファイル (\_\_ini
 
   - ServicePrincipalAuthentication 関数の \<Tenant_Id>、\<Application_Id>、\<Client_Secret_Value> の設定は、下記サイトの [Service Principal Authentication] セクションを参照ください。  
     (参考サイト) [Authentication in Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb)
-  - \<Subscription_Id>、\<>、\<ResourceGroup_Id>、\<Workspace_Id>、\<Pipeline_Id> は、使用する Azure Machine Learning ワークスペース リソースおよびパイプラインの情報を入力ください。\<Experiment_Name> はトリガーによって実行した場合の実験名になりますので、任意に指定下さい。
+  - \<Subscription_Id>、\<ResourceGroup_Name>、\<Workspace_Name>、\<Pipeline_Id> は、使用する Azure Machine Learning ワークスペース リソースおよびパイプラインの情報を入力ください。\<Experiment_Name> はトリガーによって実行した場合の実験名になりますので、任意に指定下さい。
 
   ```python
   import datetime
@@ -139,8 +139,8 @@ Azure Functions プロジェクトに含まれるコード ファイル (\_\_ini
     
       logging.info('Get Workspace')
       ws = Workspace(subscription_id="<Subscription_Id>",
-                      resource_group="<ResourceGroup_Id>",
-                      workspace_name="<Workspace_Id>",
+                      resource_group="<ResourceGroup_Name>",
+                      workspace_name="<Workspace_Name>",
                       auth=svc_pr)
       
       logging.info('Get Published Pipeline')
