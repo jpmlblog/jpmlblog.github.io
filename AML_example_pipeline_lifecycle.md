@@ -20,7 +20,7 @@ Azure Machine Learning のライフサイクルを実現する Azure Machine Lea
 ## イメージ
 
 // ライフサイクルは以下のようなイメージです。これを参考に後述の手順をご確認ください。  
-<img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle/lifecycle-image.png" width=800px align="left" border="1"><br clear="left">  
+<img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle/lifecycle-image.png" width=900px align="left" border="1"><br clear="left">  
 
 ## パイプラインの作成
 
