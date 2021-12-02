@@ -17,9 +17,14 @@ Azure Machine Learning のライフサイクルを実現する Azure Machine Lea
 <br>
 
 ***
+## イメージ
+
+// ライフサイクルは以下のようなイメージです。これを参考に後述の手順をご確認ください。  
+<img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle/lifecycle-image.png" width=800px align="left" border="1"><br clear="left">  
+
 ## パイプラインの作成
 
-下図のように、データセットを入力として自動機械学習を実行し、作成されたモデルを登録、ACI Web エンドポイントを作成または更新するパイプラインを作成します。パイプラインの作成は、ノートブック ファイルの実行により行います。実行するノートブック ファイルと、使用するデータを以下リンクからダウンロードください。  
+以下の図のように、データセットを入力として自動機械学習を実行し、作成されたモデルを登録、ACI Web エンドポイントを作成または更新するパイプラインを作成します。パイプラインの作成は、ノートブック ファイルの実行により行います。実行するノートブック ファイルと、使用するデータを以下リンクからダウンロードください。  
 
 - [aml-pipeline-sample_1.ipynb](https://jpmlblog.github.io/files/AML_example_pipeline_lifecycle/aml-pipeline-sample_1.ipynb "aml-pipeline-sample_1.ipynb")  
 - [machineData.csv](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/machineData.csv "machineData.csv")  
