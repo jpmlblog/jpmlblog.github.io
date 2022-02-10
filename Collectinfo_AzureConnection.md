@@ -26,6 +26,11 @@ Azure Machine Learning サービスのご利用時に、HTTP ステータス コ
 ## 実行手順
 (1) 再現確認用マシンに管理者アカウントでログオンします。  
 (2) CollectInfo_AzureConnection.bat ファイルを右クリックし、[管理者として実行] を選択します。  
+
+<font color="#FF0000">※ 実行時、Microsoft Defender SmartScreen によって実行確認のメッセージが表示される可能性があります。  
+　 [詳細情報] をクリックいただくと実行ボタンが表示されますので、[実行] を選択ください。  
+</font>
+
 (3) "Please enter the number you want to execute. Enter q to quit tool." メッセージに `1` を入力、リターン キーを押下し、表示に従いメニューに戻ります。  
 
 ※ CollectInfo_AzureConnection.bat のコマンド プロンプトは起動したままにしておきます。  
