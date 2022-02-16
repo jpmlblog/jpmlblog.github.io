@@ -15,7 +15,11 @@ Azure Machine Learning サービスのご利用時に、HTTP ステータス コ
 事象の再現が可能な端末 (OS: Windows 10 の各バージョン)
 
 ## 事前準備
-[こちら](https://jpmlblog.github.io//files/CollectInfo_AzureConnection.txt "CollectInfo_AzureConnection.txt") から CollectInfo_AzureConnection.txt ファイルをダウンロードし、拡張子を .txt から .bat に変更、実施対象の任意の場所に格納します。  
+[こちら](https://jpmlblog.github.io//files/CollectInfo_AzureConnection.txt "CollectInfo_AzureConnection.txt") から CollectInfo_AzureConnection.txt ファイルをダウンロードします。ローカルに保存後、拡張子を .txt から .bat に変更し、任意の場所に移します。  
+
+<font color="#FF0000">※ ダウンロード時に拡張子を .bat に変更して保存すると、ダウンロード自体がブロックされる可能性があります。  
+　 ローカルに保存後に拡張子を変更ください。
+</font>
 
 <実施対象に以下が存在する状態>  
 ・ [任意の場所]\CollectInfo_AzureConnection.bat ファイル
