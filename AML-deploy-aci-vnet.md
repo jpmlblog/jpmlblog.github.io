@@ -24,7 +24,14 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 - [Azure Container Instances (ACI) を有効にする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#enable-azure-container-instances-aci)  
 ---
 ## 仮想ネットワークの作成例
-「[サブネットの委任を追加または削除する - 仮想ネットワークの作成](https://docs.microsoft.com/ja-jp/azure/virtual-network/manage-subnet-delegation#create-the-virtual-network)」 の手順に従って進めます。  
+
+新たに仮想ネットワークを作成する際には以下制限事項について予めご留意ください。  
+
+[制限事項](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance#limitations)  
+> - 仮想ネットワークで Azure Container Instances を使用する場合、仮想ネットワークは、Azure Machine Learning ワークスペースと同じリソース グループに含まれている必要があります。  
+> - 仮想ネットワーク内で Azure Container Instances を使用する場合、ご使用のワークスペースの Azure Container Registry (ACR) もその仮想ネットワーク内に配置することはできません。
+
+「[サブネットの委任を追加または削除する - 仮想ネットワークの作成](https://docs.microsoft.com/ja-jp/azure/virtual-network/manage-subnet-delegation#create-the-virtual-network)」 の手順に従って仮想ネットワークの作成を進めます。
 
 - [基本] タブの設定例です。仮想ネットワークはワークスペースと同じリソースグループに作成します。同じリソースグル―プの既存の仮想ネットワークでも使用可能です。名前、地域は任意です。  
 
@@ -37,7 +44,7 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 [セキュリティ]、[タグ] タブも既定のまま進めると下記の画面に進みます。手順例では、リソースグループ amlrg に amlvnet1 という仮想ネットワークが作成されます。  
 
    <img src="https://jpmlblog.github.io/images/AML-deploy-aci-vnet/AML-create-vnet3.png" width=350px>  
-<br>
+<br>  
 
 ---
 ## サブネットの作成例
@@ -72,14 +79,14 @@ SDK を使用して作成する必要があります。[AciWebservice.deploy_con
    inference_config = InferenceConfig(entry_script="score.py", environment=env)
    ```
 
-- 「[Azure Container Instances にモデルをデプロイする - SDK を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance#using-the-sdk)」 のコードに vnet_name、subnet_name を追加して実行します。なお、location を指定しない場合 westus が設定されるため、仮想ネットワークが westus 以外の場合には location を指定する必要があります。以下にコード スニペットを紹介します。  
+- 「[Azure Container Instances にモデルをデプロイする - SDK を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance#using-the-sdk)」 のコードに vnet_name、subnet_name を追加して実行します。以下にコード スニペットを紹介します。  
 
    ```Python
    from azureml.core.webservice import AciWebservice, Webservice
    from azureml.core.model import Model
    
    deployment_config = AciWebservice.deploy_configuration(cpu_cores = 1, memory_gb = 1,
-       location = "japaneast", vnet_name = "amlvnet1", subnet_name = "amlsubnet1")
+       vnet_name = "amlvnet1", subnet_name = "amlsubnet1")
    service = Model.deploy(ws, "aciservice", [model], inference_config, deployment_config)
    service.wait_for_deployment(show_output = True)
    ```
@@ -126,3 +133,4 @@ print(resp.text)
 ***
 `変更履歴`  
 `2020/08/18 created by Mochizuki`  
+`2021/03/16 created by Mochizuki`  
