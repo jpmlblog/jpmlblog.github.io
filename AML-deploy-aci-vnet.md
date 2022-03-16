@@ -25,9 +25,7 @@ Azure Machine Learning を使用して Azure Container Instances (ACI) にモデ
 ---
 ## 仮想ネットワークの作成例
 
-新たに仮想ネットワークを作成する際には以下制限事項について予めご留意ください。  
-
-[制限事項](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance#limitations)  
+新たに仮想ネットワークを作成する際には、以下[制限事項](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance#limitations)  について予めご留意ください。  
 > - 仮想ネットワークで Azure Container Instances を使用する場合、仮想ネットワークは、Azure Machine Learning ワークスペースと同じリソース グループに含まれている必要があります。  
 > - 仮想ネットワーク内で Azure Container Instances を使用する場合、ご使用のワークスペースの Azure Container Registry (ACR) もその仮想ネットワーク内に配置することはできません。
 
@@ -133,4 +131,4 @@ print(resp.text)
 ***
 `変更履歴`  
 `2020/08/18 created by Mochizuki`  
-`2021/03/16 created by Mochizuki`  
+`2022/03/16 created by Mochizuki`  
