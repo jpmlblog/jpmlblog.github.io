@@ -19,7 +19,7 @@ tags:
 ## v2 API とは
 Azure Machine Learning サービスで使用される API は、ARM 宛に要求を発行するもの、ワークスペース リソース宛に要求を発行するものの 2 種類が存在します。 これまでの API (v1 API) は、ワークスペースやコンピューティング リソースに対する操作以外は基本的にワークスペース宛に要求を送っていました。 新しい API (v2 API) では、それらの多くが ARM 宛に要求を送る様に変更されます。  
 
-> | API バージョン&nbsp;&nbsp;&nbsp; | Public ARM 宛の操作 | Workspace 宛の操作 |
+> | API バージョン&nbsp;&nbsp;&nbsp; | ARM 宛の操作 | Workspace 宛の操作 |
 > | :---- | :---- | :---- |
 > | v1 | ワークスペースおよびコンピューティング リソースの作成、&nbsp;&nbsp;&nbsp;<br>更新、削除操作 | 実験などその他の操作 | 
 > | v2 | ワークスペース、コンピューティング、データストア、<br>データセット、ジョブ、環境、コード、コンポーネント、<br>エンドポイントなど、ほとんどの操作 | 残りの操作 |
@@ -77,6 +77,7 @@ SDK で更新する場合には、以下のコードを実行することで更�
 ***
 `変更履歴`  
 `2022/05/18 created by Mochizuki`
+`2022/05/19 modified by Mochizuki`
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
