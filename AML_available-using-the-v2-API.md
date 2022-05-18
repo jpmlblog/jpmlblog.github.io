@@ -9,7 +9,7 @@ tags:
 ---
 件名 「Network Isolation Change with Our New API Platform on Azure Resource Manager」 の電子メールにて、Action Required to use new API platform with private link enabled workspace といった内容が通知されています。 このメールにおいて実際に必要な対応内容をお纏めして紹介します。  
 
-(注意) 本情報は現在更新中の情報となります。併せて下記公式サイトをご参照ください。  
+(注意) 本情報は適宜調整しております。併せて下記公式サイトをご参照ください。  
 - [Network Isolation Change with Our New API Platform on Azure Resource Manager](http://aka.ms/amlv2network)
 
 <!-- more -->
@@ -19,10 +19,10 @@ tags:
 ## v2 API とは
 Azure Machine Learning サービスで使用される API は、ARM 宛に要求を発行するもの、ワークスペース リソース宛に要求を発行するものの 2 種類が存在します。 これまでの API (v1 API) は、ワークスペースやコンピューティング リソースに対する操作以外は基本的にワークスペース宛に要求を送っていました。 新しい API (v2 API) では、それらの多くが ARM 宛に要求を送る様に変更されます。  
 
-| API バージョン | Public ARM 宛に発行する API | Workspace 宛に発行する API |
+| API バージョン&nbsp;&nbsp;&nbsp; | Public ARM 宛に発行する API | Workspace 宛に発行する API |
 | :---- | :---- | :---- |
 | v1 | ワークスペースおよびコンピューティング リソースの作成、更新、削除操作 | 実験などその他の操作 | 
-| v2 | ワークスペース、コンピューティング リソース、データストア、データセット、ジョブ、環境、コード、コンポーネント、エンドポイントなど、ほとんどの操作 | 残りの操作 |
+| v2 | ワークスペース、コンピューティング リソース、データストア、データセット、ジョブ、  環境、コード、コンポーネント、エンドポイントなど、ほとんどの操作 | 残りの操作 |
 
 v2 API を使用することで、RBAC を使用したアクセス制御や Azure Policy の適用が使い易くなる見込みです。 また、Azure Machine Learning のマネージド オンライン エンドポイントなどの新機能は v2 API でしか使用できないため、これらが利用できるといったメリットもあります。  
 
