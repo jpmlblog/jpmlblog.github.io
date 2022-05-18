@@ -11,6 +11,8 @@ tags:
 
 - [Network Isolation Change with Our New API Platform on Azure Resource Manager](http://aka.ms/amlv2network)
 
+(注意) 本情報は現在更新中の情報となります。併せて上記公式サイトをご参照ください。
+
 <!-- more -->
 <br>
 
