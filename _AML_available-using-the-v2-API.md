@@ -58,11 +58,19 @@ Azure Machine Learning 用の CLI 拡張機能 v1 ([azure-cli-ml](https://docs.m
   ```
 
 - 更新方法
-  ```powershell:更新方法
+  ```powershell
   az ml workspace update -g <myresourcegroup> -w <myworkspace> --v1-legacy-mode  <true or false>
   ```
 
 SDK で更新する場合には、以下のコードを実行することで更新が可能ですが、`2022/5/1` 以前に作成されたワークスペースでは実行がエラーになる場合があるため、CLI 拡張機能の使用をお勧めします。
+
+- 更新方法
+  ```Python
+  from azureml.core import Workspace
+  
+  ws = Workspace.from_config()
+  ws.update(v1_legacy_mode=false)
+  ```
 
 
 ***
