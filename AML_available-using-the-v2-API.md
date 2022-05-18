@@ -7,7 +7,7 @@ tags:
 - v2 API
 - Private Endpoint
 ---
-件名 「Network Isolation Change with Our New API Platform on Azure Resource Manager」 の電子メールにて、`Action Required to use new API platform with private link enabled workspace` といった内容が通知されています。 このメールにおいて実際に必要な対応内容をお纏めして紹介します。
+件名 「Network Isolation Change with Our New API Platform on Azure Resource Manager」 の電子メールにて、Action Required to use new API platform with private link enabled workspace といった内容が通知されています。 このメールにおいて実際に必要な対応内容をお纏めして紹介します。
 
 - [Network Isolation Change with Our New API Platform on Azure Resource Manager](http://aka.ms/amlv2network)
 
@@ -20,7 +20,7 @@ tags:
 ## v2 API とは
 Azure Machine Learning サービスで使用される API は、ARM 宛に要求を発行するもの、ワークスペース リソース宛に要求を発行するものの 2 種類が存在します。 これまでの API (v1 API) は、ワークスペースやコンピューティング リソースに対する操作以外は基本的にワークスペース宛に要求を送っていました。 新しい API (v2 API) では、それらの多くが ARM 宛に要求を送る様に変更されます。  
 
-| API バージョン&nbsp;&nbsp;&nbsp; | Public ARM 宛に発行する API&nbsp;&nbsp;&nbsp; | Workspace 宛に発行する API&nbsp;&nbsp;&nbsp; |
+| API | Public ARM 宛に発行する API | Workspace 宛に発行する API |
 | :---- | :---- | :---- |
 | v1&nbsp;&nbsp;&nbsp; | ワークスペースおよびコンピューティング リソースの作成、更新、削除操作&nbsp;&nbsp;&nbsp; | 実験などその他の操作&nbsp;&nbsp;&nbsp; | 
 | v2&nbsp;&nbsp;&nbsp; | ワークスペース、コンピューティング リソース、データストア、データセット、ジョブ、環境、コード、コンポーネント、エンドポイントなど、ほとんどの操作&nbsp;&nbsp;&nbsp; | 残りの操作&nbsp;&nbsp;&nbsp; |
