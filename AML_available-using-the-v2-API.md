@@ -24,7 +24,7 @@ Azure Machine Learning サービスで使用される API は、Azure Resource M
 > | v1 | ワークスペースおよびコンピューティング リソースの作成、更新、削除操作 | 実験などその他の操作 | 
 > | v2 | ワークスペース、コンピューティング、データストア、データセット、ジョブ、環境、コード、&nbsp;&nbsp;&nbsp;<br>コンポーネント、エンドポイントなど、ほとんどの操作 | 残りの操作 |
 
-v2 API を使用することで、RBAC を使用したアクセス制御や Azure Policy の適用が使い易くなる見込みです。 また、Azure Machine Learning のマネージド オンライン エンドポイントなどの新機能は v2 API でしか使用できないため、これらが利用できるといったメリットもあります。  
+v2 API を使用することで、RBAC を使用したアクセス制御や Azure Policy の適用が使い易くなる見込みです。 また、Azure Machine Learning の [マネージド オンライン エンドポイント](https://docs.microsoft.com/ja-jp/azure/machine-learning/concept-endpoints) などの新機能は v2 API でしか使用できないため、これらが利用できるといったメリットもあります。  
 
 ---
 ## v2 API の使用によって発生するネットワーク分離への影響
