@@ -97,7 +97,7 @@ Azure Machine Learning を使用して機械学習を開発するための API �
 - [コード サンプル (?products=azure-machine-learning&languages=r)](https://docs.microsoft.com/ja-jp/samples/browse/?products=azure-machine-learning&languages=r)
 
 ### CLI
-- [Azure Machine Learning CLI 拡張機能 v1 (az ml)](https://docs.microsoft.com/ja-jp/cli/azure/ml(v1)?view=azure-cli-latest)  
+- [Azure CLI Machine Learning 拡張機能 v1 (az ml)](https://docs.microsoft.com/ja-jp/cli/azure/ml(v1)?view=azure-cli-latest)  
 - [Azure CLI Machine Learning 拡張機能 v2 (az ml)](https://docs.microsoft.com/ja-jp/cli/azure/ml?view=azure-cli-latest)  
 - [CLI (v1) のインストールと使用](https://docs.microsoft.com/ja-jp/azure/machine-learning/v1/reference-azure-machine-learning-cli)  
 - [CLI (v2) のインストールと設定](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-cli?tabs=public)  
