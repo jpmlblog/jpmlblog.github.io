@@ -57,9 +57,10 @@ Azure Machine Learning Studio (Classic) の技術ドキュメント、価格、�
 
 機械学習に関する概要情報、学習用のコンテンツなど。
 
-- [機械学習とは何ですか?](https://azure.microsoft.com/ja-jp/overview/what-is-machine-learning-platform/)
-- [機械学習アルゴリズム](https://azure.microsoft.com/ja-jp/overview/machine-learning-algorithms/)
-- [ラーニング パス (?products=azure-machine-learning&subjects=machine-learning)](https://docs.microsoft.com/ja-jp/learn/browse/?products=azure-machine-learning&subjects=machine-learning)  
+- [機械学習とは何ですか?](https://azure.microsoft.com/ja-jp/overview/what-is-machine-learning-platform/)  
+- [機械学習アルゴリズム](https://azure.microsoft.com/ja-jp/overview/machine-learning-algorithms/)  
+- [ラーニング モジュール (?products=azure-machine-learning&subjects=data-ai&resource_type=module)](https://docs.microsoft.com/ja-jp/learn/browse/?products=azure-machine-learning&subjects=data-ai&resource_type=module)  
+- [ラーニング パス (?products=azure-machine-learning&subjects=data-ai&resource_type=learning%20path)](https://docs.microsoft.com/ja-jp/learn/browse/?products=azure-machine-learning&subjects=data-ai&resource_type=learning%20path)  
 - [とっても便利! Azure Machine Leaning](https://www.youtube.com/watch?v=xx-meKk03YY)  
 - 初心者向けデータ サイエンス解説ビデオ
    >- [データ サイエンスが回答する 5 つの質問](https://docs.microsoft.com/ja-jp/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers)
@@ -76,19 +77,38 @@ Azure Machine Learning の導入によるメリットや考慮事項、事例な
 - [Microsoft の機械学習製品およびテクノロジの比較](https://docs.microsoft.com/ja-jp/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning)  
 - [Azure Machine Learning と Machine Learning Studio (classic) の違い](https://docs.microsoft.com/ja-jp/azure/machine-learning/overview-what-is-machine-learning-studio#ml-studio-classic-vs-azure-machine-learning-studio)  
 - [お客様事例の検索 (?sq="Azure Machine Learning")](https://customers.microsoft.com/ja-jp/search?sq=%22Azure%20Machine%20Learning%22&ff=&p=2&so=story_publish_date%20desc)  
-- [Azure アーキテクチャ (?expanded=azure&products=azure-machine-learning)](https://docs.microsoft.com/ja-jp/azure/architecture/browse/?expanded=azure&products=azure-machine-learning)  
 - [Azure アーキテクチャ (?terms=Azure%20Machine%20Learning)](https://docs.microsoft.com/ja-jp/azure/architecture/browse/?terms=Azure%20Machine%20Learning)  
+- [Azure アーキテクチャ (?products=azure-machine-learning%2Cazure-machine-learning-studio)](https://docs.microsoft.com/ja-jp/azure/architecture/browse/?products=azure-machine-learning%2Cazure-machine-learning-studio)  
 
 ***
 ## 開発者向け参考サイト  
 
 Azure Machine Learning を使用して機械学習を開発するための API リファレンスやサンプルなど。
 
+### SDK
 - [Azure Machine Learning SDK for Python とは](https://docs.microsoft.com/ja-jp/python/api/overview/azure/ml/?view=azure-ml-py)  
-- [Python notebooks with ML and deep learning examples with Azure Machine Learning](https://github.com/Azure/MachineLearningNotebooks)
-- [機械学習 REST API リファレンス](https://docs.microsoft.com/ja-jp/rest/api/azureml/)  
-- [Azure Machine Learning 用の CLI 拡張機能を使用する](https://docs.microsoft.com/ja-jp/azure/machine-learning/reference-azure-machine-learning-cli)  
-- [Browse code samples](https://docs.microsoft.com/en-us/samples/browse/?products=azure-machine-learning-service)
+- [Azure Machine Learning Python SDK notebooks](https://github.com/Azure/MachineLearningNotebooks)  
+- [Azure Machine Learning examples](https://github.com/Azure/azureml-examples)  
+- [コード サンプル (?products=azure-machine-learning&languages=python)](https://docs.microsoft.com/ja-jp/samples/browse/?products=azure-machine-learning&languages=python)
+
+### R
+- [Azure Machine Learning SDK for R (preview)](https://azure.github.io/azureml-sdk-for-r/)  
+- [Azure ML samples](https://github.com/Azure/azureml-sdk-for-r/tree/master/samples)
+- [コード サンプル (?products=azure-machine-learning&languages=r)](https://docs.microsoft.com/ja-jp/samples/browse/?products=azure-machine-learning&languages=r)
+
+### CLI
+- [Azure Machine Learning CLI 拡張機能 v1 (az ml)](https://docs.microsoft.com/ja-jp/cli/azure/ml(v1)?view=azure-cli-latest)  
+- [Azure CLI Machine Learning 拡張機能 v2 (az ml)](https://docs.microsoft.com/ja-jp/cli/azure/ml?view=azure-cli-latest)  
+- [CLI (v1) のインストールと使用](https://docs.microsoft.com/ja-jp/azure/machine-learning/v1/reference-azure-machine-learning-cli)  
+- [CLI (v2) のインストールと設定](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-configure-cli?tabs=public)  
+- [Azure CLI を使用して Azure Machine Learning ワークスペースを管理する](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-manage-workspace-cli)  
+- [コード サンプル (?products=azure-machine-learning&languages=azurecli)](https://docs.microsoft.com/ja-jp/samples/browse/?products=azure-machine-learning&languages=azurecli)
+
+### REST
+- [Machine Learning REST API リファレンス](https://docs.microsoft.com/ja-jp/rest/api/azureml/)  
+- [REST を使用して Azure ML リソースの作成、実行、削除を行う](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-manage-rest)  
+- [REST を使用してモデルをトレーニングする (プレビュー)](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-train-with-rest)
+
 
 ***
 
@@ -98,6 +118,7 @@ Azure Machine Learning を使用して機械学習を開発するための API �
 `2020/06/18 modified by Mochizuki`  
 `2020/09/08 modified by Mochizuki`  
 `2021/01/27 modified by Mochizuki`  
+`2022/06/07 modified by Mochizuki`  
 <br>
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 適宜追加更新します。  
