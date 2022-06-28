@@ -131,3 +131,4 @@ print(resp.text)
 `変更履歴`  
 `2020/08/18 created by Mochizuki`  
 `2022/03/16 created by Mochizuki`  
+`2022/06/21 created by Mochizuki`  
