@@ -16,18 +16,17 @@ Azure Machine Learning に仮想ネットワーク (Azure Virtual Network: VNET)
 ***
 Azure Machine Learning を使用して Azure Container Instances (ACI) にモデルを Web サービスとしてデプロイする方法は、以下の公開情報が参考になります。  
 
-- [Azure Container Instances にモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance)  
-- [Azure Kubernetes Service と Azure Container Instances を使用したモデルの Docker デプロイのトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-troubleshoot-deployment)  
+- [CLI (v1) を使用して Azure Container Instances にモデルをデプロイする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance)  
+- [リモートでのモデル デプロイのトラブルシューティング](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-troubleshoot-deployment?tabs=azcli)  
 
-仮想ネットワーク上の ACI にモデルをデプロイする方法は、以下の公開情報に記載されておりますが、手順が分かりづらいため、後述に具体的な手順を紹介させていただきます。
+仮想ネットワーク上の ACI にモデルをデプロイする場合、Azure Machine Learning ワークスペースにプライベート エンドポイント接続があるとサポートされなくなりました。  
 
-- [Azure Container Instances (ACI) を有効にする](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#enable-azure-container-instances-aci)  
+- [仮想ネットワークを使用して Azure Machine Learning 推論環境をセキュリティで保護する #Azure Container Instances](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#azure-container-instances)  
 ---
 ## 仮想ネットワークの作成例
 
 新たに仮想ネットワークを作成する際には、以下[制限事項](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-deploy-azure-container-instance#limitations)  について予めご留意ください。  
-> - 仮想ネットワークで Azure Container Instances を使用する場合、仮想ネットワークは、Azure Machine Learning ワークスペースと同じリソース グループに含まれている必要があります。  
-> - 仮想ネットワーク内で Azure Container Instances を使用する場合、ご使用のワークスペースの Azure Container Registry (ACR) もその仮想ネットワーク内に配置することはできません。
+> Azure Machine Learning ワークスペースがプライベート エンドポイントで構成されている場合、VNet でのAzure Container Instances へのデプロイはサポートされていません。 代わりに、ネットワークの分離とマネージド オンライン エンドポイントを使用することを検討してください。  
 
 「[サブネットの委任を追加または削除する - 仮想ネットワークの作成](https://docs.microsoft.com/ja-jp/azure/virtual-network/manage-subnet-delegation#create-the-virtual-network)」 の手順に従って仮想ネットワークの作成を進めます。
 
