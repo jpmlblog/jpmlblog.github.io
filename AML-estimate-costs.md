@@ -134,7 +134,7 @@ Azure Machine Learning で ACI にモデルをデプロイする場合、指定�
 上記に加えて以下リソースの課金が発生いたします。これらはご利用方法によって金額が大きく異なりますため、試算を含めた見積もりを例示することができません。一般的に上述の料金と比較して数パーセント程度の小さい金額となりますため、一定期間ご利用いただいた後、実際の課金額を基に見積もることをお勧めします。  
 
 - [Azure Container Registry Basic アカウント](https://azure.microsoft.com/ja-jp/pricing/details/container-registry/)  
-- [Azure ブロック BLOB Storage (汎用 v1)](https://azure.microsoft.com/ja-jp/pricing/details/storage/blobs/)  
+- [Azure ブロック BLOB Storage (汎用 v2)](https://azure.microsoft.com/ja-jp/pricing/details/storage/blobs/)  
 - [Key Vault](https://azure.microsoft.com/ja-jp/pricing/details/key-vault/)  
 - [Application Insights](https://azure.microsoft.com/ja-jp/pricing/details/monitor/)  
 
