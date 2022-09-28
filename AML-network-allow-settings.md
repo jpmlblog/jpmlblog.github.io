@@ -16,51 +16,17 @@ tags:
 ## ホスト名ベースの許可
 Azure Machine Learning で使用する通信先ホスト名の一覧は以下サイトに一覧化されております。これらのホスト名宛の送信方向の通信を許可するよう設定ください。(2022/1/13 時点)  
 
-- [ファイアウォールの内側で Azure Machine Learning のワークスペースを使用する - # Microsoft のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#microsoft-hosts)
-  > *.aznbcontent.net   
-  > *.azureml.ms   
-  > *.blob.core.windows.net   
-  > *.in.applicationinsights.azure.com   
-  > *.instances.azureml.ms   
-  > *.instances.azureml.net   
-  > *.notebooks.azure.net   
-  > *.queue.core.windows.net   
-  > *.table.core.windows.net   
-  > *.vault.azure.net   
-  > \<storage\>.blob.core.windows.net   
-  > \<storage\>.dfs.core.windows.net   
-  > \<storage\>.file.core.windows.net   
-  > dc.applicationinsights.azure.com   
-  > dc.applicationinsights.microsoft.com   
-  > dc.services.visualstudio.com   
-  > graph.microsoft.com   
-  > graph.windows.net   
-  > login.microsoftonline.com   
-  > management.azure.com   
-  > mcr.microsoft.com   
-  > ml.azure.com   
-  > viennaglobal.azurecr.io   
+- [ネットワークの着信トラフィックおよび送信トラフィックを構成する - # Microsoft のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#microsoft-hosts)
  
   ※ \<storage\> を、使用している Azure Machine Learning ワークスペースの既定のストレージ アカウント名に置き換えてください。
   
 Python パッケージをインストールして使用する要件がある場合、下記のようなホスト名宛の通信を許可する必要があります。なお、下記はインターネット上のすべての Python リソースに必要なホストの完全な一覧ではなく、最も一般的に使用されているもののみを取り上げています。たとえば、GitHub リポジトリまたはその他のホストにアクセスする必要がある場合は、そのシナリオに必要なホストを特定して追加する必要があることをご留意ください。  
 
-- [ファイアウォールの内側で Azure Machine Learning のワークスペースを使用する - # Python のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#python-hosts)
-  > anaconda.com  
-  > *.anaconda.com  	
-  > *.anaconda.org  
-  > pypi.org  
-  > *.pytorch.org  
-  > *.tensorflow.org  
+- [ネットワークの着信トラフィックおよび送信トラフィックを構成する - # Python のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#python-hosts)
 
 R パッケージをインストールして使用する要件がある場合、下記のようなホスト名宛の通信を許可する必要があります。こちらも、必要なホストの完全な一覧ではない点についてご留意ください。  
 
-- [ファイアウォールの内側で Azure Machine Learning のワークスペースを使用する - # R のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#r-hosts)
-  > cloud.r-project.org  
-
-***
-## ポート番号の許可
-HTTPS または HTTP (443 および 80) のプロトコルで通信を行います。上記したホスト名一覧に対し、送信方向のポート番号 443 および 80 宛の通信を許可するよう設定ください。  
+- [ネットワークの着信トラフィックおよび送信トラフィックを構成する - # R のホスト](https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-access-azureml-behind-firewall#r-hosts)
 
 ***
 ## WebSocket の考慮
@@ -80,7 +46,7 @@ HTTPS または HTTP (443 および 80) のプロトコルで通信を行いま�
 
 ***
 ## IP アドレスの範囲指定で許可する場合
-下記サイトに紹介されている IP アドレス一覧を使用して許可する方法につきましては、API で一覧を取得する方法が現時点 (2020/10/10) でプレビュー段階であるなどから、利用をお勧めいたしません。  
+下記サイトに紹介されている IP アドレス一覧を使用して許可する方法につきましては、以下サイトの機能をご利用いただける可能性がございます。実装方法などの確認が必要な場合、 Azure Network 観点にてお問い合わせください。  
 
 - [オンプレミスのサービス タグ](https://docs.microsoft.com/ja-jp/azure/virtual-network/service-tags-overview#service-tags-on-premises)
 
@@ -91,6 +57,7 @@ HTTPS または HTTP (443 および 80) のプロトコルで通信を行いま�
 `2021/06/17 modified by Mochizuki`  
 `2021/07/13 modified by Mochizuki`  
 `2022/01/13 modified by Uehara`  
+`2022/08/02 modified by Mochizuki`  
 
 ※ 本記事は 「[jpmlblog について](https://jpmlblog.github.io/blog/2020/01/01/about-jpmlblog/)」 の留意事項に準じます。  
 ※ 併せて 「[ホームページ](https://jpmlblog.github.io/blog/)」 および 「[記事一覧](https://jpmlblog.github.io/blog/archives/)」 もご参照いただければ幸いです。  
