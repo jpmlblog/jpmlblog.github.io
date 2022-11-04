@@ -72,7 +72,7 @@ SDK で更新する場合には、以下のコードを実行することで更�
   from azureml.core import Workspace
   
   ws = Workspace.from_config()
-  ws.update(v1_legacy_mode=false)
+  ws.update(v1_legacy_mode=False)
   ```
 
 
