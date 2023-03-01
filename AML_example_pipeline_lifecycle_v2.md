@@ -42,13 +42,13 @@ Azure Machine Learning SDK v2 を使用し、以下の Azure Machine Learning �
 
 ## ノートブックの実行
 
- sample-pipeline-sdkv2.zip の解凍後aml-pipeline-sample-sdkv2.ipynb を選択し `[カーネルを再起動し、すべてのセルを実行する]` をクリックします。実行時には cpu-cluster という名前の STANDARD_DS3_V2 のコンピューティング クラスターが作成されます。既に存在する場合はそのコンピューティング クラスターを使用します。また、AutoML によって生成されたモデルをデプロイしたマネージド オンライン エンドポイントが作成されます。
+ sample-pipeline-sdkv2.zip の解凍後、aml-pipeline-sample-sdkv2.ipynb を選択し `[カーネルを再起動し、すべてのセルを実行する]` をクリックします。実行時には cpu-cluster という名前の STANDARD_DS3_V2 のコンピューティング クラスターが作成されます。既に存在する場合はそのコンピューティング クラスターを使用します。また、AutoML によって生成されたモデルをデプロイしたマネージド オンライン エンドポイントが作成されます。
 
 <img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle_v2/execute-notebook.png" width=700px align="left" border="1"><br clear="left">  
 
-### パイプラインの公開
+## パイプラインの公開
 
-実行が終了すると、以下の通りエンドポイントとパイプラインが作成されるため、正常に実行が終了していることを確認して `[公開]` ボタンをクリックし、任意の名前で実行します。実行後、パイプライン エンドポイントが作成されます。(サンプル では pipeline_with_automlstep という名前になります。)  
+実行が終了すると、以下の通りエンドポイントとパイプラインが作成されるため、正常に実行が終了していることを確認して `[公開]` ボタンをクリックし、任意の名前で実行します。実行後、パイプライン エンドポイントが作成されます。(サンプル では automl_regression_and_deployment という名前になります。)  
 
 // ノートブックで定義したパイプラインの実行結果 (この画面で [公開] ボタンを押す)
 <img src="https://jpmlblog.github.io/images/AML_example_pipeline_lifecycle_v2/created_pipeline.png" width=600px align="left" border="1"><br clear="left">  
