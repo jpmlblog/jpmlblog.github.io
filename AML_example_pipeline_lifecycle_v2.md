@@ -1,6 +1,6 @@
 ---
 title: Azure Machine Learning パイプラインを使用した自動機械学習ライフサイクルの例 (SDK v2)
-date: 2023-03-01 00:00:00
+date: 2023-02-28 00:00:00
 categories:
 - Azure Machine Learning
 tags:
