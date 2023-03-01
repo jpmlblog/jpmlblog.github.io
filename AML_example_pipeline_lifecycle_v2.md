@@ -13,6 +13,11 @@ Azure Machine Learning SDK v2 を使用し、以下の Azure Machine Learning �
 - 自動機械学習を実行
 - ベスト モデルを選択して Managed Online Endpoint にデプロイ
 
+今後、以下が実行できるよう更新予定です。
+
+- 公開したパイプライン実行時に、データ アセットの最新バージョンを使用して AutoML が実行されるようにする
+- パイプライン実行毎に既存のエンドポイントが更新されるようにする
+
 <!-- more -->
 <br>
 
