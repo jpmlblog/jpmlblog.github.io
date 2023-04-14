@@ -17,12 +17,12 @@ Azure Machine Learning の AutoML ジョブにおいて、parquet ファイル�
 ***
 ## 既知の問題の概要
 
-Azure Machine Learning Studio から AutoML ジョブを作成する際に、parquet ファイルを使用したデータ アセットを選択した場合に [タスクと設定の選択] における [特徴量化の表示] 画面において表示されるカラムがデータ アセットのものではなく、作成に使用した parquet ファイルにおけるすべてのカラム表示されてしまう問題が確認されております。  
+Azure Machine Learning Studio から AutoML ジョブを作成する際に、parquet ファイルを使用したデータ アセットを選択した場合に [タスクと設定の選択] における [特徴量化の表示] 画面において表示されるカラムがデータ アセットのものではなく、作成に使用した parquet ファイルにおけるすべてのカラム表示されてしまう問題が確認されています。  
 <br>
 
 ## 問題の詳細
 
-問題の詳細について具体的な例を挙げてご紹介いたします (※ 使用するデータは Scikit Learn Toy Datasets の 1 つである [Diabetes dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset
+問題の詳細について具体的な例を挙げてご紹介します (※ 使用するデータは Scikit Learn Toy Datasets の 1 つである [Diabetes dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset
 ) を使用しています)。 Azure Machine Learning Studio の [自動 ML] より画面にしたがって、自動 ML ジョブの作成を進めていきます。以下の例では、S4, S5, S6 および Y の 4 つのカラムを選択してデータ アセットを作成しています。  
 
 // parquet ファイルからカラムを選択してデータ アセットを作成
@@ -48,12 +48,13 @@ AutoML ジョブの設定を進めていくと [タスクと設定の選択] の
 
 現在、本事象は Azure Machine Learning の修正予定の項目となっております。 しかしながら、現時点ではトレーニング自体は実施可能であるため、ご利用いただく際の運用によって対応していただく必要があります。  
 
-また、本事象を原因としてお客様のビジネス インパクトが多大なものである場合には、幣サポート チームより製品開発部門に対して、本機能の開発優先度をあげるようプッシュさせていただくことも可能です。その際には具体的な損失金額や被害人数等の情報をご記載いただいたうえで、サポート リクエスト発行いただきご相談ください。
+また、本事象を原因としてお客様のビジネス インパクトが多大なものである場合には、技術サポート チームより製品開発部門に対して、本機能の開発優先度をあげるようプッシュさせていただくことも可能です。 その際には具体的な損失金額や影響を受けるユーザー数等の情報をご記載いただいたうえで、サポート リクエスト発行いただきご相談ください。  
 
 Azure サポート リクエストは下記サイトの情報を参考に発行いただけます。 一般的に、[Azure portal](https://portal.azure.com/) の [ヘルプとサポート] から [新しいサポート リクエスト] を作成頂くことをお勧めいたします。
 
 - [Azure サポート要求を作成する](https://docs.microsoft.com/ja-jp/azure/azure-portal/supportability/how-to-create-azure-support-request)  
 
+<br>
 ***
 `変更履歴`  
 `2023/04/** created by Narita`
