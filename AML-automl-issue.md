@@ -55,6 +55,7 @@ Azure サポート リクエストは下記サイトの情報を参考に発行�
 - [Azure サポート要求を作成する](https://docs.microsoft.com/ja-jp/azure/azure-portal/supportability/how-to-create-azure-support-request)  
 
 <br>
+
 ***
 `変更履歴`  
 `2023/04/** created by Narita`
