@@ -23,6 +23,7 @@ Azure Machine Learning の技術ドキュメント、価格、更新情報など
 - [Azure Machine Learning の価格](https://azure.microsoft.com/ja-jp/pricing/details/machine-learning/)  
 - [Azure の更新情報 (?product=machine-learning-service)](https://azure.microsoft.com/ja-jp/updates/?product=machine-learning-service)  
 
+
 過去の Q&A、新規 Q&A、機能改善のフィードバックなど。
 
 - [(旧) Q&A](https://social.msdn.microsoft.com/Forums/en-US/home?forum=AzureMachineLearningService)  
